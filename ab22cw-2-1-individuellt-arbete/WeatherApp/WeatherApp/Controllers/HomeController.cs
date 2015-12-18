@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WeatherApp.Domain.WebServices;
+using WeatherApp.Mocks;
 
 namespace WeatherApp.Controllers
 {
@@ -13,6 +15,7 @@ namespace WeatherApp.Controllers
         {
             return View();
         }
+
 
         public ActionResult About()
         {

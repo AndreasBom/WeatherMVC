@@ -4,10 +4,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherApp.MVC", "WeatherApp\WeatherApp.MVC.csproj", "{E2B4F602-B0A5-4212-A7B1-8E3E7EEC266D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D7D44F18-8A06-4249-8D4A-2AED0D7FB71B} = {D7D44F18-8A06-4249-8D4A-2AED0D7FB71B}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherApp.Tests", "WeatherApp.Tests\WeatherApp.Tests.csproj", "{BABA832A-140C-4DF0-9D46-0F4B1A15752E}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "WeatherApp.Domain", "WeatherApp.Domain\WeatherApp.Domain.xproj", "{2CEF9C6B-38F6-4FF1-A67C-386997F02AB6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherApp.Domain", "WeatherApp.Domain\WeatherApp.Domain.csproj", "{D7D44F18-8A06-4249-8D4A-2AED0D7FB71B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +26,10 @@ Global
 		{BABA832A-140C-4DF0-9D46-0F4B1A15752E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BABA832A-140C-4DF0-9D46-0F4B1A15752E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BABA832A-140C-4DF0-9D46-0F4B1A15752E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2CEF9C6B-38F6-4FF1-A67C-386997F02AB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2CEF9C6B-38F6-4FF1-A67C-386997F02AB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2CEF9C6B-38F6-4FF1-A67C-386997F02AB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2CEF9C6B-38F6-4FF1-A67C-386997F02AB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7D44F18-8A06-4249-8D4A-2AED0D7FB71B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7D44F18-8A06-4249-8D4A-2AED0D7FB71B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7D44F18-8A06-4249-8D4A-2AED0D7FB71B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7D44F18-8A06-4249-8D4A-2AED0D7FB71B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
