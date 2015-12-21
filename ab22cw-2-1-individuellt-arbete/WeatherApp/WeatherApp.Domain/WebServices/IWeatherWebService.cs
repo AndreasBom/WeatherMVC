@@ -9,6 +9,8 @@ namespace WeatherApp.Domain.WebServices
 {
     public interface IWeatherWebService
     {
-        IEnumerable<Weather> GetForcast(double latitude, double longitude);
+        IEnumerable<Forcast> GetForcast(GeoLocation geoLocation);
+
+        GeoLocation LookUpGeoLocation(string location);
     }
 }

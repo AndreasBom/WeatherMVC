@@ -12,7 +12,7 @@ namespace WeatherApp
     {
         protected void Application_Start()
         {
-            UnityConfig.RegisterComponents();
+            //UnityConfig.RegisterComponents();
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);

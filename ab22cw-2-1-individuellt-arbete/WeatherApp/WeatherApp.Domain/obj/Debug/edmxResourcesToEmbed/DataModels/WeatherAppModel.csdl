@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dv409_ab22cw_WeatherModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Forcast">
+    <Key>
+      <PropertyRef Name="ForcastId" />
+    </Key>
+    <Property Name="ForcastId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GeoLocationId" Type="Int32" Nullable="false" />
+    <Property Name="IconId" Type="Int32" Nullable="false" />
+    <Property Name="NextUpdate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="ValidTime" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Temperature" Type="Double" Nullable="false" />
+    <Property Name="ThunderProbability" Type="Int32" Nullable="false" />
+    <Property Name="CloudFactor" Type="Int32" Nullable="false" />
+    <Property Name="Preciptation" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="GeoLocation" Relationship="Self.FK_Forcast_GeoLocation" FromRole="Forcast" ToRole="GeoLocation" />
+  </EntityType>
+  <EntityType Name="GeoLocation">
+    <Key>
+      <PropertyRef Name="GeoLocationId" />
+    </Key>
+    <Property Name="GeoLocationId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Latitude" Type="Double" Nullable="false" />
+    <Property Name="Longitude" Type="Double" Nullable="false" />
+    <Property Name="Location" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Forcasts" Relationship="Self.FK_Forcast_GeoLocation" FromRole="GeoLocation" ToRole="Forcast" />
+  </EntityType>
+  <Association Name="FK_Forcast_GeoLocation">
+    <End Role="GeoLocation" Type="Self.GeoLocation" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Forcast" Type="Self.Forcast" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GeoLocation">
+        <PropertyRef Name="GeoLocationId" />
+      </Principal>
+      <Dependent Role="Forcast">
+        <PropertyRef Name="GeoLocationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="WeatherAppEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Forcasts" EntityType="Self.Forcast" />
+    <EntitySet Name="GeoLocations" EntityType="Self.GeoLocation" />
+    <AssociationSet Name="FK_Forcast_GeoLocation" Association="Self.FK_Forcast_GeoLocation">
+      <End Role="GeoLocation" EntitySet="GeoLocations" />
+      <End Role="Forcast" EntitySet="Forcasts" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dv409_ab22cw_WeatherModelStoreContainer" CdmEntityContainer="WeatherAppEntities">
+    <EntitySetMapping Name="Forcasts">
+      <EntityTypeMapping TypeName="dv409_ab22cw_WeatherModel.Forcast">
+        <MappingFragment StoreEntitySet="Forcast">
+          <ScalarProperty Name="ForcastId" ColumnName="ForcastId" />
+          <ScalarProperty Name="GeoLocationId" ColumnName="GeoLocationId" />
+          <ScalarProperty Name="IconId" ColumnName="IconId" />
+          <ScalarProperty Name="NextUpdate" ColumnName="NextUpdate" />
+          <ScalarProperty Name="ValidTime" ColumnName="ValidTime" />
+          <ScalarProperty Name="Temperature" ColumnName="Temperature" />
+          <ScalarProperty Name="ThunderProbability" ColumnName="ThunderProbability" />
+          <ScalarProperty Name="CloudFactor" ColumnName="CloudFactor" />
+          <ScalarProperty Name="Preciptation" ColumnName="Preciptation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="dv409_ab22cw_WeatherModel.Forcast">
+        <ModificationFunctionMapping>
+          <InsertFunction FunctionName="dv409_ab22cw_WeatherModel.Store.uspForcastInsert">
+            <ScalarProperty Name="Preciptation" ParameterName="Preciptation" />
+            <ScalarProperty Name="CloudFactor" ParameterName="CloudFactor" />
+            <ScalarProperty Name="ThunderProbability" ParameterName="ThunderProbability" />
+            <ScalarProperty Name="Temperature" ParameterName="Temperature" />
+            <ScalarProperty Name="ValidTime" ParameterName="ValidTime" />
+            <ScalarProperty Name="NextUpdate" ParameterName="NextUpdate" />
+            <ScalarProperty Name="IconId" ParameterName="IconId" />
+            <ScalarProperty Name="GeoLocationId" ParameterName="GeoLocationId" />
+            <ResultBinding Name="ForcastId" ColumnName="NewForcastId" />
+          </InsertFunction>
+          <UpdateFunction FunctionName="dv409_ab22cw_WeatherModel.Store.uspForcastUpdate">
+            <ScalarProperty Name="Preciptation" ParameterName="Preciptation" Version="Current" />
+            <ScalarProperty Name="CloudFactor" ParameterName="CloudFactor" Version="Current" />
+            <ScalarProperty Name="ThunderProbability" ParameterName="ThunderProbability" Version="Current" />
+            <ScalarProperty Name="Temperature" ParameterName="Temperature" Version="Current" />
+            <ScalarProperty Name="ValidTime" ParameterName="ValidTime" Version="Current" />
+            <ScalarProperty Name="NextUpdate" ParameterName="NextUpdate" Version="Current" />
+            <ScalarProperty Name="IconId" ParameterName="IconId" Version="Current" />
+            <ScalarProperty Name="GeoLocationId" ParameterName="GeoLocationId" Version="Current" />
+            <ScalarProperty Name="ForcastId" ParameterName="ForcastId" Version="Current" />
+          </UpdateFunction>
+          <DeleteFunction FunctionName="dv409_ab22cw_WeatherModel.Store.uspForcastDelete">
+            <ScalarProperty Name="ForcastId" ParameterName="ForcastId" />
+          </DeleteFunction>
+        </ModificationFunctionMapping>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GeoLocations">
+      <EntityTypeMapping TypeName="dv409_ab22cw_WeatherModel.GeoLocation">
+        <MappingFragment StoreEntitySet="GeoLocation">
+          <ScalarProperty Name="GeoLocationId" ColumnName="GeoLocationId" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="dv409_ab22cw_WeatherModel.GeoLocation">
+        <ModificationFunctionMapping>
+          <InsertFunction FunctionName="dv409_ab22cw_WeatherModel.Store.uspGeoLocationInsert">
+            <ScalarProperty Name="Location" ParameterName="Location" />
+            <ScalarProperty Name="Longitude" ParameterName="Longitude" />
+            <ScalarProperty Name="Latitude" ParameterName="Latitude" />
+            <ResultBinding Name="GeoLocationId" ColumnName="NewGeoLocationId" />
+          </InsertFunction>
+          <DeleteFunction FunctionName="dv409_ab22cw_WeatherModel.Store.uspGeoLocationDelete">
+            <ScalarProperty Name="GeoLocationId" ParameterName="GeoLocationId" />
+          </DeleteFunction>
+          <UpdateFunction FunctionName="dv409_ab22cw_WeatherModel.Store.uspGeoLocationUpdate">
+            <ScalarProperty Name="Location" ParameterName="Location" Version="Current" />
+            <ScalarProperty Name="Longitude" ParameterName="Longitude" Version="Current" />
+            <ScalarProperty Name="Latitude" ParameterName="Latitude" Version="Current" />
+            <ScalarProperty Name="GeoLocationId" ParameterName="GeoLocationId" Version="Current" />
+          </UpdateFunction>
+        </ModificationFunctionMapping>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

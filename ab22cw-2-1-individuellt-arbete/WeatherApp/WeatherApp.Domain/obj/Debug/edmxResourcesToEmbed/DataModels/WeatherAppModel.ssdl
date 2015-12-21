@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dv409_ab22cw_WeatherModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Forcast">
+    <Key>
+      <PropertyRef Name="ForcastId" />
+    </Key>
+    <Property Name="ForcastId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GeoLocationId" Type="int" Nullable="false" />
+    <Property Name="IconId" Type="int" Nullable="false" />
+    <Property Name="NextUpdate" Type="datetime2" Precision="0" Nullable="false" />
+    <Property Name="ValidTime" Type="datetime2" Precision="0" Nullable="false" />
+    <Property Name="Temperature" Type="float" Nullable="false" />
+    <Property Name="ThunderProbability" Type="int" Nullable="false" />
+    <Property Name="CloudFactor" Type="int" Nullable="false" />
+    <Property Name="Preciptation" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="GeoLocation">
+    <Key>
+      <PropertyRef Name="GeoLocationId" />
+    </Key>
+    <Property Name="GeoLocationId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Latitude" Type="float" Nullable="false" />
+    <Property Name="Longitude" Type="float" Nullable="false" />
+    <Property Name="Location" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Forcast_GeoLocation">
+    <End Role="GeoLocation" Type="Self.GeoLocation" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Forcast" Type="Self.Forcast" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GeoLocation">
+        <PropertyRef Name="GeoLocationId" />
+      </Principal>
+      <Dependent Role="Forcast">
+        <PropertyRef Name="GeoLocationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="uspFilterLocation" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="weatherApp">
+    <Parameter Name="pattern" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="uspForcastDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="weatherApp">
+    <Parameter Name="ForcastId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="uspForcastInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="weatherApp">
+    <Parameter Name="GeoLocationId" Type="int" Mode="In" />
+    <Parameter Name="IconId" Type="int" Mode="In" />
+    <Parameter Name="NextUpdate" Type="datetime2" Mode="In" />
+    <Parameter Name="ValidTime" Type="datetime2" Mode="In" />
+    <Parameter Name="Temperature" Type="float" Mode="In" />
+    <Parameter Name="ThunderProbability" Type="int" Mode="In" />
+    <Parameter Name="CloudFactor" Type="int" Mode="In" />
+    <Parameter Name="Preciptation" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="uspForcastUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="weatherApp">
+    <Parameter Name="ForcastId" Type="int" Mode="In" />
+    <Parameter Name="GeoLocationId" Type="int" Mode="In" />
+    <Parameter Name="IconId" Type="int" Mode="In" />
+    <Parameter Name="NextUpdate" Type="datetime2" Mode="In" />
+    <Parameter Name="ValidTime" Type="datetime2" Mode="In" />
+    <Parameter Name="Temperature" Type="float" Mode="In" />
+    <Parameter Name="ThunderProbability" Type="int" Mode="In" />
+    <Parameter Name="CloudFactor" Type="int" Mode="In" />
+    <Parameter Name="Preciptation" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="uspGeoLocationDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="weatherApp">
+    <Parameter Name="GeoLocationId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="uspGeoLocationInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="weatherApp">
+    <Parameter Name="Latitude" Type="float" Mode="In" />
+    <Parameter Name="Longitude" Type="float" Mode="In" />
+    <Parameter Name="Location" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="uspGeoLocationUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="weatherApp">
+    <Parameter Name="GeoLocationId" Type="int" Mode="In" />
+    <Parameter Name="Latitude" Type="float" Mode="In" />
+    <Parameter Name="Longitude" Type="float" Mode="In" />
+    <Parameter Name="Location" Type="varchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="dv409_ab22cw_WeatherModelStoreContainer">
+    <EntitySet Name="Forcast" EntityType="Self.Forcast" Schema="weatherApp" store:Type="Tables" />
+    <EntitySet Name="GeoLocation" EntityType="Self.GeoLocation" Schema="weatherApp" store:Type="Tables" />
+    <AssociationSet Name="FK_Forcast_GeoLocation" Association="Self.FK_Forcast_GeoLocation">
+      <End Role="GeoLocation" EntitySet="GeoLocation" />
+      <End Role="Forcast" EntitySet="Forcast" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

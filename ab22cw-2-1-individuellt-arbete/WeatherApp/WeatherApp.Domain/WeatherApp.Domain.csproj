@@ -50,9 +50,16 @@
       <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="NGeo, Version=1.9.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NGeo.1.9.0.0\lib\net40\NGeo.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -62,17 +69,67 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Authentications\IdentityModels.cs" />
-    <Compile Include="Models\Weather.cs" />
+    <Compile Include="DataModels\Forcast.cs">
+      <DependentUpon>WeatherAppModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModels\GeoLocation.cs">
+      <DependentUpon>WeatherAppModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModels\WeatherAppModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WeatherAppModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModels\WeatherAppModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WeatherAppModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModels\WeatherAppModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WeatherAppModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Forcast.cs" />
+    <Compile Include="Models\GeoLocation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\IWeatherRepository.cs" />
+    <Compile Include="Repositories\WeatherRepository.cs" />
+    <Compile Include="Repositories\WeatherRepositoryBase.cs" />
+    <Compile Include="Services\IWeatherService.cs" />
+    <Compile Include="Services\WeatherService.cs" />
+    <Compile Include="Services\WeatherServiceBase.cs" />
+    <Compile Include="WebServices\GeoLocationWebService.cs" />
     <Compile Include="WebServices\IWeatherWebService.cs" />
     <Compile Include="WebServices\WeatherWebService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <EntityDeploy Include="DataModels\WeatherAppModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>WeatherAppModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DataModels\WeatherAppModel.edmx.diagram">
+      <DependentUpon>WeatherAppModel.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Repositories\" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DataModels\WeatherAppModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>WeatherAppModel.edmx</DependentUpon>
+      <LastGenOutput>WeatherAppModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DataModels\WeatherAppModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>WeatherAppModel.edmx</DependentUpon>
+      <LastGenOutput>WeatherAppModel.cs</LastGenOutput>
+      <CustomToolNamespace> WeatherApp.Domain.Models</CustomToolNamespace>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
