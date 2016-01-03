@@ -90,6 +90,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>WeatherAppModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201601031136223_InitialCreate.cs" />
+    <Compile Include="Migrations\201601031136223_InitialCreate.Designer.cs">
+      <DependentUpon>201601031136223_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Forcast.cs" />
     <Compile Include="Models\GeoLocation.cs" />
     <Compile Include="Models\Location.cs" />
@@ -117,7 +122,11 @@
     </None>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201601031136223_InitialCreate.resx">
+      <DependentUpon>201601031136223_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>

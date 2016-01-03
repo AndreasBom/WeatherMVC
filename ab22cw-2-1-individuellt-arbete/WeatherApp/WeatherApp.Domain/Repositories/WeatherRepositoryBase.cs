@@ -9,6 +9,7 @@ namespace WeatherApp.Domain.Repositories
 {
     public abstract class WeatherRepositoryBase : IWeatherRepository
     {
+        
         protected abstract IQueryable<Weather> QueryWeathers();
 
         public IEnumerable<Weather> GetWeathers()
@@ -20,6 +21,7 @@ namespace WeatherApp.Domain.Repositories
         {
             return QueryWeathers().SingleOrDefault(f => f.WeatherId == id);
         }
+
 
         public abstract void AddWeather(Weather forcast);
 
@@ -38,6 +40,11 @@ namespace WeatherApp.Domain.Repositories
         public Location GetLocation(int id)
         {
             return QueryLocations().SingleOrDefault(i => i.LocationId == id);
+        }
+
+        public Location GetLocationByPlaceId(string placeId)
+        {
+            return QueryLocations().SingleOrDefault(l => l.PlaceId == placeId);
         }
 
         public Location GetLocation(string location)

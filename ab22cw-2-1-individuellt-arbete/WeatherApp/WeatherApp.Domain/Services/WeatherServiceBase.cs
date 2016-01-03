@@ -10,7 +10,7 @@ namespace WeatherApp.Domain.Services
     public abstract class WeatherServiceBase : IWeatherService
     {
         public abstract Location GetLocation(string location);
-        public abstract ICollection<Weather> GetWeather(Location locationObject);
+        public abstract void UpdateWeather(Location locationObject);
 
         //public abstract GeoLocation GetLocation(string location);
 

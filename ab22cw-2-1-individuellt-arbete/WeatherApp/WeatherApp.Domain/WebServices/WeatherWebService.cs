@@ -41,9 +41,6 @@ namespace WeatherApp.Domain.WebServices
             return jObj["timeSeries"].Select(item => new Weather(item, location)).ToList();
         }
 
-
-
-
         public Location GetLocation(string location)
         {
             GeoLocationWebService geoWebservice = new GeoLocationWebService();

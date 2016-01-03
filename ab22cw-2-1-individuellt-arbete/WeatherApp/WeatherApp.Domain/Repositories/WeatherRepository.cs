@@ -20,6 +20,7 @@ namespace WeatherApp.Domain.Repositories
             return _context.Weather.AsQueryable();
         }
 
+
         public override void AddWeather(Weather weather)
         {
             _context.Weather.Add(weather);

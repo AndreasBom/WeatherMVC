@@ -31,8 +31,8 @@ namespace WeatherApp.Controllers
         {
             var webservice = new WeatherService(new WeatherRepository(), new WeatherWebService());
 
-            var locaction = webservice.GetLocation("Göteborg");
-            var forcast = webservice.GetWeather(locaction);
+            var locaction = webservice.GetLocation("Åsa");
+            webservice.UpdateWeather(locaction);
 
             return View();
         }

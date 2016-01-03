@@ -46,9 +46,30 @@ namespace WeatherApp.Domain.WebServices
             //Parse to JObject
             var jObj = JObject.Parse(rawJson);
 
-            return new Location(jObj);
-            //return new GeoLocation(jObj);
+            //Thrown an exception if location is not found 
+            if (jObj.Value<string>("status") == "ZERO_RESULTS")
+            {
+                throw new GeoLocationNotFoundException();
+            }
 
+            return new Location(jObj);
+        }
+    }
+
+    public class GeoLocationNotFoundException : Exception
+    {
+        public GeoLocationNotFoundException()
+        {
+        }
+
+        public GeoLocationNotFoundException(string message)
+        : base(message)
+    {
+        }
+
+        public GeoLocationNotFoundException(string message, Exception inner)
+        : base(message, inner)
+    {
         }
     }
 }

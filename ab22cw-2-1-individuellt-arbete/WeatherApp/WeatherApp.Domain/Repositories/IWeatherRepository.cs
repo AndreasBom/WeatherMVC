@@ -19,6 +19,7 @@ namespace WeatherApp.Domain.Repositories
         IEnumerable<Location> GetLocations();
         Location GetLocation(int id);
         Location GetLocation(string location);
+        Location GetLocationByPlaceId(string placeId);
         void AddLocation(Location location);
         void UpdateLocation(Location location);
         void DeleteLocation(int id);
