@@ -28,7 +28,7 @@ namespace WeatherApp.Domain.WebServices
             ApiKey = AppSettings.Get("geoLocationApiKey");
         }
 
-        public GeoLocation AddressToCoordinates(string location)
+        public Location AddressToCoordinates(string location)
         {
             var webClient = new WebClient();
 
@@ -46,7 +46,8 @@ namespace WeatherApp.Domain.WebServices
             //Parse to JObject
             var jObj = JObject.Parse(rawJson);
 
-            return new GeoLocation(jObj);
+            return new Location(jObj);
+            //return new GeoLocation(jObj);
 
         }
     }

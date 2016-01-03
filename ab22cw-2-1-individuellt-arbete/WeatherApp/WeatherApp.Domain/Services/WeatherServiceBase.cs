@@ -9,9 +9,12 @@ namespace WeatherApp.Domain.Services
 {
     public abstract class WeatherServiceBase : IWeatherService
     {
-        public abstract GeoLocation GetLocation(string location);
+        public abstract Location GetLocation(string location);
+        public abstract ICollection<Weather> GetWeather(Location locationObject);
 
-        public abstract void RefreshForcasts(GeoLocation location);
+        //public abstract GeoLocation GetLocation(string location);
+
+        //public abstract void RefreshForcasts(GeoLocation location);
 
         #region IDisposable Support
         private bool disposedValue = false; // To detect redundant calls

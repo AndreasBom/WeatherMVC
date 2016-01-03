@@ -29,25 +29,10 @@ namespace WeatherApp.Controllers
         // GET: Forcast
         public ActionResult Index()
         {
+            var webservice = new WeatherService(new WeatherRepository(), new WeatherWebService());
 
-            var weather = new WeatherService(new WeatherRepository(), new WeatherWebService());
-
-            var geo = weather.GetGeolocation("Malmö");
-            var forcast = weather.GetForcast(geo);
-            var yy = 11;
-            
-            //try
-            //{
-
-            //}
-            //catch (Exception ex)
-            //{
-            //    while (ex.InnerException != null)
-            //    {
-            //        ex = ex.InnerException;
-            //    }
-            //    FlashMessage.Danger(ex.Message);
-            //}
+            var locaction = webservice.GetLocation("Göteborg");
+            var forcast = webservice.GetWeather(locaction);
 
             return View();
         }

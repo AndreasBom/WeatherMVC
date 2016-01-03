@@ -62,3 +62,5 @@ C:\Users\Andre\Documents\Copy\Skola\Linneuniversitetet\ASP MVC\Project\ab22cw-2-
 C:\Users\Andre\Documents\Copy\Skola\Linneuniversitetet\ASP MVC\Project\ab22cw-2-1-individuellt-arbete\WeatherApp\WeatherApp.Tests\bin\Debug\Microsoft.Practices.Unity.xml
 C:\Users\Andre\Documents\Copy\Skola\Linneuniversitetet\ASP MVC\Project\ab22cw-2-1-individuellt-arbete\WeatherApp\WeatherApp.Tests\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
 C:\Users\Andre\Documents\Copy\Skola\Linneuniversitetet\ASP MVC\Project\ab22cw-2-1-individuellt-arbete\WeatherApp\WeatherApp.Tests\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\Andre\Documents\Copy\Skola\Linneuniversitetet\ASP MVC\Project\ab22cw-2-1-individuellt-arbete\WeatherApp\WeatherApp.Tests\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Andre\Documents\Copy\Skola\Linneuniversitetet\ASP MVC\Project\ab22cw-2-1-individuellt-arbete\WeatherApp\WeatherApp.Tests\bin\Debug\EntityFramework.SqlServer.xml
