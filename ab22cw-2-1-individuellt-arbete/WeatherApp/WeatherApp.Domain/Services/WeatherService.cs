@@ -21,16 +21,32 @@ namespace WeatherApp.Domain.Services
         }
 
 
+        public GeoLocation GetGeolocation(string location)
+        {
+            var geoLocation = _webservice.LookUpGeoLocation(location);
+
+            return geoLocation;
+        }
+
+        public ICollection<Forcast> GetForcast(GeoLocation geolocation)
+        {
+            var forcasts = _webservice.GetForcast(geolocation);
+            return (ICollection<Forcast>) forcasts;
+        }
+
+
         public override GeoLocation GetLocation(string location)
         {
-            var geoLocation = _repository.GetGeoLocation(location);
+            var geoLocation = _webservice.LookUpGeoLocation(location);
 
-            if (geoLocation == null)
-            {
-                geoLocation = _webservice.LookUpGeoLocation(location);
-                _repository.AddGeoLocation(geoLocation);
-                _repository.Save();
-            }
+            //var geoLocation = _repository.GetGeoLocation(location);
+
+            //if (geoLocation == null)
+            //{
+            //    geoLocation = _webservice.LookUpGeoLocation(location);
+            //    _repository.AddGeoLocation(geoLocation);
+            //    _repository.Save();
+            //}
             return geoLocation;
         }
 

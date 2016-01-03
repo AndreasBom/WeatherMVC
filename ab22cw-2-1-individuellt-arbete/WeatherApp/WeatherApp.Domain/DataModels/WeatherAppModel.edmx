@@ -11,22 +11,22 @@
           </Key>
           <Property Name="ForcastId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="GeoLocationId" Type="int" Nullable="false" />
-          <Property Name="IconId" Type="int" Nullable="false" />
-          <Property Name="NextUpdate" Type="datetime2" Precision="0" Nullable="false" />
-          <Property Name="ValidTime" Type="datetime2" Precision="0" Nullable="false" />
-          <Property Name="Temperature" Type="float" Nullable="false" />
-          <Property Name="ThunderProbability" Type="int" Nullable="false" />
-          <Property Name="CloudFactor" Type="int" Nullable="false" />
-          <Property Name="Preciptation" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="NextUpdate" Type="datetime2" Precision="0" />
+          <Property Name="IconId" Type="int" />
+          <Property Name="ValidTime" Type="datetime2" Precision="0" />
+          <Property Name="Temperature" Type="float" />
+          <Property Name="ThunderProbability" Type="int" />
+          <Property Name="CloudFactor" Type="int" />
+          <Property Name="Preciptation" Type="varchar" MaxLength="20" />
         </EntityType>
         <EntityType Name="GeoLocation">
           <Key>
             <PropertyRef Name="GeoLocationId" />
           </Key>
           <Property Name="GeoLocationId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Latitude" Type="float" Nullable="false" />
-          <Property Name="Longitude" Type="float" Nullable="false" />
-          <Property Name="Location" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Latitude" Type="float" />
+          <Property Name="Longitude" Type="float" />
+          <Property Name="Location" Type="varchar" MaxLength="50" />
         </EntityType>
         <Association Name="FK_Forcast_GeoLocation">
           <End Role="GeoLocation" Type="Self.GeoLocation" Multiplicity="1">
@@ -101,13 +101,13 @@
           </Key>
           <Property Name="ForcastId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="GeoLocationId" Type="Int32" Nullable="false" />
-          <Property Name="IconId" Type="Int32" Nullable="false" />
-          <Property Name="NextUpdate" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="ValidTime" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="Temperature" Type="Double" Nullable="false" />
-          <Property Name="ThunderProbability" Type="Int32" Nullable="false" />
-          <Property Name="CloudFactor" Type="Int32" Nullable="false" />
-          <Property Name="Preciptation" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IconId" Type="Int32" />
+          <Property Name="NextUpdate" Type="DateTime" Precision="0" />
+          <Property Name="ValidTime" Type="DateTime" Precision="0" />
+          <Property Name="Temperature" Type="Double" />
+          <Property Name="ThunderProbability" Type="Int32" />
+          <Property Name="CloudFactor" Type="Int32" />
+          <Property Name="Preciptation" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="GeoLocation" Relationship="Self.FK_Forcast_GeoLocation" FromRole="Forcast" ToRole="GeoLocation" />
         </EntityType>
         <EntityType Name="GeoLocation">
@@ -115,9 +115,9 @@
             <PropertyRef Name="GeoLocationId" />
           </Key>
           <Property Name="GeoLocationId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Latitude" Type="Double" Nullable="false" />
-          <Property Name="Longitude" Type="Double" Nullable="false" />
-          <Property Name="Location" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Latitude" Type="Double" />
+          <Property Name="Longitude" Type="Double" />
+          <Property Name="Location" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Forcasts" Relationship="Self.FK_Forcast_GeoLocation" FromRole="GeoLocation" ToRole="Forcast" />
         </EntityType>
         <Association Name="FK_Forcast_GeoLocation">

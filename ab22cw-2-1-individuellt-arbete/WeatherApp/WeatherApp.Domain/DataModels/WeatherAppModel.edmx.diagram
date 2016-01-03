@@ -4,9 +4,9 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="95056d5bc4e34acc8677ce7eb2bdf135" Name="Diagram1" ZoomLevel="81">
+      <Diagram DiagramId="95056d5bc4e34acc8677ce7eb2bdf135" Name="Diagram1" ZoomLevel="93">
         <EntityTypeShape EntityType="dv409_ab22cw_WeatherModel.Forcast" Width="1.5" PointX="3.25" PointY="0.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="dv409_ab22cw_WeatherModel.GeoLocation" Width="1.5" PointX="1" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="dv409_ab22cw_WeatherModel.GeoLocation" Width="1.5" PointX="1.25" PointY="0.875" IsExpanded="true" />
         <AssociationConnector Association="dv409_ab22cw_WeatherModel.FK_Forcast_GeoLocation" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>

@@ -30,9 +30,12 @@ namespace WeatherApp.Controllers
         public ActionResult Index()
         {
 
-            var x = new WeatherService(new WeatherRepository(), new WeatherWebService());
-            var t = x.GetLocation("Malmö");
-            string xx = "";
+            var weather = new WeatherService(new WeatherRepository(), new WeatherWebService());
+
+            var geo = weather.GetGeolocation("Malmö");
+            var forcast = weather.GetForcast(geo);
+            var yy = 11;
+            
             //try
             //{
 
