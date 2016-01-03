@@ -25,8 +25,8 @@ namespace WeatherApp.Tests.Models
         public void GetForcast_FetchJsonDataIsNotNull()
         {
             // Act
-            IEnumerable<Forcast> request = null;
-            request = wMock.GetForcast(new GeoLocation());
+            IEnumerable<Weather> request = null;
+            request = wMock.GetWeather(new Location());
 
             // Assert
             Assert.IsNotNull(request);
@@ -43,7 +43,7 @@ namespace WeatherApp.Tests.Models
 			string pcat = (Preciptation.Drizzle).ToString();
 
             //Actual values
-            var data = wMock.GetForcast(new GeoLocation());
+            var data = wMock.GetWeather(new Location());
             var setOfData = (from s in data
                 select s).FirstOrDefault();
         //Assert

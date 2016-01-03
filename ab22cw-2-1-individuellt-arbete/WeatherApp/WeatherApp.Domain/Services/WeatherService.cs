@@ -21,55 +21,66 @@ namespace WeatherApp.Domain.Services
         }
 
 
-        public GeoLocation GetGeolocation(string location)
+        public override Location GetLocation(string location)
         {
-            var geoLocation = _webservice.LookUpGeoLocation(location);
-
+            var geoLocation = _webservice.GetLocation(location);
+            _repository.AddLocation(geoLocation);
+            _repository.Save();
             return geoLocation;
         }
 
-        public ICollection<Forcast> GetForcast(GeoLocation geolocation)
+        public override ICollection<Weather> GetWeather(Location location)
         {
-            var forcasts = _webservice.GetForcast(geolocation);
-            return (ICollection<Forcast>) forcasts;
-        }
+            var forcasts = _webservice.GetWeather(location);
 
-
-        public override GeoLocation GetLocation(string location)
-        {
-            var geoLocation = _webservice.LookUpGeoLocation(location);
-
-            //var geoLocation = _repository.GetGeoLocation(location);
-
-            //if (geoLocation == null)
-            //{
-            //    geoLocation = _webservice.LookUpGeoLocation(location);
-            //    _repository.AddGeoLocation(geoLocation);
-            //    _repository.Save();
-            //}
-            return geoLocation;
-        }
-
-        public override void RefreshForcasts(GeoLocation location)
-        {
-            
-
-            if (location.Forcasts == null || !location.Forcasts.Any() ||
-                location.Forcasts.Select(l => l.NextUpdate).FirstOrDefault() < DateTime.Now)
+            foreach (var forcast in forcasts)
             {
-                foreach (var forcast in location.Forcasts)
-                {
-                    _repository.DeleteForcast(location.GeoLocationId);
-                }
-
-                foreach (var forcast in _webservice.GetForcast(location))
-                {
-                    forcast.NextUpdate = DateTime.Now.AddMinutes(10);
-                    _repository.AddForcast(forcast);
-                }
-
+                _repository.AddWeather(forcast);
                 _repository.Save();
             }
+            return (ICollection<Weather>) forcasts;
         }
+
+
+
+
+
+
+        //public override GeoLocation GetLocation(string location)
+        //{
+        //    var geoLocation = _webservice.LookUpGeoLocation(location);
+
+        //    //var geoLocation = _repository.GetGeoLocation(location);
+
+        //    //if (geoLocation == null)
+        //    //{
+        //    //    geoLocation = _webservice.LookUpGeoLocation(location);
+        //    //    _repository.AddGeoLocation(geoLocation);
+        //    //    _repository.Save();
+        //    //}
+        //    return geoLocation;
+        //}
+
+        //public override void RefreshForcasts(GeoLocation location)
+        //{
+
+
+        //    if (location.Forcasts == null || !location.Forcasts.Any() ||
+        //        location.Forcasts.Select(l => l.NextUpdate).FirstOrDefault() < DateTime.Now)
+        //    {
+        //        foreach (var forcast in location.Forcasts)
+        //        {
+        //            _repository.DeleteForcast(location.GeoLocationId);
+        //        }
+
+        //        foreach (var forcast in _webservice.GetForcast(location))
+        //        {
+        //            forcast.NextUpdate = DateTime.Now.AddMinutes(10);
+        //            _repository.AddForcast(forcast);
+        //        }
+
+        //        _repository.Save();
+        //    }
+        //}
     }
 }

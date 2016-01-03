@@ -9,7 +9,9 @@ namespace WeatherApp.Domain.Services
 {
     public interface IWeatherService : IDisposable
     {
-        GeoLocation GetLocation(string location);
-        void RefreshForcasts(GeoLocation location);
+        Location GetLocation(string location);
+        ICollection<Weather> GetWeather(Location locationObject);
+        //GeoLocation GetLocation(string location);
+        //void RefreshForcasts(GeoLocation location);
     }
 }

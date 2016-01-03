@@ -13,7 +13,7 @@ namespace WeatherApp.Mocks
 {
     public class WeatherWebServiceMock : IWeatherWebService
     {
-        public IEnumerable<Forcast> GetForcast(GeoLocation geoLocation)
+        public IEnumerable<Weather> GetWeather(Location location)
         {
             string rawJsonString;
             var physicalPath =
@@ -27,10 +27,10 @@ namespace WeatherApp.Mocks
 
             var jObj = JObject.Parse(rawJsonString);
 
-            return jObj["timeseries"].Select(item => new Forcast(item, geoLocation)).ToList();
+            return jObj["timeseries"].Select(item => new Weather(item, location)).ToList();
         }
 
-        public GeoLocation LookUpGeoLocation(string location)
+        public Location GetLocation(string location)
         {
             throw new NotImplementedException();
         }
@@ -51,5 +51,6 @@ namespace WeatherApp.Mocks
 
         //    return jObj["timeseries"].Select(item => new Forcast(item)).ToList();
         //}
+
     }
 }

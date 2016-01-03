@@ -15,8 +15,8 @@ namespace WeatherApp.Controllers
         public ActionResult Index()
         {
             var w = new WeatherWebServiceMock();
-            var geo = new GeoLocation();
-            var data = w.GetForcast(geo);
+            var geo = new Location();
+            var data = w.GetWeather(geo);
             return View();
         }
 
