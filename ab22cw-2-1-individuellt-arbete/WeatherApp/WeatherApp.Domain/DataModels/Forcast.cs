@@ -16,12 +16,12 @@ namespace WeatherApp.Domain.Models
     {
         public int ForcastId { get; set; }
         public int GeoLocationId { get; set; }
-        public int IconId { get; set; }
-        public System.DateTime NextUpdate { get; set; }
-        public System.DateTime ValidTime { get; set; }
-        public double Temperature { get; set; }
-        public int ThunderProbability { get; set; }
-        public int CloudFactor { get; set; }
+        public Nullable<int> IconId { get; set; }
+        public Nullable<System.DateTime> NextUpdate { get; set; }
+        public Nullable<System.DateTime> ValidTime { get; set; }
+        public Nullable<double> Temperature { get; set; }
+        public Nullable<int> ThunderProbability { get; set; }
+        public Nullable<int> CloudFactor { get; set; }
         public string Preciptation { get; set; }
     
         public virtual GeoLocation GeoLocation { get; set; }

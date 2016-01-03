@@ -21,8 +21,8 @@ namespace WeatherApp.Domain.Models
         }
     
         public int GeoLocationId { get; set; }
-        public double Latitude { get; set; }
-        public double Longitude { get; set; }
+        public Nullable<double> Latitude { get; set; }
+        public Nullable<double> Longitude { get; set; }
         public string Location { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

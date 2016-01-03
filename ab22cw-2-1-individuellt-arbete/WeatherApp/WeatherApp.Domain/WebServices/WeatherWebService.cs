@@ -14,17 +14,22 @@ namespace WeatherApp.Domain.WebServices
     {
         //TODO Refactor forcast and Geolocation to user same base class
 
-        private static readonly string baseApiUrl = @"http://opendata-download-metfcst.smhi.se";
+        private static readonly string baseApiUrl = @"http://opendata-download-metfcst.smhi.se/";
         
+        /// <summary>
+        /// Get a forcast for a specified area
+        /// </summary>
+        /// <param name="geoLocation"></param>
+        /// <returns>Returns a list with forcast objects</returns>
         public IEnumerable<Forcast> GetForcast(GeoLocation geoLocation)
         {
             string rawJsonString;
-            string lat = geoLocation.Latitude.ToString("0.000000");
-            string lng = geoLocation.Longitude.ToString("0.000000");
+            string lat = geoLocation.Latitude.ToString().Substring(0,8);
+            string lng = geoLocation.Longitude.ToString().Substring(0,8);
 
-            var requestUrl = $@"/api/category/pmp2g/version/1/geopoint/lat/{lat}/lon/{lng}/data.json";
+            var requestUrl = $@"api/category/pmp2g/version/2/geotype/point/lon/{lng}/lat/{lat}/data.json";
+
             var requestUrlParse = requestUrl.Replace(",", ".");
-
             var request = (HttpWebRequest) WebRequest.Create($"{baseApiUrl}{requestUrlParse}");
 
             using (var response = request.GetResponse())
@@ -35,8 +40,10 @@ namespace WeatherApp.Domain.WebServices
 
             var jObj = JObject.Parse(rawJsonString);
 
-            return jObj["timeseries"].Select(item => new Forcast(item, geoLocation)).ToList();
+            return jObj["timeSeries"].Select(item => new Forcast(item, geoLocation)).ToList();
         }
+
+
 
         public GeoLocation LookUpGeoLocation(string location)
         {

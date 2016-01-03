@@ -6,22 +6,22 @@
     </Key>
     <Property Name="ForcastId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="GeoLocationId" Type="int" Nullable="false" />
-    <Property Name="IconId" Type="int" Nullable="false" />
-    <Property Name="NextUpdate" Type="datetime2" Precision="0" Nullable="false" />
-    <Property Name="ValidTime" Type="datetime2" Precision="0" Nullable="false" />
-    <Property Name="Temperature" Type="float" Nullable="false" />
-    <Property Name="ThunderProbability" Type="int" Nullable="false" />
-    <Property Name="CloudFactor" Type="int" Nullable="false" />
-    <Property Name="Preciptation" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="NextUpdate" Type="datetime2" Precision="0" />
+    <Property Name="IconId" Type="int" />
+    <Property Name="ValidTime" Type="datetime2" Precision="0" />
+    <Property Name="Temperature" Type="float" />
+    <Property Name="ThunderProbability" Type="int" />
+    <Property Name="CloudFactor" Type="int" />
+    <Property Name="Preciptation" Type="varchar" MaxLength="20" />
   </EntityType>
   <EntityType Name="GeoLocation">
     <Key>
       <PropertyRef Name="GeoLocationId" />
     </Key>
     <Property Name="GeoLocationId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Latitude" Type="float" Nullable="false" />
-    <Property Name="Longitude" Type="float" Nullable="false" />
-    <Property Name="Location" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Latitude" Type="float" />
+    <Property Name="Longitude" Type="float" />
+    <Property Name="Location" Type="varchar" MaxLength="50" />
   </EntityType>
   <Association Name="FK_Forcast_GeoLocation">
     <End Role="GeoLocation" Type="Self.GeoLocation" Multiplicity="1">
