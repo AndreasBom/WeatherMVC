@@ -7,7 +7,6 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WeatherApp.Domain.DataModels;
 using WeatherApp.Domain.Models;
 
 namespace WeatherApp.Domain.Repositories

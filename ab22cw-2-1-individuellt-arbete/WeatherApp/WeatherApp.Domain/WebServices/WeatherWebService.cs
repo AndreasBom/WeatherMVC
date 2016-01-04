@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,8 +23,8 @@ namespace WeatherApp.Domain.WebServices
         public IEnumerable<Weather> GetWeather(Location location)
         {
             string rawJsonString;
-            string lat = location.Latitude.ToString().Substring(0, 8);
-            string lng = location.Longitude.ToString().Substring(0, 8);
+            string lat = location.Latitude.ToString("F");
+            string lng = location.Longitude.ToString("F");
 
             var requestUrl = $@"api/category/pmp2g/version/2/geotype/point/lon/{lng}/lat/{lat}/data.json";
 
@@ -44,8 +45,17 @@ namespace WeatherApp.Domain.WebServices
         public Location GetLocation(string location)
         {
             GeoLocationWebService geoWebservice = new GeoLocationWebService();
+            Location locationObj;
 
-            return geoWebservice.AddressToCoordinates(location);
+            try
+            {
+                locationObj = geoWebservice.AddressToCoordinates(location);
+            }
+            catch(GeoLocationNotFoundException)
+            {
+                throw new GeoLocationNotFoundException();
+            }
+            return locationObj;
         }
 
 

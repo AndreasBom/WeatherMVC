@@ -1,6 +1,6 @@
 ﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -28,7 +28,7 @@ textarea {
 .wraper-layer {
     width: 100%;
     margin-top: 100px;
-    margin-bottom: 100px;
+    /*margin-bottom: 100px;*/
 }
 
 
@@ -50,3 +50,96 @@ textarea {
     padding: 30px 40px 10px 40px;
     text-align: center;
 }
+
+#weather-wrapper {
+    /*height: 98vh;*/
+    width: 80vw;
+    /*max-width: 1200px;
+    max-height: 600px;*/
+    border: 1px solid #BCBCBC;
+    /*border-right: 1px solid #BCBCBC;*/
+    margin: 5px auto 0 auto;
+    border-radius: 10px;
+    /*overflow: hidden;*/
+}
+
+.title-text {
+    color: #BCBCBC;
+    margin: 2px;
+}
+
+#todays-symbol {
+    max-width: 75px;
+    float: left;
+}
+
+#title-temperature {
+    font-size: 37px;
+    margin-top: 50px;
+    margin-left: 15px;
+    display: inline;
+}
+
+.btn {
+    display: block;
+    margin-top: 3px;
+    float: right;
+}
+
+#title-layer {
+    margin-bottom: 25px;
+    margin-left: 20px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+#search-layer {
+    float: right;
+    display: inline-block;
+    margin-top: 30px;
+    margin-right: 20px;
+}
+
+#graph {
+    margin: 0 auto;
+    width: 70%;
+}
+
+#valid-date {
+    position: relative;
+    bottom: 10px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+#valid-date-day {
+    position: relative;
+    bottom: 5px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#valid-date-layer {
+    position: relative;
+    top: -10px;
+}
+
+#temperature {
+    font-size: 1.7em;
+    position: absolute;
+    top: 40px;
+    right: 10px;
+    background-color: black;
+    border: 2px solid white;
+    border-radius: 10px;
+    color: white;
+    margin: 3px;
+}
+
+#nameOfDay-layer {
+    display: block;
+    clear: both;
+}
+

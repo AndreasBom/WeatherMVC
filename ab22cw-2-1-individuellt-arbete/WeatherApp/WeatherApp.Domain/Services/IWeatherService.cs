@@ -12,6 +12,7 @@ namespace WeatherApp.Domain.Services
         Location GetLocation(string location);
         void UpdateWeather(Location locationObject);
         //ICollection<Weather> GetWeather(Location locationObject);
-        
+        IEnumerable<Location> GetAllLocations();
+
     }
 }

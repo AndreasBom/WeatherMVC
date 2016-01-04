@@ -12,9 +12,7 @@ namespace WeatherApp.Domain.Services
         public abstract Location GetLocation(string location);
         public abstract void UpdateWeather(Location locationObject);
 
-        //public abstract GeoLocation GetLocation(string location);
-
-        //public abstract void RefreshForcasts(GeoLocation location);
+        public abstract IEnumerable<Location> GetAllLocations();
 
         #region IDisposable Support
         private bool disposedValue = false; // To detect redundant calls

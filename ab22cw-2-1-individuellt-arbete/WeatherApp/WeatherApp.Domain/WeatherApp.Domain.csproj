@@ -57,6 +57,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.EnterpriseServices" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.ServiceModel" />
@@ -69,34 +70,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Authentications\IdentityModels.cs" />
-    <Compile Include="DataModels\Forcast.cs">
-      <DependentUpon>WeatherAppModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DataModels\GeoLocation.cs">
-      <DependentUpon>WeatherAppModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DataModels\WeatherAppModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>WeatherAppModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DataModels\WeatherAppModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>WeatherAppModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DataModels\WeatherAppModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>WeatherAppModel.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\201601031136223_InitialCreate.cs" />
     <Compile Include="Migrations\201601031136223_InitialCreate.Designer.cs">
       <DependentUpon>201601031136223_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\Forcast.cs" />
-    <Compile Include="Models\GeoLocation.cs" />
     <Compile Include="Models\Location.cs" />
     <Compile Include="Models\Weather.cs" />
     <Compile Include="Models\WeatherForcastDbContext.cs" />
@@ -113,13 +91,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <EntityDeploy Include="DataModels\WeatherAppModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>WeatherAppModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="DataModels\WeatherAppModel.edmx.diagram">
-      <DependentUpon>WeatherAppModel.edmx</DependentUpon>
-    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -130,19 +101,7 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="DataModels\WeatherAppModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>WeatherAppModel.edmx</DependentUpon>
-      <LastGenOutput>WeatherAppModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="DataModels\WeatherAppModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>WeatherAppModel.edmx</DependentUpon>
-      <LastGenOutput>WeatherAppModel.cs</LastGenOutput>
-      <CustomToolNamespace> WeatherApp.Domain.Models</CustomToolNamespace>
-    </Content>
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
