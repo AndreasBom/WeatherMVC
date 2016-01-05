@@ -20,7 +20,7 @@ namespace WeatherApp.Domain.Models
         FreezingDrizzle
     }
 
-    [Table("Weather")]
+    [Table("Weather", Schema = "weatherApp")]
     public class Weather
     {
         [Key]

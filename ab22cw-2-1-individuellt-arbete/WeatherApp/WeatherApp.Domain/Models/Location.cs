@@ -6,7 +6,8 @@ using Newtonsoft.Json.Linq;
 
 namespace WeatherApp.Domain.Models
 {
-    [Table("Location")]
+    
+    [Table("Location", Schema = "weatherApp")]
     public class Location
     {
         [Key]

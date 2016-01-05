@@ -70,6 +70,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Authentications\IdentityModels.cs" />
+    <Compile Include="Migrations\201601050901044_WeatherDb.cs" />
+    <Compile Include="Migrations\201601050901044_WeatherDb.Designer.cs">
+      <DependentUpon>201601050901044_WeatherDb.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Location.cs" />
     <Compile Include="Models\Weather.cs" />
@@ -92,7 +96,11 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201601050901044_WeatherDb.resx">
+      <DependentUpon>201601050901044_WeatherDb.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
