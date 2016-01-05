@@ -227,6 +227,7 @@
     <Content Include="Media\7.png" />
     <Content Include="Media\8.png" />
     <Content Include="Media\9.png" />
+    <Content Include="Media\clouds-and-blue-sky.jpg" />
     <Content Include="Scripts\app.js" />
     <Content Include="Scripts\autocomplete.js" />
     <Content Include="Scripts\bootstrap.js" />

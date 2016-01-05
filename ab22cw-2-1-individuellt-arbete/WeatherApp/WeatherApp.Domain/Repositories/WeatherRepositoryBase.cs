@@ -44,7 +44,7 @@ namespace WeatherApp.Domain.Repositories
 
         public Location GetLocationByPlaceId(string placeId)
         {
-            return QueryLocations().SingleOrDefault(l => l.PlaceId == placeId);
+            return QueryLocations().SingleOrDefault(l => l.PlaceCode == placeId);
         }
 
         public Location GetLocation(string location)

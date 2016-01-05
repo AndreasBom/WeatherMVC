@@ -40,14 +40,14 @@ namespace WeatherApp.Domain.Services
                 throw new GeoLocationNotFoundException();
             }
 
-            var locationInDatabase = _repository.GetLocationByPlaceId(locationObj.PlaceId);
+            var locationInDatabase = _repository.GetLocationByPlaceId(locationObj.PlaceCode);
 
             if (locationInDatabase == null)
             {
                 _repository.AddLocation(locationObj);
                 _repository.Save();
             }
-            return _repository.GetLocationByPlaceId(locationObj.PlaceId);
+            return _repository.GetLocationByPlaceId(locationObj.PlaceCode);
         }
 
         public override void UpdateWeather(Location location)

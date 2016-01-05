@@ -10,7 +10,6 @@ namespace WeatherApp.Domain.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
-            ContextKey = "WeatherApp.Domain.Models.WeatherForcastDbContext";
         }
 
         protected override void Seed(WeatherApp.Domain.Models.WeatherForcastDbContext context)

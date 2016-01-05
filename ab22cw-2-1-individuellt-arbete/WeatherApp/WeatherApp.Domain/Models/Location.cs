@@ -11,7 +11,7 @@ namespace WeatherApp.Domain.Models
     {
         [Key]
         public int LocationId { get; set; }
-        public string PlaceId { get; set; }
+        public string PlaceCode { get; set; }
         public float Latitude { get; set; }
         public float Longitude { get; set; }
         public string LocationText { get; set; }
@@ -21,7 +21,7 @@ namespace WeatherApp.Domain.Models
 
         public Location(JToken location)
         {
-            PlaceId = (string) location["results"][0]["place_id"];
+            PlaceCode = (string) location["results"][0]["place_id"];
             Latitude = (float)Math.Round((float)location["results"][0]["geometry"]["location"]["lat"], 6);
             Longitude = (float)Math.Round((float)location["results"][0]["geometry"]["location"]["lng"], 6);
             LocationText = (string)location["results"][0]["address_components"][0]["long_name"];
