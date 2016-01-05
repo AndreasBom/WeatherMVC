@@ -6,6 +6,7 @@ using System.Net;
 using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using NGeo.GeoNames;
 using WeatherApp.Domain.Models;
@@ -37,6 +38,8 @@ namespace WeatherApp.Domain.WebServices
 
             string requestUrl = $"{location}, {Country},&key={ApiKey}";
             var request = (HttpWebRequest)WebRequest.Create($"{BaseUrl}{requestUrl}");
+            request.Method = WebRequestMethods.Http.Get;
+            request.ContentType = "application/json; charset=utf-8";
 
             using (var response = request.GetResponse())
             using (var reader = new StreamReader(response.GetResponseStream()))
@@ -46,7 +49,7 @@ namespace WeatherApp.Domain.WebServices
 
             //Parse to JObject
             var jObj = JObject.Parse(rawJson);
-
+            
             //Thrown an exception if location is not found 
             if (jObj.Value<string>("status") == "ZERO_RESULTS")
             {

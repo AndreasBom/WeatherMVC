@@ -63,11 +63,11 @@ namespace WeatherApp.Controllers
             return Json(model, JsonRequestBehavior.AllowGet);
         }
 
-        protected override void OnException(ExceptionContext filterContext)
-        {
-            filterContext.ExceptionHandled = true;
-            filterContext.Result = RedirectToAction("Index", "Error");
-        }
+        //protected override void OnException(ExceptionContext filterContext)
+        //{
+        //    filterContext.ExceptionHandled = true;
+        //    filterContext.Result = RedirectToAction("Index", "Error");
+        //}
 
 
     }

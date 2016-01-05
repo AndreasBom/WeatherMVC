@@ -11,7 +11,8 @@ namespace WeatherApp.Controllers
         // GET: Error
         public ActionResult Index()
         {
-            return Json(new {}, JsonRequestBehavior.AllowGet);
+            var error = new {error = "Somthing went wrong"};
+            return Json(error, JsonRequestBehavior.AllowGet);
         }
     }
 }
