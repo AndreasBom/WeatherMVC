@@ -16,6 +16,7 @@
     <img id="todays-symbol" src="~/Media/@(Model.Weather.Where(s=>s.ValidTime.Day == DateTime.Now.Day).Select(s=>s.Symbol).FirstOrDefault()).png" />
     <h3 id="title-temperature">@Model.Weather.Where(w => w.ValidTime.Date == DateTime.Now.Date).Select(t => t.Temperature).FirstOrDefault()&deg;C</h3>
     <p id="nameOfDay-layer">Idag har <span id="nameOfDay"></span> namnsdag.</p>
+
 </div>
 
 <div id="search-layer" class="form-group">

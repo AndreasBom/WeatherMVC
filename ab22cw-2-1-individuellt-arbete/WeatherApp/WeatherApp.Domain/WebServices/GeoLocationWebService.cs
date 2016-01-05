@@ -28,6 +28,7 @@ namespace WeatherApp.Domain.WebServices
             ApiKey = AppSettings.Get("geoLocationApiKey");
         }
 
+        
         public Location AddressToCoordinates(string location)
         {
             var webClient = new WebClient();
@@ -49,7 +50,7 @@ namespace WeatherApp.Domain.WebServices
             //Thrown an exception if location is not found 
             if (jObj.Value<string>("status") == "ZERO_RESULTS")
             {
-                throw new GeoLocationNotFoundException();
+                throw new GeoLocationNotFoundException("No location found");
             }
 
             return new Location(jObj);

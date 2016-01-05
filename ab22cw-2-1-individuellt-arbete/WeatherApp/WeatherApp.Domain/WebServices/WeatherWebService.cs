@@ -45,17 +45,11 @@ namespace WeatherApp.Domain.WebServices
         public Location GetLocation(string location)
         {
             GeoLocationWebService geoWebservice = new GeoLocationWebService();
-            Location locationObj;
 
-            try
-            {
-                locationObj = geoWebservice.AddressToCoordinates(location);
-            }
-            catch(GeoLocationNotFoundException)
-            {
-                throw new GeoLocationNotFoundException();
-            }
+            var locationObj = geoWebservice.AddressToCoordinates(location);
             return locationObj;
+
+
         }
 
 

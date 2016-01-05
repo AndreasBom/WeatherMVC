@@ -27,18 +27,17 @@ namespace WeatherApp.Domain.Services
             _webservice = webservice;
         }
 
+
+        /// <summary>
+        /// Looks up lat and lng from google geocode, based on a location name.
+        /// </summary>
+        /// <param name="location"></param>
+        /// <returns>Location object</returns>
         public override Location GetLocation(string location)
         {
             Location locationObj;
 
-            try
-            {
-                locationObj = _webservice.GetLocation(location);
-            }
-            catch (GeoLocationNotFoundException)
-            {
-                throw new GeoLocationNotFoundException();
-            }
+            locationObj = _webservice.GetLocation(location);
 
             var locationInDatabase = _repository.GetLocationByPlaceId(locationObj.PlaceCode);
 
@@ -47,29 +46,43 @@ namespace WeatherApp.Domain.Services
                 _repository.AddLocation(locationObj);
                 _repository.Save();
             }
+
             return _repository.GetLocationByPlaceId(locationObj.PlaceCode);
         }
 
+
+
+        /// <summary>
+        /// Updates weather to Location object
+        /// 
+        /// Returns true if fetched from webservice and false if fetched from database
+        /// 
+        /// </summary>
+        /// <param name="location"></param>
+        /// <returns>bool</returns>
         public override void UpdateWeather(Location location)
         {
-
+            
             if (location.WeatherForcasts == null ||
                 location.WeatherForcasts.Any() == false ||
                location.WeatherForcasts.Select(w => w.NextUpdate).FirstOrDefault() < DateTime.Now)
             {
                 if (location.WeatherForcasts != null)
+                {
                     foreach (var weather in location.WeatherForcasts.ToList())
                     {
                         _repository.DeleteWeather(weather.WeatherId);
                     }
+                }
 
                 foreach (var weather in _webservice.GetWeather(location))
                 {
                     weather.NextUpdate = DateTime.Now.AddMinutes(15);
                     _repository.AddWeather(weather);
+                    
                 }
+                _repository.Save();
             }
-            _repository.Save();
         }
 
         public override IEnumerable<Location> GetAllLocations()

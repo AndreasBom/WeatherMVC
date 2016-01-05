@@ -22,12 +22,15 @@ namespace WeatherApp.Views.Weather
         private readonly IWeatherService _weatherService;
         
 
+
+        //default constructor
         public WeatherIndexViewModel()
         {
             _weatherService = new WeatherService(new WeatherRepository(), new WeatherWebService());
 
         }
 
+        //injected constructor
         public WeatherIndexViewModel(IWeatherRepository repository, IWeatherWebService webservice)
         {
             _weatherService = new WeatherService(repository, webservice);
@@ -35,6 +38,7 @@ namespace WeatherApp.Views.Weather
 
         [Required(ErrorMessage = "Skriv in en plats")]
         [DisplayName("Sök väder")]
+        [MaxLength(100)]
         public string LocationInput { get; set; }
 
         public Location LocationObject => _weatherService.GetLocation(LocationInput);
@@ -54,10 +58,12 @@ namespace WeatherApp.Views.Weather
             return culture.DateTimeFormat.GetDayName(date.DayOfWeek);
         }
 
+        //Returns a filtered list (5 objects) with weather
         public IEnumerable<Domain.Models.Weather> Weather
         {
             get
             {
+                //Updates weather and returns true if webservice was used and false if repository was used
                 _weatherService.UpdateWeather(LocationObject);
                 var location = _weatherService.GetLocation(LocationInput);
 
@@ -73,7 +79,7 @@ namespace WeatherApp.Views.Weather
                                 && weather.ValidTime.Hour == 12
                                 select weather).Take(5).ToList();
 
-            if (DateTime.Now.Hour > 12)
+            if (DateTime.Now.Hour >= 12)
             {
                 filteredList.Add((from weather in weatherList
                                   where weather.ValidTime > DateTime.Now

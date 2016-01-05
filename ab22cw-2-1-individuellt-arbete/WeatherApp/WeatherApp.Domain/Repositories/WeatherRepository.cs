@@ -24,7 +24,7 @@ namespace WeatherApp.Domain.Repositories
         {
             _context.Weather.Add(weather);
         }
-        
+
         public override void UpdateWeather(Weather weather)
         {
             _context.Entry(weather).State = EntityState.Modified;
@@ -122,7 +122,7 @@ namespace WeatherApp.Domain.Repositories
     //        //}
     //        //catch (SqlException ex)
     //        //{
-                
+
     //        //}
     //        catch (Exception ex)
     //        {

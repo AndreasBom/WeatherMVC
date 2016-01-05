@@ -7,6 +7,7 @@ using System.Web.Services.Description;
 using WeatherApp.Domain.Repositories;
 using WeatherApp.Domain.Services;
 using WeatherApp.Domain.WebServices;
+using WeatherApp.Models;
 using WeatherApp.Views.Weather;
 using WebGrease.Css.Ast.Selectors;
 
@@ -29,26 +30,16 @@ namespace WeatherApp.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Index(FormCollection collection)
+        public virtual ActionResult Index(FormCollection collection)
         {
             var model = new WeatherIndexViewModel();
+            if (TryUpdateModel(model, new[] { "LocationInput" }, collection))
+            {
+                Session[SessionLocation] = model.LocationInput;
+            }
 
-            try
-            {
-                if (TryUpdateModel(model, new[] { "LocationInput" }, collection))
-                {
-                    
-                    Session[SessionLocation] = model.LocationInput;
-                }
-            }
-            catch (GeoLocationNotFoundException)
-            {
-                ModelState.AddModelError("LocationInput", "Platsen hittades inte");
-            }
-            finally
-            {
-                model.LocationInput = (string)Session[SessionLocation];
-            }
+            model.LocationInput = (string)Session[SessionLocation];
+
             return View(model);
         }
 
@@ -56,11 +47,11 @@ namespace WeatherApp.Controllers
         {
             var model = new WeatherIndexViewModel
             {
-                LocationInput = (string) Session[SessionLocation]
+                LocationInput = (string)Session[SessionLocation]
             };
             var temp = from t in model.Weather
-                select new {day = model.DayOfWeek(t.ValidTime), temp = t.Temperature};
-            
+                       select new { day = model.DayOfWeek(t.ValidTime), temp = t.Temperature };
+
             return Json(temp, JsonRequestBehavior.AllowGet);
         }
 
@@ -71,6 +62,13 @@ namespace WeatherApp.Controllers
 
             return Json(model, JsonRequestBehavior.AllowGet);
         }
+
+        protected override void OnException(ExceptionContext filterContext)
+        {
+            filterContext.ExceptionHandled = true;
+            filterContext.Result = RedirectToAction("Index", "Error");
+        }
+
 
     }
 

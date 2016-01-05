@@ -17,3 +17,4 @@ C:\Users\Andre\Documents\Copy\Skola\Linneuniversitetet\ASP MVC\Project\ab22cw-2-
 C:\Users\Andre\Documents\Copy\Skola\Linneuniversitetet\ASP MVC\Project\ab22cw-2-1-individuellt-arbete\WeatherApp\WeatherApp.Domain\bin\Debug\NGeo.dll
 C:\Users\Andre\Documents\Copy\Skola\Linneuniversitetet\ASP MVC\Project\ab22cw-2-1-individuellt-arbete\WeatherApp\WeatherApp.Domain\obj\Debug\WeatherApp.Domain.Migrations.WeatherDb.resources
 C:\Users\Andre\Documents\Copy\Skola\Linneuniversitetet\ASP MVC\Project\ab22cw-2-1-individuellt-arbete\WeatherApp\WeatherApp.Domain\obj\Debug\WeatherApp.Domain.csproj.GenerateResource.Cache
+C:\Users\Andre\Documents\Copy\Skola\Linneuniversitetet\ASP MVC\Project\ab22cw-2-1-individuellt-arbete\WeatherApp\WeatherApp.Domain\obj\Debug\WeatherApp.Domain.Migrations.WeatherDb1.resources

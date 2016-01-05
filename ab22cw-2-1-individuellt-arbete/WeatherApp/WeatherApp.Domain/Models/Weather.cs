@@ -27,6 +27,7 @@ namespace WeatherApp.Domain.Models
         public int WeatherId { get; set; }
         [ForeignKey("Location")]
         public int LocationId { get; set; }
+        [Required]
         public DateTime NextUpdate { get; set; }
         public DateTime ValidTime { get; set; } //validTime
         public float Temperature { get; set; } //t

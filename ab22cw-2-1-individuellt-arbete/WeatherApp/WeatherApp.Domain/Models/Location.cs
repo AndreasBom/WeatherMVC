@@ -12,9 +12,15 @@ namespace WeatherApp.Domain.Models
     {
         [Key]
         public int LocationId { get; set; }
+        [Required]
+        [StringLength(100)]
         public string PlaceCode { get; set; }
+        [Required]
         public float Latitude { get; set; }
+        [Required]
         public float Longitude { get; set; }
+        [Required]
+        [MaxLength(50)]
         public string LocationText { get; set; }
 
         public virtual ICollection<Weather> WeatherForcasts { get; set; }

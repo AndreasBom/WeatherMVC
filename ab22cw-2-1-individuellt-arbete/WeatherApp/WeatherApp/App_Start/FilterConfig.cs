@@ -1,5 +1,6 @@
 ﻿using System.Web;
 using System.Web.Mvc;
+using WeatherApp.Models;
 
 namespace WeatherApp
 {
@@ -8,6 +9,7 @@ namespace WeatherApp
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
             filters.Add(new HandleErrorAttribute());
+            filters.Add(new ExceptionHandler());
         }
     }
 }
