@@ -1,28 +1,39 @@
 ﻿google.load('visualization', '1', { packages: ['corechart', 'line'] });
 
 
-$(document).ready(function() {
+$(document).ready(function () {
     //For TESTING
     var urlToData = function () {
         if (document.location.hostname === "localhost") {
-            return "Weather/GetTempData";
+            if (document.location.toString().indexOf("Weather") > -1) {
+                return "GetTempData";
+            } else {
+                return "Weather/GetTempData";
+            }
+        } else {
+            if (document.location.toString().indexOf("Weather") > -1) {
+                return "GetTempData";
+            } else {
+                return "ab22cw/Weather/GetTempData";
+            }
         }
-        return "ab22cw/Weather/GetTempData";
+        
+
     }
 
     //Fetch temperature data from server
-    $(function() {
+    $(function () {
         $.ajax({
             type: 'GET',
             dataType: 'json',
             contentType: 'application/json',
             url: urlToData(),
             data: '{}',
-            success: function(response) {
+            success: function (response) {
                 console.log("Temperature data successfully loaded");
                 drawTemperature(response); // calling method                      
             },
-            error: function() {
+            error: function () {
                 $("#graph").html("Ett fel inträffade när data skulle hämtas");
             }
         });
@@ -34,10 +45,10 @@ $(document).ready(function() {
             //Add Columns
             data.addColumn('string', 'Day');
             data.addColumn('number', '\xB0C');
-            
+
             //Add data to rows
             for (var i = 0; i < jsonData.length; i++) {
-                data.addRow([jsonData[i].day,jsonData[i].temp]);
+                data.addRow([jsonData[i].day, jsonData[i].temp]);
             }
 
             // Render chart

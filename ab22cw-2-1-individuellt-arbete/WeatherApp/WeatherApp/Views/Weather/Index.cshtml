@@ -28,7 +28,8 @@
         @Html.LabelFor(m => m.LocationInput)
         @Html.EditorFor(m => m.LocationInput, new { htmlAttributes = new { @class = "form-control", id = "search-field" } })
         @Html.ValidationMessageFor(m => m.LocationInput, null, new { @class = "alert-danger" })
-        <button class="btn btn-group-lg">Hämta</button>
+        <button class="btn btn-group-lg ">Hämta</button>
+        @Html.ValidationMessage("LocationNotFound", new { @class = "alert-danger" })
     }
     
 </div>

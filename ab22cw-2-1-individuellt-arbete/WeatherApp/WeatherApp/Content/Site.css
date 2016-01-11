@@ -98,7 +98,7 @@ textarea {
 #search-layer {
     float: right;
     display: inline-block;
-    margin-top: 30px;
+    margin-top: 40px;
     margin-right: 20px;
 }
 
@@ -144,4 +144,53 @@ textarea {
     display: block;
     clear: both;
 }
+
+.partial-login-layer {
+    position: relative;
+    right: 140px;
+}
+
+#registerLink {
+    color: lightgray;
+    margin: 10px 4px 2px 4px;
+    padding: 4px;
+}
+
+#registerLink:hover {
+    background: none;
+    color: gray;
+}
+
+#loginLink {
+    color: lightgray;
+    margin: 10px 4px 2px 4px;
+    padding: 4px;
+}
+
+#loginLink:hover {
+    background: none;
+    color: gray;
+}
+
+a {
+    color: lightgray;
+}
+
+a:hover {
+    background: none !important; 
+    color: gray;
+}
+
+#loginForm {
+    width: 400px;
+    margin: 0 auto;
+}
+
+.btnFloatLeft {
+    float: left;
+    clear: both;
+    
+}
+
+
 

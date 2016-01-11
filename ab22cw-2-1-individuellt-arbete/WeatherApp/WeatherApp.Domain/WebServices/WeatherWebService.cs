@@ -123,7 +123,7 @@ namespace WeatherApp.Domain.WebServices
             {
                locationObj  = geoWebservice.AddressToCoordinates(location);
             }
-            catch (Exception ex)
+            catch (GeoLocationNotFoundException ex)
             {
 
                 throw ex;

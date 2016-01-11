@@ -41,7 +41,7 @@ namespace WeatherApp.Domain.Services
             {
                 locationObj = _webservice.GetLocation(location);
             }
-            catch (Exception ex)
+            catch (GeoLocationNotFoundException ex)
             {
 
                 throw ex;

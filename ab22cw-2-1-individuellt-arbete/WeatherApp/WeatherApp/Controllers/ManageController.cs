@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
+using WeatherApp.Domain.Services;
 using WeatherApp.Models;
 
 namespace WeatherApp.Controllers
@@ -74,6 +75,31 @@ namespace WeatherApp.Controllers
             };
             return View(model);
         }
+
+
+        //Save default start location to xml-file
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult SaveDefaultLocation(FormCollection collection)
+        {
+            var model = new IndexViewModel();
+
+            if (TryUpdateModel(model, new[] {"StartLocation"}, collection))
+            {
+                var path = HttpContext.Server.MapPath("~/App_Data/XML/config.xml");
+                var writer = new DefaultConfig(path);
+                writer.SetDefaultLocation(model.StartLocation);
+                TempData["savedToXml"] = "Inställningen sparades";
+            }
+            else
+            {
+                TempData["savedToXml"] = "Fel!Försök igen.";
+            }
+
+            return View("Index", model);
+        }
+
+
 
         //
         // POST: /Manage/RemoveLogin
@@ -297,15 +323,15 @@ namespace WeatherApp.Controllers
             });
         }
 
-        //
-        // POST: /Manage/LinkLogin
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult LinkLogin(string provider)
-        {
-            // Request a redirect to the external login provider to link a login for the current user
-            return new AccountController.ChallengeResult(provider, Url.Action("LinkLoginCallback", "Manage"), User.Identity.GetUserId());
-        }
+        ////
+        //// POST: /Manage/LinkLogin
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public ActionResult LinkLogin(string provider)
+        //{
+        //    // Request a redirect to the external login provider to link a login for the current user
+        //    return new AccountController.ChallengeResult(provider, Url.Action("LinkLoginCallback", "Manage"), User.Identity.GetUserId());
+        //}
 
         //
         // GET: /Manage/LinkLoginCallback

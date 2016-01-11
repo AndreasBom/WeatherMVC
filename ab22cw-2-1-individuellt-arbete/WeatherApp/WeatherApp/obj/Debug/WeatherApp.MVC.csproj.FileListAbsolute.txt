@@ -150,3 +150,7 @@ C:\Users\Andre\Documents\Copy\Skola\Linneuniversitetet\ASP MVC\Project\ab22cw-2-
 C:\Users\Andre\Documents\Copy\Skola\Linneuniversitetet\ASP MVC\Project\ab22cw-2-1-individuellt-arbete\WeatherApp\WeatherApp\bin\Microsoft.Practices.Unity.RegistrationByConvention.xml
 C:\Users\Andre\Documents\Copy\Skola\Linneuniversitetet\ASP MVC\Project\ab22cw-2-1-individuellt-arbete\WeatherApp\WeatherApp\bin\UtilityForTesting.dll
 C:\Users\Andre\Documents\Copy\Skola\Linneuniversitetet\ASP MVC\Project\ab22cw-2-1-individuellt-arbete\WeatherApp\WeatherApp\bin\UtilityForTesting.pdb
+C:\Users\Andre\Documents\Copy\Skola\Linneuniversitetet\ASP MVC\Project\ab22cw-2-1-individuellt-arbete\WeatherApp\WeatherApp\obj\Debug\WeatherApp.Migrations.changeSchema.resources
+C:\Users\Andre\Documents\Copy\Skola\Linneuniversitetet\ASP MVC\Project\ab22cw-2-1-individuellt-arbete\WeatherApp\WeatherApp\obj\Debug\WeatherApp.MVC.csproj.GenerateResource.Cache
+C:\Users\Andre\Documents\Copy\Skola\Linneuniversitetet\ASP MVC\Project\ab22cw-2-1-individuellt-arbete\WeatherApp\WeatherApp\obj\Debug\WeatherApp.Migrations.test.resources
+C:\Users\Andre\Documents\Copy\Skola\Linneuniversitetet\ASP MVC\Project\ab22cw-2-1-individuellt-arbete\WeatherApp\WeatherApp\obj\Debug\WeatherApp.Migrations.ChangingBack.resources

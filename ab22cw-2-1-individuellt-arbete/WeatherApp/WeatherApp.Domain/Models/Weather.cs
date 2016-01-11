@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
-using WeatherApp.Models;
+
 
 namespace WeatherApp.Domain.Models
 {

@@ -5,7 +5,10 @@ using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
+using WeatherApp.Domain.Authentications;
 using WeatherApp.Models;
+using ApplicationDbContext = WeatherApp.Models.Authentications.ApplicationDbContext;
+using ApplicationUser = WeatherApp.Models.Authentications.ApplicationUser;
 
 namespace WeatherApp
 {

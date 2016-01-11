@@ -198,7 +198,21 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201601111624435_changeSchema.cs" />
+    <Compile Include="Migrations\201601111624435_changeSchema.Designer.cs">
+      <DependentUpon>201601111624435_changeSchema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201601111634323_test.cs" />
+    <Compile Include="Migrations\201601111634323_test.Designer.cs">
+      <DependentUpon>201601111634323_test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201601111649387_ChangingBack.cs" />
+    <Compile Include="Migrations\201601111649387_ChangingBack.Designer.cs">
+      <DependentUpon>201601111649387_ChangingBack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Mocks\WeatherWebServiceMock.cs" />
+    <Compile Include="Models\Authentications\IdentityModels.cs" />
     <Compile Include="Models\ExceptionHandler.cs" />
     <Compile Include="Views\Account\ViewModels\AccountViewModels.cs" />
     <Compile Include="Views\Manage\ViewModels\ManageViewModels.cs" />
@@ -207,10 +221,15 @@
     <Compile Include="Views\Weather\WeatherIndexViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\aspnet-WeatherApp-20151217031317.mdf" />
+    <Content Include="App_Data\aspnet-WeatherApp-20151217031317_log.ldf">
+      <DependentUpon>aspnet-WeatherApp-20151217031317.mdf</DependentUpon>
+    </Content>
     <Content Include="App_Data\WeatherForcasts.mdf" />
     <Content Include="App_Data\WeatherForcasts_log.ldf">
       <DependentUpon>WeatherForcasts.mdf</DependentUpon>
     </Content>
+    <Content Include="App_Data\XML\config.xml" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
@@ -266,10 +285,7 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
-    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
-    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
     <Content Include="Views\Account\ForgotPassword.cshtml" />
     <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
@@ -308,6 +324,17 @@
       <Project>{d7d44f18-8a06-4249-8d4a-2aed0d7fb71b}</Project>
       <Name>WeatherApp.Domain</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201601111624435_changeSchema.resx">
+      <DependentUpon>201601111624435_changeSchema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201601111634323_test.resx">
+      <DependentUpon>201601111634323_test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201601111649387_ChangingBack.resx">
+      <DependentUpon>201601111649387_ChangingBack.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

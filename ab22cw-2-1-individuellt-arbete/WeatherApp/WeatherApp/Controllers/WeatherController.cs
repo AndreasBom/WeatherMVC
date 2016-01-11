@@ -20,10 +20,14 @@ namespace WeatherApp.Controllers
         // GET: Weather
         public ActionResult Index()
         {
+            var reader = new DefaultConfig(HttpContext.Server.MapPath("~/App_Data/XML/config.xml"));
+            var location = reader.GetDefaultLocation();
             var model = new WeatherIndexViewModel
             {
-                LocationInput = "Kalmar"
+                LocationInput = location
             };
+
+            model.LocationObject = model.WeatherService.GetLocation(model.LocationInput);
             Session[SessionLocation] = model.LocationInput;
             return View(model);
         }
@@ -37,10 +41,20 @@ namespace WeatherApp.Controllers
             
             if (TryUpdateModel(model, new[] {"LocationInput"}, collection))
             {
-                Session[SessionLocation] = model.LocationInput;
+                try
+                {
+                    model.LocationObject = model.WeatherService.GetLocation(model.LocationInput);
+                    Session[SessionLocation] = model.LocationInput;
+                }
+                catch (GeoLocationNotFoundException)
+                {
+                    ModelState.AddModelError("LocationNotFound", "Platsen hittades inte");
+                    model.LocationInput = (string)Session[SessionLocation];
+                    model.LocationObject = model.WeatherService.GetLocation(model.LocationInput);
+                    return View(model);
+                }
+                
             }
-
-
             model.LocationInput = (string)Session[SessionLocation];
 
             return View(model);
@@ -52,19 +66,24 @@ namespace WeatherApp.Controllers
             {
                 LocationInput = (string)Session[SessionLocation]
             };
+            model.LocationObject = model.WeatherService.GetLocation(model.LocationInput);
+
             var temp = from t in model.Weather
                        select new { day = model.DayOfWeek(t.ValidTime), temp = t.Temperature };
 
             return Json(temp, JsonRequestBehavior.AllowGet);
         }
 
-        public ActionResult GetAutoCompleteData()
-        {
-            var service = new WeatherService();
-            var model = service.GetAllLocations();
+        
 
-            return Json(model, JsonRequestBehavior.AllowGet);
-        }
+
+        //public ActionResult GetAutoCompleteData()
+        //{
+        //    var service = new WeatherService();
+        //    var model = service.GetAllLocations();
+
+        //    return Json(model, JsonRequestBehavior.AllowGet);
+        //}
 
         //protected override void OnException(ExceptionContext filterContext)
         //{

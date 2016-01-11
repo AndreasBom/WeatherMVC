@@ -7,9 +7,6 @@ using System.Threading.Tasks;
 
 namespace WeatherApp.Domain.Models
 {
-
-    
-
     public class WeatherForcastDbContext : DbContext
     {
         public WeatherForcastDbContext()

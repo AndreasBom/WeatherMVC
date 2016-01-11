@@ -88,6 +88,9 @@
     <Compile Include="Repositories\IWeatherRepository.cs" />
     <Compile Include="Repositories\WeatherRepository.cs" />
     <Compile Include="Repositories\WeatherRepositoryBase.cs" />
+    <Compile Include="Services\DefaultConfig.cs" />
+    <Compile Include="Services\DefaultConfigBase.cs" />
+    <Compile Include="Services\IDefaultConfig.cs" />
     <Compile Include="Services\IWeatherService.cs" />
     <Compile Include="Services\WeatherService.cs" />
     <Compile Include="Services\WeatherServiceBase.cs" />

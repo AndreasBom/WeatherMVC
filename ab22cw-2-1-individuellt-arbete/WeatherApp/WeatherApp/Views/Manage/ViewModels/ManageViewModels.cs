@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNet.Identity;
 using Microsoft.Owin.Security;
@@ -12,6 +13,11 @@ namespace WeatherApp.Models
         public string PhoneNumber { get; set; }
         public bool TwoFactor { get; set; }
         public bool BrowserRemembered { get; set; }
+        [Required]
+        [StringLength(100)]
+        [DisplayName("Förinställd plats")]
+        public string StartLocation { get; set; }
+
     }
 
     public class ManageLoginsViewModel

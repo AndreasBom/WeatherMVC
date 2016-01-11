@@ -10,7 +10,10 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
+using WeatherApp.Domain.Authentications;
 using WeatherApp.Models;
+using ApplicationDbContext = WeatherApp.Models.Authentications.ApplicationDbContext;
+using ApplicationUser = WeatherApp.Models.Authentications.ApplicationUser;
 
 namespace WeatherApp
 {

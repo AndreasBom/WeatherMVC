@@ -20,7 +20,8 @@ namespace WeatherApp.Views.Weather
     public class WeatherIndexViewModel
     {
         private readonly IWeatherService _weatherService;
-        
+
+        public IWeatherService WeatherService => _weatherService;
 
 
         //default constructor
@@ -41,7 +42,9 @@ namespace WeatherApp.Views.Weather
         [MaxLength(100)]
         public string LocationInput { get; set; }
 
-        public Location LocationObject => _weatherService.GetLocation(LocationInput);
+        public Location LocationObject { get; set; }
+
+        //public Location LocationObject => _weatherService.GetLocation(LocationInput);
         public string DayOfWeekToday
         {
             get
