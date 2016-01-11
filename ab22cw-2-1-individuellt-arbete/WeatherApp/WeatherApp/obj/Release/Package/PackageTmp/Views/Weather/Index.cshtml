@@ -1,4 +1,6 @@
 ﻿@using System.Configuration
+@using Microsoft.Ajax.Utilities
+@using GlobalScope = UtilityForTesting.Util.GlobalScope
 @model WeatherApp.Views.Weather.WeatherIndexViewModel
 
 @{
@@ -19,47 +21,48 @@
 
 </div>
 
-    <div id="search-layer" class="form-group">
-        @using (Html.BeginForm())
-        {
-            @Html.AntiForgeryToken()
-            @Html.LabelFor(m => m.LocationInput)
-            @Html.EditorFor(m => m.LocationInput, new { htmlAttributes = new { @class = "form-control", id="search-field"} })
-            @Html.ValidationMessageFor(m => m.LocationInput, null, new { @class = "alert-danger" })
-            <button class="btn btn-group-lg">Hämta</button>
-        }
-    </div>
-
-
-    <div id="graph">
-
-    </div>
-        <div class="row">
-            <ul class="list-unstyled list-inline">
-                <li class="col-sm-1" style="color: white;">0</li>
-                @foreach (var m in Model.Weather)
-                {
-                    <li class="col-sm-2">
-                        <img src="~/Media/@(m.Symbol).png" class="img-responsive" />
-                        <div id="temperature">@m.Temperature&deg;</div>
-                        <div id="valid-date-layer">
-                            <h3 id="valid-date-day">@Model.DayOfWeek(m.ValidTime)</h3>
-                            <p id="valid-date">@m.ValidTime.ToString("yyyy-MM-dd") </p>
-                        </div>
-                    </li>
-                }
-
-            </ul>
-    </div>
-    @section scripts{
-        @*Selects text when click on input*@
-        <script>
-            $(".form-control").on('click', function () {
-                $(this).select();
-            });
-        </script>
-        <script src="~/Scripts/app.js"></script>
-        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-        <script src="~/Scripts/graph.js"></script>
-</div>
+<div id="search-layer" class="form-group">
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.LabelFor(m => m.LocationInput)
+        @Html.EditorFor(m => m.LocationInput, new { htmlAttributes = new { @class = "form-control", id = "search-field" } })
+        @Html.ValidationMessageFor(m => m.LocationInput, null, new { @class = "alert-danger" })
+        <button class="btn btn-group-lg">Hämta</button>
     }
+    
+</div>
+
+
+<div id="graph">
+
+</div>
+<div class="row">
+    <ul class="list-unstyled list-inline">
+        <li class="col-sm-1" style="color: white;">0</li>
+        @foreach (var m in Model.Weather)
+        {
+            <li class="col-sm-2">
+                <img src="~/Media/@(m.Symbol).png" class="img-responsive" />
+                <div id="temperature">@m.Temperature&deg;</div>
+                <div id="valid-date-layer">
+                    <h3 id="valid-date-day">@Model.DayOfWeek(m.ValidTime)</h3>
+                    <p id="valid-date">@m.ValidTime.ToString("yyyy-MM-dd") </p>
+                </div>
+            </li>
+        }
+
+    </ul>
+</div>
+@section scripts{
+    @*Selects text when click on input*@
+    <script>
+        $(".form-control").on('click', function () {
+            $(this).select();
+        });
+    </script>
+    <script src="~/Scripts/app.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script src="~/Scripts/graph.js"></script>
+
+}

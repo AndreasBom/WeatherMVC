@@ -18,3 +18,7 @@ C:\Users\Andre\Documents\Copy\Skola\Linneuniversitetet\ASP MVC\Project\ab22cw-2-
 C:\Users\Andre\Documents\Copy\Skola\Linneuniversitetet\ASP MVC\Project\ab22cw-2-1-individuellt-arbete\WeatherApp\WeatherApp.Domain\obj\Debug\WeatherApp.Domain.Migrations.WeatherDb.resources
 C:\Users\Andre\Documents\Copy\Skola\Linneuniversitetet\ASP MVC\Project\ab22cw-2-1-individuellt-arbete\WeatherApp\WeatherApp.Domain\obj\Debug\WeatherApp.Domain.csproj.GenerateResource.Cache
 C:\Users\Andre\Documents\Copy\Skola\Linneuniversitetet\ASP MVC\Project\ab22cw-2-1-individuellt-arbete\WeatherApp\WeatherApp.Domain\obj\Debug\WeatherApp.Domain.Migrations.WeatherDb1.resources
+C:\Users\Andre\Documents\Copy\Skola\Linneuniversitetet\ASP MVC\Project\ab22cw-2-1-individuellt-arbete\WeatherApp\WeatherApp.Domain\bin\Debug\UtilityForTesting.dll
+C:\Users\Andre\Documents\Copy\Skola\Linneuniversitetet\ASP MVC\Project\ab22cw-2-1-individuellt-arbete\WeatherApp\WeatherApp.Domain\bin\Debug\UtilityForTesting.pdb
+C:\Users\Andre\Documents\Copy\Skola\Linneuniversitetet\ASP MVC\Project\ab22cw-2-1-individuellt-arbete\WeatherApp\WeatherApp.Domain\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\Andre\Documents\Copy\Skola\Linneuniversitetet\ASP MVC\Project\ab22cw-2-1-individuellt-arbete\WeatherApp\WeatherApp.Domain\bin\Debug\System.Net.Http.Formatting.xml

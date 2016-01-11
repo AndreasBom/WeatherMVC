@@ -2,13 +2,21 @@
 
 
 $(document).ready(function() {
+    //For TESTING
+    var urlToData = function () {
+        if (document.location.hostname === "localhost") {
+            return "Weather/GetTempData";
+        }
+        return "ab22cw/Weather/GetTempData";
+    }
+
     //Fetch temperature data from server
     $(function() {
         $.ajax({
             type: 'GET',
             dataType: 'json',
             contentType: 'application/json',
-            url: 'Weather/GetTempData',
+            url: urlToData(),
             data: '{}',
             success: function(response) {
                 console.log("Temperature data successfully loaded");

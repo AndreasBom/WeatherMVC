@@ -300,6 +300,10 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\UtilityForTesting\UtilityForTesting.csproj">
+      <Project>{b4d21655-e8a0-4563-88aa-612a41efa379}</Project>
+      <Name>UtilityForTesting</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WeatherApp.Domain\WeatherApp.Domain.csproj">
       <Project>{d7d44f18-8a06-4249-8d4a-2aed0d7fb71b}</Project>
       <Name>WeatherApp.Domain</Name>

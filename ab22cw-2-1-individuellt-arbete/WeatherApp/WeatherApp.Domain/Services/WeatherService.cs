@@ -37,7 +37,15 @@ namespace WeatherApp.Domain.Services
         {
             Location locationObj;
 
-            locationObj = _webservice.GetLocation(location);
+            try
+            {
+                locationObj = _webservice.GetLocation(location);
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
 
             var locationInDatabase = _repository.GetLocationByPlaceId(locationObj.PlaceCode);
 

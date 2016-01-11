@@ -1,0 +1,4 @@
+C:\Users\Andre\Documents\Copy\Skola\Linneuniversitetet\ASP MVC\Project\ab22cw-2-1-individuellt-arbete\WeatherApp\UtilityForTesting\bin\Release\UtilityForTesting.dll
+C:\Users\Andre\Documents\Copy\Skola\Linneuniversitetet\ASP MVC\Project\ab22cw-2-1-individuellt-arbete\WeatherApp\UtilityForTesting\bin\Release\UtilityForTesting.pdb
+C:\Users\Andre\Documents\Copy\Skola\Linneuniversitetet\ASP MVC\Project\ab22cw-2-1-individuellt-arbete\WeatherApp\UtilityForTesting\obj\Release\UtilityForTesting.dll
+C:\Users\Andre\Documents\Copy\Skola\Linneuniversitetet\ASP MVC\Project\ab22cw-2-1-individuellt-arbete\WeatherApp\UtilityForTesting\obj\Release\UtilityForTesting.pdb

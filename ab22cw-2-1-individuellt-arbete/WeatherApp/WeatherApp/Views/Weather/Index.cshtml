@@ -1,4 +1,6 @@
 ﻿@using System.Configuration
+@using Microsoft.Ajax.Utilities
+@using GlobalScope = UtilityForTesting.Util.GlobalScope
 @model WeatherApp.Views.Weather.WeatherIndexViewModel
 
 @{
@@ -28,6 +30,7 @@
         @Html.ValidationMessageFor(m => m.LocationInput, null, new { @class = "alert-danger" })
         <button class="btn btn-group-lg">Hämta</button>
     }
+    
 </div>
 
 

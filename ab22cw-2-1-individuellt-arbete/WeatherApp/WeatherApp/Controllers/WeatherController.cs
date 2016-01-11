@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Services.Description;
+using WeatherApp.Domain.Models;
 using WeatherApp.Domain.Repositories;
 using WeatherApp.Domain.Services;
 using WeatherApp.Domain.WebServices;
@@ -33,10 +34,12 @@ namespace WeatherApp.Controllers
         public virtual ActionResult Index(FormCollection collection)
         {
             var model = new WeatherIndexViewModel();
-            if (TryUpdateModel(model, new[] { "LocationInput" }, collection))
+            
+            if (TryUpdateModel(model, new[] {"LocationInput"}, collection))
             {
                 Session[SessionLocation] = model.LocationInput;
             }
+
 
             model.LocationInput = (string)Session[SessionLocation];
 
@@ -68,7 +71,6 @@ namespace WeatherApp.Controllers
         //    filterContext.ExceptionHandled = true;
         //    filterContext.Result = RedirectToAction("Index", "Error");
         //}
-
 
     }
 

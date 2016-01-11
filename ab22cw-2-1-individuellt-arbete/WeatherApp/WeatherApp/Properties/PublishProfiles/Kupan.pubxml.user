@@ -13,10 +13,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/17/2015 21:17:39</publishTime>
     </File>
     <File Include="App_Data/WeatherForcasts.mdf">
-      <publishTime>01/05/2016 08:36:21</publishTime>
+      <publishTime>01/06/2016 09:30:31</publishTime>
     </File>
     <File Include="App_Data/WeatherForcasts_log.ldf">
-      <publishTime>01/05/2016 08:36:21</publishTime>
+      <publishTime>01/06/2016 09:30:31</publishTime>
     </File>
     <File Include="bin/Antlr3.Runtime.dll">
       <publishTime>12/17/2015 15:13:02</publishTime>
@@ -123,6 +123,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="bin/roslyn/VBCSCompiler.exe.config">
       <publishTime>12/17/2015 15:13:13</publishTime>
     </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>05/07/2013 14:09:16</publishTime>
+    </File>
     <File Include="bin/System.Web.Helpers.dll">
       <publishTime>12/17/2015 15:13:01</publishTime>
     </File>
@@ -147,11 +150,14 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="bin/Unity.Mvc5.dll">
       <publishTime>12/17/2015 19:52:27</publishTime>
     </File>
+    <File Include="bin/UtilityForTesting.dll">
+      <publishTime>01/06/2016 09:32:09</publishTime>
+    </File>
     <File Include="bin/WeatherApp.dll">
-      <publishTime>01/05/2016 19:21:15</publishTime>
+      <publishTime>01/11/2016 10:13:40</publishTime>
     </File>
     <File Include="bin/WeatherApp.Domain.dll">
-      <publishTime>01/05/2016 19:21:11</publishTime>
+      <publishTime>01/11/2016 10:05:20</publishTime>
     </File>
     <File Include="bin/WebGrease.dll">
       <publishTime>12/17/2015 15:13:02</publishTime>
@@ -164,6 +170,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Content/Site.css">
       <publishTime>01/05/2016 09:37:40</publishTime>
+    </File>
+    <File Include="Controllers/WeatherController.cs">
+      <publishTime>01/11/2016 10:12:13</publishTime>
     </File>
     <File Include="favicon.ico">
       <publishTime>12/17/2015 15:12:46</publishTime>
@@ -238,7 +247,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/17/2015 15:12:54</publishTime>
     </File>
     <File Include="Scripts/graph.js">
-      <publishTime>01/04/2016 21:14:24</publishTime>
+      <publishTime>01/11/2016 09:32:03</publishTime>
     </File>
     <File Include="Scripts/jquery-1.10.2.js">
       <publishTime>12/17/2015 15:12:56</publishTime>
@@ -349,7 +358,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/17/2015 16:35:46</publishTime>
     </File>
     <File Include="Views/Weather/Index.cshtml">
-      <publishTime>01/05/2016 19:39:47</publishTime>
+      <publishTime>01/11/2016 10:25:02</publishTime>
     </File>
     <File Include="Views/Web.config">
       <publishTime>12/17/2015 15:12:46</publishTime>
@@ -358,7 +367,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/17/2015 15:12:46</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>01/05/2016 19:21:16</publishTime>
+      <publishTime>01/11/2016 10:07:40</publishTime>
     </File>
   </ItemGroup>
 </Project>

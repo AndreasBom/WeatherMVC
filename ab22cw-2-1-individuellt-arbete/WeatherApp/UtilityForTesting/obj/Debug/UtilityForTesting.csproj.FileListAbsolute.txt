@@ -1,0 +1,5 @@
+C:\Users\Andre\Documents\Copy\Skola\Linneuniversitetet\ASP MVC\Project\ab22cw-2-1-individuellt-arbete\WeatherApp\UtilityForTesting\bin\Debug\UtilityForTesting.dll
+C:\Users\Andre\Documents\Copy\Skola\Linneuniversitetet\ASP MVC\Project\ab22cw-2-1-individuellt-arbete\WeatherApp\UtilityForTesting\bin\Debug\UtilityForTesting.pdb
+C:\Users\Andre\Documents\Copy\Skola\Linneuniversitetet\ASP MVC\Project\ab22cw-2-1-individuellt-arbete\WeatherApp\UtilityForTesting\obj\Debug\UtilityForTesting.csprojResolveAssemblyReference.cache
+C:\Users\Andre\Documents\Copy\Skola\Linneuniversitetet\ASP MVC\Project\ab22cw-2-1-individuellt-arbete\WeatherApp\UtilityForTesting\obj\Debug\UtilityForTesting.dll
+C:\Users\Andre\Documents\Copy\Skola\Linneuniversitetet\ASP MVC\Project\ab22cw-2-1-individuellt-arbete\WeatherApp\UtilityForTesting\obj\Debug\UtilityForTesting.pdb

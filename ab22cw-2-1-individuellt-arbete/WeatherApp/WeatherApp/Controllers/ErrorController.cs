@@ -11,7 +11,7 @@ namespace WeatherApp.Controllers
         // GET: Error
         public ActionResult Index()
         {
-            var error = new {error = "Somthing went wrong"};
+            var error = new {error = "Platsen hittades inte"};
             return Json(error, JsonRequestBehavior.AllowGet);
         }
     }
