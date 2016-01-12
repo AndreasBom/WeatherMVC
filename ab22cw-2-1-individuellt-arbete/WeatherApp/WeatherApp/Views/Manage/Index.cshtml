@@ -18,6 +18,7 @@
                     @Html.EditorFor(m => m.StartLocation, null, new { htmlAttributes = new { @class = "form-control" } })
                     <button class="btn btn-default btnFloatLeft">Spara</button>
                     @Html.ValidationMessageFor(m=>m.StartLocation)
+                    <span class="@TempData["css-message"]">@TempData["savedToDatabase"]</span>
                     
                 }
             </div>

@@ -77,6 +77,10 @@ namespace WeatherApp.Controllers
                 Logins = await UserManager.GetLoginsAsync(userId),
                 BrowserRemembered = await AuthenticationManager.TwoFactorBrowserRememberedAsync(userId)
             };
+            //loading default start location 
+            var user = UserManager.FindById(User.Identity.GetUserId());
+            model.StartLocation = user.DefaultLocation;
+
             return View(model);
         }
 
@@ -93,11 +97,13 @@ namespace WeatherApp.Controllers
                 var user = UserManager.FindById(User.Identity.GetUserId());
                 user.DefaultLocation = model.StartLocation;
                 var result = UserManager.Update(user);
-                TempData["savedToXml"] = "Inställningen sparades";
+                TempData["savedToDatabase"] = "Inställningen sparades";
+                TempData["css-message"] = "alert-success";
             }
             else
             {
-                TempData["savedToXml"] = "Fel!Försök igen.";
+                TempData["savedToDatabase"] = "Fel!Försök igen.";
+                TempData["css-message"] = "alert-danger";
             }
 
             return View("Index", model);
