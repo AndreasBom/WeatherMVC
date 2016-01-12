@@ -1,7 +1,11 @@
 ﻿using System.Security.Claims;
+using System.Security.Principal;
 using System.Threading.Tasks;
+using System.Web;
+using Microsoft.Ajax.Utilities;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using Microsoft.AspNet.Identity.Owin;
 
 namespace WeatherApp.Models.Authentications
 {
@@ -13,9 +17,35 @@ namespace WeatherApp.Models.Authentications
             // Note the authenticationType must match the one defined in CookieAuthenticationOptions.AuthenticationType
             var userIdentity = await manager.CreateIdentityAsync(this, DefaultAuthenticationTypes.ApplicationCookie);
             // Add custom user claims here
+            //userIdentity.AddClaim(new Claim("DefaultLocation", DefaultLocation));
             return userIdentity;
         }
+
+        //Extended Property
+        public string DefaultLocation { get; set; }
     }
+
+    //namespace App.Extensions
+    //{
+    //    public static class IdentityExtensions
+    //    {
+    //        public static string GetDefaultLocation(this IIdentity identity)
+    //        {
+    //            return ((ClaimsIdentity)identity).FindFirst("DefaultLocation").Value;
+    //        }
+
+    //        public static void SetDefaultLocation(this IIdentity identity, string location)
+    //        {
+
+    //            var manager = context.GetOwinContext().GetUserManager<ApplicationUserManager>();
+    //            var user = manager.
+    //            user.DefaultLocation = location;
+    //            manager.Update(user);
+    //            context.GetOwinContext().Get<ApplicationDbContext>().SaveChanges();
+    //        }
+    //    }   
+    //}
+
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {

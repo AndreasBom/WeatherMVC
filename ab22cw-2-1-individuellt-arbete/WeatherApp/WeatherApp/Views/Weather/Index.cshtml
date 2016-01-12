@@ -5,33 +5,30 @@
 
 @{
     ViewBag.Title = "Vädret";
-    //var ajaxOptions = new AjaxOptions
-    //{
-    //    UpdateTargetId = "search-field"
-    //};
 }
 
+<div class="row">
+    <div id="title-layer">
+        <h2 id="location-title" class="title-text">@Model.LocationObject.LocationText</h2>
+        <h4 id="todays-day" class="title-text">@Model.DayOfWeekToday</h4>
+        <img id="todays-symbol" src="~/Media/@(Model.Weather.Where(s=>s.ValidTime.Day == DateTime.Now.Day).Select(s=>s.Symbol).FirstOrDefault()).png" />
+        <h3 id="title-temperature">@Model.Weather.Where(w => w.ValidTime.Date == DateTime.Now.Date).Select(t => t.Temperature).FirstOrDefault()&deg;C</h3>
+        <p id="nameOfDay-layer">Idag har <span id="nameOfDay"></span> namnsdag.</p>
 
-<div id="title-layer">
-    <h2 id="location-title" class="title-text">@Model.LocationObject.LocationText</h2>
-    <h4 id="todays-day" class="title-text">@Model.DayOfWeekToday</h4>
-    <img id="todays-symbol" src="~/Media/@(Model.Weather.Where(s=>s.ValidTime.Day == DateTime.Now.Day).Select(s=>s.Symbol).FirstOrDefault()).png" />
-    <h3 id="title-temperature">@Model.Weather.Where(w => w.ValidTime.Date == DateTime.Now.Date).Select(t => t.Temperature).FirstOrDefault()&deg;C</h3>
-    <p id="nameOfDay-layer">Idag har <span id="nameOfDay"></span> namnsdag.</p>
+    </div>
 
-</div>
+    <div id="search-layer" class="form-group">
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            @Html.LabelFor(m => m.LocationInput)
+            @Html.EditorFor(m => m.LocationInput, new { htmlAttributes = new { @class = "form-control", id = "search-field" } })
+            @Html.ValidationMessageFor(m => m.LocationInput, null, new { @class = "alert-danger" })
+            <button class="btn btn-group-lg ">Hämta</button>
+            @Html.ValidationMessage("LocationNotFound", new { @class = "alert-danger" })
+        }
 
-<div id="search-layer" class="form-group">
-    @using (Html.BeginForm())
-    {
-        @Html.AntiForgeryToken()
-        @Html.LabelFor(m => m.LocationInput)
-        @Html.EditorFor(m => m.LocationInput, new { htmlAttributes = new { @class = "form-control", id = "search-field" } })
-        @Html.ValidationMessageFor(m => m.LocationInput, null, new { @class = "alert-danger" })
-        <button class="btn btn-group-lg ">Hämta</button>
-        @Html.ValidationMessage("LocationNotFound", new { @class = "alert-danger" })
-    }
-    
+    </div>
 </div>
 
 

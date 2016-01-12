@@ -4,10 +4,14 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using WeatherApp.Domain.Services;
 using WeatherApp.Models;
+using WeatherApp.Models.Authentications;
+
+
 
 namespace WeatherApp.Controllers
 {
@@ -56,10 +60,10 @@ namespace WeatherApp.Controllers
         public async Task<ActionResult> Index(ManageMessageId? message)
         {
             ViewBag.StatusMessage =
-                message == ManageMessageId.ChangePasswordSuccess ? "Your password has been changed."
+                message == ManageMessageId.ChangePasswordSuccess ? "Ditt lösenord har ändrats."
                 : message == ManageMessageId.SetPasswordSuccess ? "Your password has been set."
                 : message == ManageMessageId.SetTwoFactorSuccess ? "Your two-factor authentication provider has been set."
-                : message == ManageMessageId.Error ? "An error has occurred."
+                : message == ManageMessageId.Error ? "Ett fel inträffade."
                 : message == ManageMessageId.AddPhoneSuccess ? "Your phone number was added."
                 : message == ManageMessageId.RemovePhoneSuccess ? "Your phone number was removed."
                 : "";
@@ -86,9 +90,9 @@ namespace WeatherApp.Controllers
 
             if (TryUpdateModel(model, new[] {"StartLocation"}, collection))
             {
-                var path = HttpContext.Server.MapPath("~/App_Data/XML/config.xml");
-                var writer = new DefaultConfig(path);
-                writer.SetDefaultLocation(model.StartLocation);
+                var user = UserManager.FindById(User.Identity.GetUserId());
+                user.DefaultLocation = model.StartLocation;
+                var result = UserManager.Update(user);
                 TempData["savedToXml"] = "Inställningen sparades";
             }
             else
@@ -98,8 +102,12 @@ namespace WeatherApp.Controllers
 
             return View("Index", model);
         }
-
-
+        
+        [Authorize(Roles = "Admin")]
+        public ActionResult Admin()
+        {
+            return View("Admin");
+        }
 
         //
         // POST: /Manage/RemoveLogin

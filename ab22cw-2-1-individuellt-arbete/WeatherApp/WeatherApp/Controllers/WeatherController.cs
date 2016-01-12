@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Services.Description;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.Owin;
 using WeatherApp.Domain.Models;
 using WeatherApp.Domain.Repositories;
 using WeatherApp.Domain.Services;
@@ -17,11 +19,43 @@ namespace WeatherApp.Controllers
     public class WeatherController : Controller
     {
         private static readonly string SessionLocation = "location";
-        // GET: Weather
+        private ApplicationUserManager _userManager;
+
+        public ApplicationUserManager UserManager
+        {
+            get
+            {
+                return _userManager ?? HttpContext.GetOwinContext().GetUserManager<ApplicationUserManager>();
+            }
+            private set
+            {
+                _userManager = value;
+            }
+        }
+
+        public WeatherController()
+        {
+            //Empty!
+        }
+
+        public WeatherController(ApplicationUserManager userManager)
+        {
+            _userManager = userManager;
+        }
+
+        // GET: 
         public ActionResult Index()
         {
-            var reader = new DefaultConfig(HttpContext.Server.MapPath("~/App_Data/XML/config.xml"));
-            var location = reader.GetDefaultLocation();
+            //Kalmar will be shown if user is not logged in
+            var location = "Kalmar";
+
+            //If user is logged in and have saved a default location
+            if (User.Identity.Name != String.Empty)
+            {
+                var user = UserManager.FindById(User.Identity.GetUserId());
+                location = user.DefaultLocation;
+            }
+            
             var model = new WeatherIndexViewModel
             {
                 LocationInput = location
@@ -32,7 +66,11 @@ namespace WeatherApp.Controllers
             return View(model);
         }
 
-
+        /// <summary>
+        /// POST: Search for location
+        /// </summary>
+        /// <param name="collection"></param>
+        /// <returns></returns>
         [HttpPost]
         [ValidateAntiForgeryToken]
         public virtual ActionResult Index(FormCollection collection)
@@ -48,6 +86,7 @@ namespace WeatherApp.Controllers
                 }
                 catch (GeoLocationNotFoundException)
                 {
+                    //Shows an error if location is not found
                     ModelState.AddModelError("LocationNotFound", "Platsen hittades inte");
                     model.LocationInput = (string)Session[SessionLocation];
                     model.LocationObject = model.WeatherService.GetLocation(model.LocationInput);
@@ -60,6 +99,10 @@ namespace WeatherApp.Controllers
             return View(model);
         }
 
+        /// <summary>
+        /// Returns an Json, and is used by graph.js
+        /// </summary>
+        /// <returns></returns>
         public ActionResult GetTempData()
         {
             var model = new WeatherIndexViewModel

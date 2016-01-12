@@ -69,8 +69,8 @@ namespace WeatherApp.Views.Weather
                 //Updates weather and returns true if webservice was used and false if repository was used
                 _weatherService.UpdateWeather(LocationObject);
                 var location = _weatherService.GetLocation(LocationInput);
-
-                return FilterWeather(location.WeatherForcasts);
+                var weather = FilterWeather(location.WeatherForcasts);
+                return weather;
             }
         }
 

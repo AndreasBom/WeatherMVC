@@ -4,6 +4,7 @@
 $(document).ready(function () {
     //For TESTING
     var urlToData = function () {
+        console.log(document.location.href);
         if (document.location.hostname === "localhost") {
             if (document.location.toString().indexOf("Weather") > -1) {
                 return "GetTempData";
@@ -12,9 +13,9 @@ $(document).ready(function () {
             }
         } else {
             if (document.location.toString().indexOf("Weather") > -1) {
-                return "GetTempData";
+                return "/GetTempData";
             } else {
-                return "ab22cw/Weather/GetTempData";
+                return "/ab22cw/Weather/GetTempData";
             }
         }
         
@@ -27,7 +28,7 @@ $(document).ready(function () {
             type: 'GET',
             dataType: 'json',
             contentType: 'application/json',
-            url: urlToData(),
+            url: 'http://172.16.214.1/1dv409/ab22cw/Weather/GetTempData',
             data: '{}',
             success: function (response) {
                 console.log("Temperature data successfully loaded");

@@ -4,7 +4,7 @@
 }
 
 
-<p class="text-success">@ViewBag.StatusMessage</p>
+
 <div class="container">
 
     <div class="row">
@@ -18,14 +18,14 @@
                     @Html.EditorFor(m => m.StartLocation, null, new { htmlAttributes = new { @class = "form-control" } })
                     <button class="btn btn-default btnFloatLeft">Spara</button>
                     @Html.ValidationMessageFor(m=>m.StartLocation)
-                    <span class="alert-success">@TempData["savedToXml"]</span>
+                    
                 }
             </div>
         </div>
 
 
         <div class="col-sm-5" style="margin-top: 50px;">
-            
+
             <h4>
                 Lösenord:
                 <span>
@@ -41,6 +41,7 @@
                     ]
                 </span>
             </h4>
+            <span class="alert-success">@ViewBag.StatusMessage</span>
         </div>
     </div>
     <hr/>

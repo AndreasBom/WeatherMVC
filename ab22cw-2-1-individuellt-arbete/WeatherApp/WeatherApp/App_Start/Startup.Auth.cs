@@ -61,11 +61,11 @@ namespace WeatherApp
             //   appId: "",
             //   appSecret: "");
 
-            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            {
-                ClientId = System.Web.Configuration.WebConfigurationManager.AppSettings["ClientId"],
-                ClientSecret = System.Web.Configuration.WebConfigurationManager.AppSettings["ClientSecret"]
-            });
+            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            //{
+            //    ClientId = System.Web.Configuration.WebConfigurationManager.AppSettings["ClientId"],
+            //    ClientSecret = System.Web.Configuration.WebConfigurationManager.AppSettings["ClientSecret"]
+            //});
         }
     }
 }

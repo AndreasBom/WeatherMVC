@@ -10,10 +10,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   </PropertyGroup>
   <ItemGroup>
     <File Include="App_Data/aspnet-WeatherApp-20151217031317.mdf">
-      <publishTime>01/11/2016 17:50:57</publishTime>
+      <publishTime>01/11/2016 23:21:35</publishTime>
     </File>
     <File Include="App_Data/aspnet-WeatherApp-20151217031317_log.ldf">
-      <publishTime>01/11/2016 17:50:57</publishTime>
+      <publishTime>01/11/2016 23:21:35</publishTime>
     </File>
     <File Include="App_Data/data.json">
       <publishTime>12/17/2015 21:17:39</publishTime>
@@ -25,7 +25,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/06/2016 09:30:31</publishTime>
     </File>
     <File Include="App_Data/XML/config.xml">
-      <publishTime>01/11/2016 21:09:05</publishTime>
+      <publishTime>01/11/2016 23:06:18</publishTime>
     </File>
     <File Include="bin/Antlr3.Runtime.dll">
       <publishTime>12/17/2015 15:13:02</publishTime>
@@ -163,7 +163,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/06/2016 09:32:09</publishTime>
     </File>
     <File Include="bin/WeatherApp.dll">
-      <publishTime>01/11/2016 21:09:59</publishTime>
+      <publishTime>01/12/2016 00:50:55</publishTime>
     </File>
     <File Include="bin/WeatherApp.Domain.dll">
       <publishTime>01/11/2016 21:09:55</publishTime>
@@ -178,7 +178,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/17/2015 15:12:55</publishTime>
     </File>
     <File Include="Content/Site.css">
-      <publishTime>01/11/2016 19:45:53</publishTime>
+      <publishTime>01/12/2016 00:41:46</publishTime>
     </File>
     <File Include="Controllers/WeatherController.cs">
       <publishTime>01/11/2016 10:12:13</publishTime>
@@ -256,7 +256,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/17/2015 15:12:54</publishTime>
     </File>
     <File Include="Scripts/graph.js">
-      <publishTime>01/11/2016 15:18:48</publishTime>
+      <publishTime>01/12/2016 08:27:36</publishTime>
     </File>
     <File Include="Scripts/jquery-1.10.2.js">
       <publishTime>12/17/2015 15:12:56</publishTime>
@@ -310,7 +310,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/11/2016 19:44:06</publishTime>
     </File>
     <File Include="Views/Account/Register.cshtml">
-      <publishTime>12/17/2015 16:22:05</publishTime>
+      <publishTime>01/12/2016 00:42:33</publishTime>
     </File>
     <File Include="Views/Account/ResetPassword.cshtml">
       <publishTime>12/17/2015 16:25:54</publishTime>
@@ -339,11 +339,14 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Views/Manage/AddPhoneNumber.cshtml">
       <publishTime>12/17/2015 15:13:05</publishTime>
     </File>
+    <File Include="Views/Manage/Admin.cshtml">
+      <publishTime>01/11/2016 23:56:19</publishTime>
+    </File>
     <File Include="Views/Manage/ChangePassword.cshtml">
       <publishTime>12/17/2015 15:13:05</publishTime>
     </File>
     <File Include="Views/Manage/Index.cshtml">
-      <publishTime>01/11/2016 21:02:41</publishTime>
+      <publishTime>01/12/2016 00:05:09</publishTime>
     </File>
     <File Include="Views/Manage/ManageLogins.cshtml">
       <publishTime>12/17/2015 15:13:05</publishTime>
@@ -361,13 +364,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/17/2015 15:13:06</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>01/11/2016 15:28:31</publishTime>
+      <publishTime>01/11/2016 23:49:24</publishTime>
     </File>
     <File Include="Views/Shared/_LoginPartial.cshtml">
-      <publishTime>01/11/2016 15:47:56</publishTime>
+      <publishTime>01/12/2016 00:49:19</publishTime>
     </File>
     <File Include="Views/Weather/Index.cshtml">
-      <publishTime>01/11/2016 13:50:36</publishTime>
+      <publishTime>01/12/2016 00:26:30</publishTime>
     </File>
     <File Include="Views/Web.config">
       <publishTime>12/17/2015 15:12:46</publishTime>

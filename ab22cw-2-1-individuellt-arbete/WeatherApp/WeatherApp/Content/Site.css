@@ -90,16 +90,19 @@ textarea {
 
 #title-layer {
     margin-bottom: 25px;
-    margin-left: 20px;
+    margin-left: 30px;
     margin-top: 20px;
     display: inline-block;
 }
 
 #search-layer {
     float: right;
-    display: inline-block;
-    margin-top: 40px;
-    margin-right: 20px;
+    margin-top: 10px;
+    position: relative;
+    right: 35px;
+    clear: both;
+    
+    
 }
 
 #graph {
@@ -170,6 +173,11 @@ textarea {
 #loginLink:hover {
     background: none;
     color: gray;
+}
+
+.reg-layer {
+    width: 70%;
+    margin: 20px auto;
 }
 
 a {
