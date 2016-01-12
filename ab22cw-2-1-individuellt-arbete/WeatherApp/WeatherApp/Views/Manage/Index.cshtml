@@ -3,8 +3,6 @@
     ViewBag.Title = "Kontoinställningar";
 }
 
-
-
 <div class="container">
 
     <div class="row">
@@ -22,27 +20,6 @@
                     
                 }
             </div>
-        </div>
-
-
-        <div class="col-sm-5" style="margin-top: 50px;">
-
-            <h4>
-                Lösenord:
-                <span>
-                    [
-                    @if (Model.HasPassword)
-                    {
-                        @Html.ActionLink("Ändra lösenord", "ChangePassword")
-                    }
-                    else
-                    {
-                        @Html.ActionLink("Skapa lösenord", "SetPassword")
-                    }
-                    ]
-                </span>
-            </h4>
-            <span class="alert-success">@ViewBag.StatusMessage</span>
         </div>
     </div>
     <hr/>

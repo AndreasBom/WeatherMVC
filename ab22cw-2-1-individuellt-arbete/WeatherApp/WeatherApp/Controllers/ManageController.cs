@@ -85,7 +85,7 @@ namespace WeatherApp.Controllers
         }
 
 
-        //Save default start location to xml-file
+        //Save default start location to database
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult SaveDefaultLocation(FormCollection collection)

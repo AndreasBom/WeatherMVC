@@ -3,8 +3,6 @@
     ViewBag.Title = "Kontoinställningar";
 }
 
-
-
 <div class="container">
 
     <div class="row">
@@ -18,30 +16,10 @@
                     @Html.EditorFor(m => m.StartLocation, null, new { htmlAttributes = new { @class = "form-control" } })
                     <button class="btn btn-default btnFloatLeft">Spara</button>
                     @Html.ValidationMessageFor(m=>m.StartLocation)
+                    <span class="@TempData["css-message"]">@TempData["savedToDatabase"]</span>
                     
                 }
             </div>
-        </div>
-
-
-        <div class="col-sm-5" style="margin-top: 50px;">
-
-            <h4>
-                Lösenord:
-                <span>
-                    [
-                    @if (Model.HasPassword)
-                    {
-                        @Html.ActionLink("Ändra lösenord", "ChangePassword")
-                    }
-                    else
-                    {
-                        @Html.ActionLink("Skapa lösenord", "SetPassword")
-                    }
-                    ]
-                </span>
-            </h4>
-            <span class="alert-success">@ViewBag.StatusMessage</span>
         </div>
     </div>
     <hr/>

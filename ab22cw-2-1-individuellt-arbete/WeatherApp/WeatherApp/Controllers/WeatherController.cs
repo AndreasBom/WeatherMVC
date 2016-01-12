@@ -6,13 +6,9 @@ using System.Web.Mvc;
 using System.Web.Services.Description;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
-using WeatherApp.Domain.Models;
-using WeatherApp.Domain.Repositories;
-using WeatherApp.Domain.Services;
 using WeatherApp.Domain.WebServices;
-using WeatherApp.Models;
 using WeatherApp.Views.Weather;
-using WebGrease.Css.Ast.Selectors;
+
 
 namespace WeatherApp.Controllers
 {
@@ -46,6 +42,7 @@ namespace WeatherApp.Controllers
         // GET: 
         public ActionResult Index()
         {
+
             //Kalmar will be shown if user is not logged in
             var location = "Kalmar";
 
@@ -53,9 +50,12 @@ namespace WeatherApp.Controllers
             if (User.Identity.Name != String.Empty)
             {
                 var user = UserManager.FindById(User.Identity.GetUserId());
-                location = user.DefaultLocation;
+                if (user != null)
+                {
+                    location = user.DefaultLocation;
+                }
             }
-            
+
             var model = new WeatherIndexViewModel
             {
                 LocationInput = location
@@ -76,8 +76,8 @@ namespace WeatherApp.Controllers
         public virtual ActionResult Index(FormCollection collection)
         {
             var model = new WeatherIndexViewModel();
-            
-            if (TryUpdateModel(model, new[] {"LocationInput"}, collection))
+
+            if (TryUpdateModel(model, new[] { "LocationInput" }, collection))
             {
                 try
                 {
@@ -88,12 +88,12 @@ namespace WeatherApp.Controllers
                 {
                     //Shows an error if location is not found
                     ModelState.AddModelError("LocationNotFound", "Platsen hittades inte");
-                    model.LocationInput = (string)Session[SessionLocation];
-                    model.LocationObject = model.WeatherService.GetLocation(model.LocationInput);
-                    return View(model);
                 }
-                
+
             }
+            model.LocationInput = (string)Session[SessionLocation];
+            model.LocationObject = model.WeatherService.GetLocation(model.LocationInput);
+
             model.LocationInput = (string)Session[SessionLocation];
 
             return View(model);
@@ -105,6 +105,7 @@ namespace WeatherApp.Controllers
         /// <returns></returns>
         public ActionResult GetTempData()
         {
+
             var model = new WeatherIndexViewModel
             {
                 LocationInput = (string)Session[SessionLocation]
@@ -117,22 +118,15 @@ namespace WeatherApp.Controllers
             return Json(temp, JsonRequestBehavior.AllowGet);
         }
 
-        
+        //Catches all unhandled exceptions and redirects to Errorhandler
+        protected override void OnException(ExceptionContext filterContext)
+        {
+            filterContext.ExceptionHandled = true;
+            ModelState.AddModelError(string.Empty, "Något gick fel");
 
+            filterContext.Result = RedirectToAction("Index");
+        }
 
-        //public ActionResult GetAutoCompleteData()
-        //{
-        //    var service = new WeatherService();
-        //    var model = service.GetAllLocations();
-
-        //    return Json(model, JsonRequestBehavior.AllowGet);
-        //}
-
-        //protected override void OnException(ExceptionContext filterContext)
-        //{
-        //    filterContext.ExceptionHandled = true;
-        //    filterContext.Result = RedirectToAction("Index", "Error");
-        //}
 
     }
 

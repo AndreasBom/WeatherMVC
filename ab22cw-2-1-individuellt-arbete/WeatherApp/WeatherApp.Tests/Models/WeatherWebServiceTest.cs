@@ -51,7 +51,6 @@ namespace WeatherApp.Tests.Models
             Assert.AreEqual(t, setOfData.Temperature);
             Assert.AreEqual(tstm, setOfData.ThunderProbability);
             Assert.AreEqual(tcc_mean, setOfData.CloudFactor);
-            Assert.AreEqual(pcat, setOfData.Preciptation.ToString());
         }
     }
 }

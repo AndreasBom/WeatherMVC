@@ -26,6 +26,7 @@
             @Html.ValidationMessageFor(m => m.LocationInput, null, new { @class = "alert-danger" })
             <button class="btn btn-group-lg ">Hämta</button>
             @Html.ValidationMessage("LocationNotFound", new { @class = "alert-danger" })
+            <p class="alert-danger">@Html.ValidationSummary(true)</p>
         }
 
     </div>

@@ -9,9 +9,9 @@ namespace WeatherApp.Controllers
     public class ErrorController : Controller
     {
         // GET: Error
-        public ActionResult Index()
+        public ActionResult Index(ExceptionContext context)
         {
-            var error = new {error = "Platsen hittades inte"};
+            var error = new {error = "Ett fel inträffade"};
             return Json(error, JsonRequestBehavior.AllowGet);
         }
     }

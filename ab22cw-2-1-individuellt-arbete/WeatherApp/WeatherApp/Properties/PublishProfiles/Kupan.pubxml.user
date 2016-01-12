@@ -163,7 +163,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/06/2016 09:32:09</publishTime>
     </File>
     <File Include="bin/WeatherApp.dll">
-      <publishTime>01/12/2016 00:50:55</publishTime>
+      <publishTime>01/12/2016 21:48:05</publishTime>
     </File>
     <File Include="bin/WeatherApp.Domain.dll">
       <publishTime>01/11/2016 21:09:55</publishTime>
@@ -340,13 +340,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/17/2015 15:13:05</publishTime>
     </File>
     <File Include="Views/Manage/Admin.cshtml">
-      <publishTime>01/11/2016 23:56:19</publishTime>
+      <publishTime>01/12/2016 08:42:50</publishTime>
     </File>
     <File Include="Views/Manage/ChangePassword.cshtml">
       <publishTime>12/17/2015 15:13:05</publishTime>
     </File>
     <File Include="Views/Manage/Index.cshtml">
-      <publishTime>01/12/2016 00:05:09</publishTime>
+      <publishTime>01/12/2016 19:19:24</publishTime>
     </File>
     <File Include="Views/Manage/ManageLogins.cshtml">
       <publishTime>12/17/2015 15:13:05</publishTime>
@@ -370,7 +370,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/12/2016 00:49:19</publishTime>
     </File>
     <File Include="Views/Weather/Index.cshtml">
-      <publishTime>01/12/2016 00:26:30</publishTime>
+      <publishTime>01/12/2016 21:31:50</publishTime>
     </File>
     <File Include="Views/Web.config">
       <publishTime>12/17/2015 15:12:46</publishTime>
@@ -379,7 +379,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/17/2015 15:12:46</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>01/11/2016 10:07:40</publishTime>
+      <publishTime>01/12/2016 21:48:08</publishTime>
     </File>
   </ItemGroup>
 </Project>

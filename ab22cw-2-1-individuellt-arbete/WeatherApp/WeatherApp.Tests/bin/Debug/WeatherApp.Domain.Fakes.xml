@@ -1,0 +1,1934 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WeatherApp.Domain.Fakes</name>
+    </assembly>
+    <members>
+        <member name="T:WeatherApp.Domain.Authentications.Fakes.ShimApplicationDbContext">
+            <summary>Shim type of WeatherApp.Domain.Authentications.ApplicationDbContext</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Authentications.Fakes.ShimApplicationDbContext.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Authentications.Fakes.ShimApplicationDbContext.#ctor(WeatherApp.Domain.Authentications.ApplicationDbContext)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="T:WeatherApp.Domain.Authentications.Fakes.ShimApplicationDbContext.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Authentications.Fakes.ShimApplicationDbContext.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Authentications.Fakes.ShimApplicationDbContext.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Authentications.Fakes.ShimApplicationDbContext.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Authentications.Fakes.ShimApplicationDbContext.Bind(System.Data.Entity.Infrastructure.IObjectContextAdapter)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Authentications.Fakes.ShimApplicationDbContext.Bind(System.IDisposable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Authentications.Fakes.ShimApplicationDbContext.Constructor">
+            <summary>Sets the shim of ApplicationDbContext.ApplicationDbContext()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Authentications.Fakes.ShimApplicationDbContext.Create">
+            <summary>Sets the shim of ApplicationDbContext.Create()</summary>
+        </member>
+        <member name="T:WeatherApp.Domain.Authentications.Fakes.ShimApplicationUser">
+            <summary>Shim type of WeatherApp.Domain.Authentications.ApplicationUser</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Authentications.Fakes.ShimApplicationUser.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Authentications.Fakes.ShimApplicationUser.#ctor(WeatherApp.Domain.Authentications.ApplicationUser)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="T:WeatherApp.Domain.Authentications.Fakes.ShimApplicationUser.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Authentications.Fakes.ShimApplicationUser.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Authentications.Fakes.ShimApplicationUser.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Authentications.Fakes.ShimApplicationUser.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Authentications.Fakes.ShimApplicationUser.Bind(Microsoft.AspNet.Identity.IUser)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Authentications.Fakes.ShimApplicationUser.Bind(Microsoft.AspNet.Identity.IUser{System.String})">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Authentications.Fakes.ShimApplicationUser.Constructor">
+            <summary>Sets the shim of ApplicationUser.ApplicationUser()</summary>
+        </member>
+        <member name="T:WeatherApp.Domain.Authentications.Fakes.StubApplicationDbContext">
+            <summary>Stub type of WeatherApp.Domain.Authentications.ApplicationDbContext</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Authentications.Fakes.StubApplicationDbContext.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Authentications.Fakes.StubApplicationDbContext.AttachBackingFieldToRoles">
+            <summary>Attaches delegates to emulate StubApplicationDbContext.Roles as a property with a backing field.</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Authentications.Fakes.StubApplicationDbContext.AttachBackingFieldToUsers">
+            <summary>Attaches delegates to emulate StubApplicationDbContext.Users as a property with a backing field.</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Authentications.Fakes.StubApplicationDbContext.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Authentications.Fakes.StubApplicationDbContext.Dispose(System.Boolean)">
+            <summary>Sets the stub of DbContext.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Authentications.Fakes.StubApplicationDbContext.DisposeBoolean">
+            <summary>Sets the stub of DbContext.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Authentications.Fakes.StubApplicationDbContext.Equals(System.Object)">
+            <summary>Sets the stub of DbContext.Equals(Object obj)</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Authentications.Fakes.StubApplicationDbContext.EqualsObject">
+            <summary>Sets the stub of DbContext.Equals(Object obj)</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Authentications.Fakes.StubApplicationDbContext.GetHashCode">
+            <summary>Sets the stub of DbContext.GetHashCode()</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Authentications.Fakes.StubApplicationDbContext.GetHashCode01">
+            <summary>Sets the stub of DbContext.GetHashCode()</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Authentications.Fakes.StubApplicationDbContext.InitializeStub">
+            <summary>Initializes a new instance of type StubApplicationDbContext</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Authentications.Fakes.StubApplicationDbContext.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Authentications.Fakes.StubApplicationDbContext.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Authentications.Fakes.StubApplicationDbContext.OnModelCreating(System.Data.Entity.DbModelBuilder)">
+            <summary>Sets the stub of IdentityDbContext`6.OnModelCreating(DbModelBuilder modelBuilder)</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Authentications.Fakes.StubApplicationDbContext.OnModelCreatingDbModelBuilder">
+            <summary>Sets the stub of IdentityDbContext`6.OnModelCreating(DbModelBuilder modelBuilder)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Authentications.Fakes.StubApplicationDbContext.Roles">
+            <summary>Sets the stub of IdentityDbContext`6.get_Roles()</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Authentications.Fakes.StubApplicationDbContext.RolesGet">
+            <summary>Sets the stub of IdentityDbContext`6.get_Roles()</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Authentications.Fakes.StubApplicationDbContext.RolesSetIDbSetOfIdentityRole">
+            <summary>Sets the stub of IdentityDbContext`6.set_Roles(IDbSet`1&lt;!1&gt; value)</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Authentications.Fakes.StubApplicationDbContext.SaveChanges">
+            <summary>Sets the stub of DbContext.SaveChanges()</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Authentications.Fakes.StubApplicationDbContext.SaveChanges01">
+            <summary>Sets the stub of DbContext.SaveChanges()</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Authentications.Fakes.StubApplicationDbContext.SaveChangesAsync">
+            <summary>Sets the stub of DbContext.SaveChangesAsync()</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Authentications.Fakes.StubApplicationDbContext.SaveChangesAsync(System.Threading.CancellationToken)">
+            <summary>Sets the stub of DbContext.SaveChangesAsync(CancellationToken cancellationToken)</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Authentications.Fakes.StubApplicationDbContext.SaveChangesAsync01">
+            <summary>Sets the stub of DbContext.SaveChangesAsync()</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Authentications.Fakes.StubApplicationDbContext.SaveChangesAsyncCancellationToken">
+            <summary>Sets the stub of DbContext.SaveChangesAsync(CancellationToken cancellationToken)</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Authentications.Fakes.StubApplicationDbContext.ShouldValidateEntity(System.Data.Entity.Infrastructure.DbEntityEntry)">
+            <summary>Sets the stub of DbContext.ShouldValidateEntity(DbEntityEntry entityEntry)</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Authentications.Fakes.StubApplicationDbContext.ShouldValidateEntityDbEntityEntry">
+            <summary>Sets the stub of DbContext.ShouldValidateEntity(DbEntityEntry entityEntry)</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Authentications.Fakes.StubApplicationDbContext.ToString">
+            <summary>Sets the stub of DbContext.ToString()</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Authentications.Fakes.StubApplicationDbContext.ToString01">
+            <summary>Sets the stub of DbContext.ToString()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Authentications.Fakes.StubApplicationDbContext.Users">
+            <summary>Sets the stub of IdentityDbContext`6.get_Users()</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Authentications.Fakes.StubApplicationDbContext.UsersGet">
+            <summary>Sets the stub of IdentityDbContext`6.get_Users()</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Authentications.Fakes.StubApplicationDbContext.UsersSetIDbSetOfApplicationUser">
+            <summary>Sets the stub of IdentityDbContext`6.set_Users(IDbSet`1&lt;!0&gt; value)</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Authentications.Fakes.StubApplicationDbContext.ValidateEntity(System.Data.Entity.Infrastructure.DbEntityEntry,System.Collections.Generic.IDictionary{System.Object,System.Object})">
+            <summary>Sets the stub of IdentityDbContext`6.ValidateEntity(DbEntityEntry entityEntry, IDictionary`2&lt;Object,Object&gt; items)</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Authentications.Fakes.StubApplicationDbContext.ValidateEntityDbEntityEntryIDictionaryOfObjectObject">
+            <summary>Sets the stub of IdentityDbContext`6.ValidateEntity(DbEntityEntry entityEntry, IDictionary`2&lt;Object,Object&gt; items)</summary>
+        </member>
+        <member name="T:WeatherApp.Domain.Authentications.Fakes.StubApplicationUser">
+            <summary>Stub type of WeatherApp.Domain.Authentications.ApplicationUser</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Authentications.Fakes.StubApplicationUser.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Authentications.Fakes.StubApplicationUser.AccessFailedCount">
+            <summary>Sets the stub of IdentityUser`4.get_AccessFailedCount()</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Authentications.Fakes.StubApplicationUser.AccessFailedCountGet">
+            <summary>Sets the stub of IdentityUser`4.get_AccessFailedCount()</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Authentications.Fakes.StubApplicationUser.AccessFailedCountSetInt32">
+            <summary>Sets the stub of IdentityUser`4.set_AccessFailedCount(Int32 value)</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Authentications.Fakes.StubApplicationUser.AttachBackingFieldToAccessFailedCount">
+            <summary>Attaches delegates to emulate StubApplicationUser.AccessFailedCount as a property with a backing field.</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Authentications.Fakes.StubApplicationUser.AttachBackingFieldToEmail">
+            <summary>Attaches delegates to emulate StubApplicationUser.Email as a property with a backing field.</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Authentications.Fakes.StubApplicationUser.AttachBackingFieldToEmailConfirmed">
+            <summary>Attaches delegates to emulate StubApplicationUser.EmailConfirmed as a property with a backing field.</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Authentications.Fakes.StubApplicationUser.AttachBackingFieldToId">
+            <summary>Attaches delegates to emulate StubApplicationUser.Id as a property with a backing field.</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Authentications.Fakes.StubApplicationUser.AttachBackingFieldToLockoutEnabled">
+            <summary>Attaches delegates to emulate StubApplicationUser.LockoutEnabled as a property with a backing field.</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Authentications.Fakes.StubApplicationUser.AttachBackingFieldToLockoutEndDateUtc">
+            <summary>Attaches delegates to emulate StubApplicationUser.LockoutEndDateUtc as a property with a backing field.</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Authentications.Fakes.StubApplicationUser.AttachBackingFieldToPasswordHash">
+            <summary>Attaches delegates to emulate StubApplicationUser.PasswordHash as a property with a backing field.</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Authentications.Fakes.StubApplicationUser.AttachBackingFieldToPhoneNumber">
+            <summary>Attaches delegates to emulate StubApplicationUser.PhoneNumber as a property with a backing field.</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Authentications.Fakes.StubApplicationUser.AttachBackingFieldToPhoneNumberConfirmed">
+            <summary>Attaches delegates to emulate StubApplicationUser.PhoneNumberConfirmed as a property with a backing field.</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Authentications.Fakes.StubApplicationUser.AttachBackingFieldToSecurityStamp">
+            <summary>Attaches delegates to emulate StubApplicationUser.SecurityStamp as a property with a backing field.</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Authentications.Fakes.StubApplicationUser.AttachBackingFieldToTwoFactorEnabled">
+            <summary>Attaches delegates to emulate StubApplicationUser.TwoFactorEnabled as a property with a backing field.</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Authentications.Fakes.StubApplicationUser.AttachBackingFieldToUserName">
+            <summary>Attaches delegates to emulate StubApplicationUser.UserName as a property with a backing field.</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Authentications.Fakes.StubApplicationUser.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Authentications.Fakes.StubApplicationUser.Email">
+            <summary>Sets the stub of IdentityUser`4.get_Email()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Authentications.Fakes.StubApplicationUser.EmailConfirmed">
+            <summary>Sets the stub of IdentityUser`4.get_EmailConfirmed()</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Authentications.Fakes.StubApplicationUser.EmailConfirmedGet">
+            <summary>Sets the stub of IdentityUser`4.get_EmailConfirmed()</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Authentications.Fakes.StubApplicationUser.EmailConfirmedSetBoolean">
+            <summary>Sets the stub of IdentityUser`4.set_EmailConfirmed(Boolean value)</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Authentications.Fakes.StubApplicationUser.EmailGet">
+            <summary>Sets the stub of IdentityUser`4.get_Email()</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Authentications.Fakes.StubApplicationUser.EmailSetString">
+            <summary>Sets the stub of IdentityUser`4.set_Email(String value)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Authentications.Fakes.StubApplicationUser.Id">
+            <summary>Sets the stub of IdentityUser`4.get_Id()</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Authentications.Fakes.StubApplicationUser.IdGet">
+            <summary>Sets the stub of IdentityUser`4.get_Id()</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Authentications.Fakes.StubApplicationUser.IdSetString">
+            <summary>Sets the stub of IdentityUser`4.set_Id(!0 value)</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Authentications.Fakes.StubApplicationUser.InitializeStub">
+            <summary>Initializes a new instance of type StubApplicationUser</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Authentications.Fakes.StubApplicationUser.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Authentications.Fakes.StubApplicationUser.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Authentications.Fakes.StubApplicationUser.LockoutEnabled">
+            <summary>Sets the stub of IdentityUser`4.get_LockoutEnabled()</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Authentications.Fakes.StubApplicationUser.LockoutEnabledGet">
+            <summary>Sets the stub of IdentityUser`4.get_LockoutEnabled()</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Authentications.Fakes.StubApplicationUser.LockoutEnabledSetBoolean">
+            <summary>Sets the stub of IdentityUser`4.set_LockoutEnabled(Boolean value)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Authentications.Fakes.StubApplicationUser.LockoutEndDateUtc">
+            <summary>Sets the stub of IdentityUser`4.get_LockoutEndDateUtc()</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Authentications.Fakes.StubApplicationUser.LockoutEndDateUtcGet">
+            <summary>Sets the stub of IdentityUser`4.get_LockoutEndDateUtc()</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Authentications.Fakes.StubApplicationUser.LockoutEndDateUtcSetNullableOfDateTime">
+            <summary>Sets the stub of IdentityUser`4.set_LockoutEndDateUtc(Nullable`1&lt;DateTime&gt; value)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Authentications.Fakes.StubApplicationUser.PasswordHash">
+            <summary>Sets the stub of IdentityUser`4.get_PasswordHash()</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Authentications.Fakes.StubApplicationUser.PasswordHashGet">
+            <summary>Sets the stub of IdentityUser`4.get_PasswordHash()</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Authentications.Fakes.StubApplicationUser.PasswordHashSetString">
+            <summary>Sets the stub of IdentityUser`4.set_PasswordHash(String value)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Authentications.Fakes.StubApplicationUser.PhoneNumber">
+            <summary>Sets the stub of IdentityUser`4.get_PhoneNumber()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Authentications.Fakes.StubApplicationUser.PhoneNumberConfirmed">
+            <summary>Sets the stub of IdentityUser`4.get_PhoneNumberConfirmed()</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Authentications.Fakes.StubApplicationUser.PhoneNumberConfirmedGet">
+            <summary>Sets the stub of IdentityUser`4.get_PhoneNumberConfirmed()</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Authentications.Fakes.StubApplicationUser.PhoneNumberConfirmedSetBoolean">
+            <summary>Sets the stub of IdentityUser`4.set_PhoneNumberConfirmed(Boolean value)</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Authentications.Fakes.StubApplicationUser.PhoneNumberGet">
+            <summary>Sets the stub of IdentityUser`4.get_PhoneNumber()</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Authentications.Fakes.StubApplicationUser.PhoneNumberSetString">
+            <summary>Sets the stub of IdentityUser`4.set_PhoneNumber(String value)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Authentications.Fakes.StubApplicationUser.SecurityStamp">
+            <summary>Sets the stub of IdentityUser`4.get_SecurityStamp()</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Authentications.Fakes.StubApplicationUser.SecurityStampGet">
+            <summary>Sets the stub of IdentityUser`4.get_SecurityStamp()</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Authentications.Fakes.StubApplicationUser.SecurityStampSetString">
+            <summary>Sets the stub of IdentityUser`4.set_SecurityStamp(String value)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Authentications.Fakes.StubApplicationUser.TwoFactorEnabled">
+            <summary>Sets the stub of IdentityUser`4.get_TwoFactorEnabled()</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Authentications.Fakes.StubApplicationUser.TwoFactorEnabledGet">
+            <summary>Sets the stub of IdentityUser`4.get_TwoFactorEnabled()</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Authentications.Fakes.StubApplicationUser.TwoFactorEnabledSetBoolean">
+            <summary>Sets the stub of IdentityUser`4.set_TwoFactorEnabled(Boolean value)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Authentications.Fakes.StubApplicationUser.UserName">
+            <summary>Sets the stub of IdentityUser`4.get_UserName()</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Authentications.Fakes.StubApplicationUser.UserNameGet">
+            <summary>Sets the stub of IdentityUser`4.get_UserName()</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Authentications.Fakes.StubApplicationUser.UserNameSetString">
+            <summary>Sets the stub of IdentityUser`4.set_UserName(String value)</summary>
+        </member>
+        <member name="T:WeatherApp.Domain.Migrations.Fakes.ShimWeatherDb">
+            <summary>Shim type of WeatherApp.Domain.Migrations.WeatherDb</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Migrations.Fakes.ShimWeatherDb.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Migrations.Fakes.ShimWeatherDb.#ctor(WeatherApp.Domain.Migrations.WeatherDb)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="T:WeatherApp.Domain.Migrations.Fakes.ShimWeatherDb.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Migrations.Fakes.ShimWeatherDb.AllInstances.Down">
+            <summary>Sets the shim of WeatherDb.Down()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Migrations.Fakes.ShimWeatherDb.AllInstances.IdSystemDataEntityMigrationsInfrastructureIMigrationMetadataget">
+            <summary>Sets the shim of WeatherDb.System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata.get_Id()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Migrations.Fakes.ShimWeatherDb.AllInstances.SourceSystemDataEntityMigrationsInfrastructureIMigrationMetadataget">
+            <summary>Sets the shim of WeatherDb.System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata.get_Source()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Migrations.Fakes.ShimWeatherDb.AllInstances.TargetSystemDataEntityMigrationsInfrastructureIMigrationMetadataget">
+            <summary>Sets the shim of WeatherDb.System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata.get_Target()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Migrations.Fakes.ShimWeatherDb.AllInstances.Up">
+            <summary>Sets the shim of WeatherDb.Up()</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Migrations.Fakes.ShimWeatherDb.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Migrations.Fakes.ShimWeatherDb.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Migrations.Fakes.ShimWeatherDb.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Migrations.Fakes.ShimWeatherDb.Bind(System.Data.Entity.Migrations.Infrastructure.IDbMigration)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Migrations.Fakes.ShimWeatherDb.Bind(System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Migrations.Fakes.ShimWeatherDb.Constructor">
+            <summary>Sets the shim of WeatherDb.WeatherDb()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Migrations.Fakes.ShimWeatherDb.Down">
+            <summary>Sets the shim of WeatherDb.Down()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Migrations.Fakes.ShimWeatherDb.IdSystemDataEntityMigrationsInfrastructureIMigrationMetadataget">
+            <summary>Sets the shim of WeatherDb.System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata.get_Id()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Migrations.Fakes.ShimWeatherDb.SourceSystemDataEntityMigrationsInfrastructureIMigrationMetadataget">
+            <summary>Sets the shim of WeatherDb.System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata.get_Source()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Migrations.Fakes.ShimWeatherDb.TargetSystemDataEntityMigrationsInfrastructureIMigrationMetadataget">
+            <summary>Sets the shim of WeatherDb.System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata.get_Target()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Migrations.Fakes.ShimWeatherDb.Up">
+            <summary>Sets the shim of WeatherDb.Up()</summary>
+        </member>
+        <member name="T:WeatherApp.Domain.Migrations.Fakes.ShimWeatherDb1">
+            <summary>Shim type of WeatherApp.Domain.Migrations.WeatherDb1</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Migrations.Fakes.ShimWeatherDb1.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Migrations.Fakes.ShimWeatherDb1.#ctor(WeatherApp.Domain.Migrations.WeatherDb1)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="T:WeatherApp.Domain.Migrations.Fakes.ShimWeatherDb1.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Migrations.Fakes.ShimWeatherDb1.AllInstances.Down">
+            <summary>Sets the shim of WeatherDb1.Down()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Migrations.Fakes.ShimWeatherDb1.AllInstances.IdSystemDataEntityMigrationsInfrastructureIMigrationMetadataget">
+            <summary>Sets the shim of WeatherDb1.System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata.get_Id()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Migrations.Fakes.ShimWeatherDb1.AllInstances.SourceSystemDataEntityMigrationsInfrastructureIMigrationMetadataget">
+            <summary>Sets the shim of WeatherDb1.System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata.get_Source()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Migrations.Fakes.ShimWeatherDb1.AllInstances.TargetSystemDataEntityMigrationsInfrastructureIMigrationMetadataget">
+            <summary>Sets the shim of WeatherDb1.System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata.get_Target()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Migrations.Fakes.ShimWeatherDb1.AllInstances.Up">
+            <summary>Sets the shim of WeatherDb1.Up()</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Migrations.Fakes.ShimWeatherDb1.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Migrations.Fakes.ShimWeatherDb1.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Migrations.Fakes.ShimWeatherDb1.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Migrations.Fakes.ShimWeatherDb1.Bind(System.Data.Entity.Migrations.Infrastructure.IDbMigration)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Migrations.Fakes.ShimWeatherDb1.Bind(System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Migrations.Fakes.ShimWeatherDb1.Constructor">
+            <summary>Sets the shim of WeatherDb1.WeatherDb1()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Migrations.Fakes.ShimWeatherDb1.Down">
+            <summary>Sets the shim of WeatherDb1.Down()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Migrations.Fakes.ShimWeatherDb1.IdSystemDataEntityMigrationsInfrastructureIMigrationMetadataget">
+            <summary>Sets the shim of WeatherDb1.System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata.get_Id()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Migrations.Fakes.ShimWeatherDb1.SourceSystemDataEntityMigrationsInfrastructureIMigrationMetadataget">
+            <summary>Sets the shim of WeatherDb1.System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata.get_Source()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Migrations.Fakes.ShimWeatherDb1.TargetSystemDataEntityMigrationsInfrastructureIMigrationMetadataget">
+            <summary>Sets the shim of WeatherDb1.System.Data.Entity.Migrations.Infrastructure.IMigrationMetadata.get_Target()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Migrations.Fakes.ShimWeatherDb1.Up">
+            <summary>Sets the shim of WeatherDb1.Up()</summary>
+        </member>
+        <member name="T:WeatherApp.Domain.Models.Fakes.ShimLocation">
+            <summary>Shim type of WeatherApp.Domain.Models.Location</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Models.Fakes.ShimLocation.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Models.Fakes.ShimLocation.#ctor(WeatherApp.Domain.Models.Location)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="T:WeatherApp.Domain.Models.Fakes.ShimLocation.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimLocation.AllInstances.LatitudeGet">
+            <summary>Sets the shim of Location.get_Latitude()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimLocation.AllInstances.LatitudeSetSingle">
+            <summary>Sets the shim of Location.set_Latitude(Single value)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimLocation.AllInstances.LocationIdGet">
+            <summary>Sets the shim of Location.get_LocationId()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimLocation.AllInstances.LocationIdSetInt32">
+            <summary>Sets the shim of Location.set_LocationId(Int32 value)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimLocation.AllInstances.LocationTextGet">
+            <summary>Sets the shim of Location.get_LocationText()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimLocation.AllInstances.LocationTextSetString">
+            <summary>Sets the shim of Location.set_LocationText(String value)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimLocation.AllInstances.LongitudeGet">
+            <summary>Sets the shim of Location.get_Longitude()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimLocation.AllInstances.LongitudeSetSingle">
+            <summary>Sets the shim of Location.set_Longitude(Single value)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimLocation.AllInstances.PlaceCodeGet">
+            <summary>Sets the shim of Location.get_PlaceCode()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimLocation.AllInstances.PlaceCodeSetString">
+            <summary>Sets the shim of Location.set_PlaceCode(String value)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimLocation.AllInstances.WeatherForcastsGet">
+            <summary>Sets the shim of Location.get_WeatherForcasts()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimLocation.AllInstances.WeatherForcastsSetICollectionOfWeather">
+            <summary>Sets the shim of Location.set_WeatherForcasts(ICollection`1&lt;Weather&gt; value)</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Models.Fakes.ShimLocation.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Models.Fakes.ShimLocation.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimLocation.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimLocation.Constructor">
+            <summary>Sets the shim of Location.Location()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimLocation.ConstructorJToken">
+            <summary>Sets the shim of Location.Location(JToken location)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimLocation.LatitudeGet">
+            <summary>Sets the shim of Location.get_Latitude()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimLocation.LatitudeSetSingle">
+            <summary>Sets the shim of Location.set_Latitude(Single value)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimLocation.LocationIdGet">
+            <summary>Sets the shim of Location.get_LocationId()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimLocation.LocationIdSetInt32">
+            <summary>Sets the shim of Location.set_LocationId(Int32 value)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimLocation.LocationTextGet">
+            <summary>Sets the shim of Location.get_LocationText()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimLocation.LocationTextSetString">
+            <summary>Sets the shim of Location.set_LocationText(String value)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimLocation.LongitudeGet">
+            <summary>Sets the shim of Location.get_Longitude()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimLocation.LongitudeSetSingle">
+            <summary>Sets the shim of Location.set_Longitude(Single value)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimLocation.PlaceCodeGet">
+            <summary>Sets the shim of Location.get_PlaceCode()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimLocation.PlaceCodeSetString">
+            <summary>Sets the shim of Location.set_PlaceCode(String value)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimLocation.WeatherForcastsGet">
+            <summary>Sets the shim of Location.get_WeatherForcasts()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimLocation.WeatherForcastsSetICollectionOfWeather">
+            <summary>Sets the shim of Location.set_WeatherForcasts(ICollection`1&lt;Weather&gt; value)</summary>
+        </member>
+        <member name="T:WeatherApp.Domain.Models.Fakes.ShimWeather">
+            <summary>Shim type of WeatherApp.Domain.Models.Weather</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Models.Fakes.ShimWeather.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Models.Fakes.ShimWeather.#ctor(WeatherApp.Domain.Models.Weather)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="T:WeatherApp.Domain.Models.Fakes.ShimWeather.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimWeather.AllInstances.AmountPreciptationGet">
+            <summary>Sets the shim of Weather.get_AmountPreciptation()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimWeather.AllInstances.AmountPreciptationSetSingle">
+            <summary>Sets the shim of Weather.set_AmountPreciptation(Single value)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimWeather.AllInstances.CloudFactorGet">
+            <summary>Sets the shim of Weather.get_CloudFactor()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimWeather.AllInstances.CloudFactorSetInt32">
+            <summary>Sets the shim of Weather.set_CloudFactor(Int32 value)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimWeather.AllInstances.ExtractInfoJTokenString">
+            <summary>Sets the shim of Weather.ExtractInfo(JToken weatherItem, String jsonPath)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimWeather.AllInstances.InterpretWeatherDataAndAssignSymbol">
+            <summary>Sets the shim of Weather.InterpretWeatherDataAndAssignSymbol()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimWeather.AllInstances.LocationGet">
+            <summary>Sets the shim of Weather.get_Location()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimWeather.AllInstances.LocationIdGet">
+            <summary>Sets the shim of Weather.get_LocationId()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimWeather.AllInstances.LocationIdSetInt32">
+            <summary>Sets the shim of Weather.set_LocationId(Int32 value)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimWeather.AllInstances.LocationSetLocation">
+            <summary>Sets the shim of Weather.set_Location(Location value)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimWeather.AllInstances.NextUpdateGet">
+            <summary>Sets the shim of Weather.get_NextUpdate()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimWeather.AllInstances.NextUpdateSetDateTime">
+            <summary>Sets the shim of Weather.set_NextUpdate(DateTime value)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimWeather.AllInstances.PreciptationGet">
+            <summary>Sets the shim of Weather.get_Preciptation()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimWeather.AllInstances.PreciptationSetPreciptation">
+            <summary>Sets the shim of Weather.set_Preciptation(Preciptation value)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimWeather.AllInstances.SymbolGet">
+            <summary>Sets the shim of Weather.get_Symbol()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimWeather.AllInstances.TemperatureGet">
+            <summary>Sets the shim of Weather.get_Temperature()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimWeather.AllInstances.TemperatureSetSingle">
+            <summary>Sets the shim of Weather.set_Temperature(Single value)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimWeather.AllInstances.ThunderProbabilityGet">
+            <summary>Sets the shim of Weather.get_ThunderProbability()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimWeather.AllInstances.ThunderProbabilitySetInt32">
+            <summary>Sets the shim of Weather.set_ThunderProbability(Int32 value)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimWeather.AllInstances.ValidTimeGet">
+            <summary>Sets the shim of Weather.get_ValidTime()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimWeather.AllInstances.ValidTimeSetDateTime">
+            <summary>Sets the shim of Weather.set_ValidTime(DateTime value)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimWeather.AllInstances.WeatherIdGet">
+            <summary>Sets the shim of Weather.get_WeatherId()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimWeather.AllInstances.WeatherIdSetInt32">
+            <summary>Sets the shim of Weather.set_WeatherId(Int32 value)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimWeather.AmountPreciptationGet">
+            <summary>Sets the shim of Weather.get_AmountPreciptation()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimWeather.AmountPreciptationSetSingle">
+            <summary>Sets the shim of Weather.set_AmountPreciptation(Single value)</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Models.Fakes.ShimWeather.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Models.Fakes.ShimWeather.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimWeather.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimWeather.CloudFactorGet">
+            <summary>Sets the shim of Weather.get_CloudFactor()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimWeather.CloudFactorSetInt32">
+            <summary>Sets the shim of Weather.set_CloudFactor(Int32 value)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimWeather.Constructor">
+            <summary>Sets the shim of Weather.Weather()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimWeather.ConstructorJTokenLocation">
+            <summary>Sets the shim of Weather.Weather(JToken weatherItem, Location location)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimWeather.ExtractInfoJTokenString">
+            <summary>Sets the shim of Weather.ExtractInfo(JToken weatherItem, String jsonPath)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimWeather.InterpretWeatherDataAndAssignSymbol">
+            <summary>Sets the shim of Weather.InterpretWeatherDataAndAssignSymbol()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimWeather.LocationGet">
+            <summary>Sets the shim of Weather.get_Location()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimWeather.LocationIdGet">
+            <summary>Sets the shim of Weather.get_LocationId()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimWeather.LocationIdSetInt32">
+            <summary>Sets the shim of Weather.set_LocationId(Int32 value)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimWeather.LocationSetLocation">
+            <summary>Sets the shim of Weather.set_Location(Location value)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimWeather.NextUpdateGet">
+            <summary>Sets the shim of Weather.get_NextUpdate()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimWeather.NextUpdateSetDateTime">
+            <summary>Sets the shim of Weather.set_NextUpdate(DateTime value)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimWeather.PreciptationGet">
+            <summary>Sets the shim of Weather.get_Preciptation()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimWeather.PreciptationSetPreciptation">
+            <summary>Sets the shim of Weather.set_Preciptation(Preciptation value)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimWeather.SymbolGet">
+            <summary>Sets the shim of Weather.get_Symbol()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimWeather.TemperatureGet">
+            <summary>Sets the shim of Weather.get_Temperature()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimWeather.TemperatureSetSingle">
+            <summary>Sets the shim of Weather.set_Temperature(Single value)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimWeather.ThunderProbabilityGet">
+            <summary>Sets the shim of Weather.get_ThunderProbability()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimWeather.ThunderProbabilitySetInt32">
+            <summary>Sets the shim of Weather.set_ThunderProbability(Int32 value)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimWeather.ValidTimeGet">
+            <summary>Sets the shim of Weather.get_ValidTime()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimWeather.ValidTimeSetDateTime">
+            <summary>Sets the shim of Weather.set_ValidTime(DateTime value)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimWeather.WeatherIdGet">
+            <summary>Sets the shim of Weather.get_WeatherId()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimWeather.WeatherIdSetInt32">
+            <summary>Sets the shim of Weather.set_WeatherId(Int32 value)</summary>
+        </member>
+        <member name="T:WeatherApp.Domain.Models.Fakes.ShimWeatherForcastDbContext">
+            <summary>Shim type of WeatherApp.Domain.Models.WeatherForcastDbContext</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Models.Fakes.ShimWeatherForcastDbContext.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Models.Fakes.ShimWeatherForcastDbContext.#ctor(WeatherApp.Domain.Models.WeatherForcastDbContext)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="T:WeatherApp.Domain.Models.Fakes.ShimWeatherForcastDbContext.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimWeatherForcastDbContext.AllInstances.LocationsGet">
+            <summary>Sets the shim of WeatherForcastDbContext.get_Locations()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimWeatherForcastDbContext.AllInstances.LocationsSetDbSetOfLocation">
+            <summary>Sets the shim of WeatherForcastDbContext.set_Locations(DbSet`1&lt;Location&gt; value)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimWeatherForcastDbContext.AllInstances.WeatherGet">
+            <summary>Sets the shim of WeatherForcastDbContext.get_Weather()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimWeatherForcastDbContext.AllInstances.WeatherSetDbSetOfWeather">
+            <summary>Sets the shim of WeatherForcastDbContext.set_Weather(DbSet`1&lt;Weather&gt; value)</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Models.Fakes.ShimWeatherForcastDbContext.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Models.Fakes.ShimWeatherForcastDbContext.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimWeatherForcastDbContext.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Models.Fakes.ShimWeatherForcastDbContext.Bind(System.Data.Entity.Infrastructure.IObjectContextAdapter)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Models.Fakes.ShimWeatherForcastDbContext.Bind(System.IDisposable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimWeatherForcastDbContext.Constructor">
+            <summary>Sets the shim of WeatherForcastDbContext.WeatherForcastDbContext()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimWeatherForcastDbContext.LocationsGet">
+            <summary>Sets the shim of WeatherForcastDbContext.get_Locations()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimWeatherForcastDbContext.LocationsSetDbSetOfLocation">
+            <summary>Sets the shim of WeatherForcastDbContext.set_Locations(DbSet`1&lt;Location&gt; value)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimWeatherForcastDbContext.WeatherGet">
+            <summary>Sets the shim of WeatherForcastDbContext.get_Weather()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.ShimWeatherForcastDbContext.WeatherSetDbSetOfWeather">
+            <summary>Sets the shim of WeatherForcastDbContext.set_Weather(DbSet`1&lt;Weather&gt; value)</summary>
+        </member>
+        <member name="T:WeatherApp.Domain.Models.Fakes.StubLocation">
+            <summary>Stub type of WeatherApp.Domain.Models.Location</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Models.Fakes.StubLocation.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Models.Fakes.StubLocation.#ctor(Newtonsoft.Json.Linq.JToken)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Models.Fakes.StubLocation.AttachBackingFieldToWeatherForcasts">
+            <summary>Attaches delegates to emulate StubLocation.WeatherForcasts as a property with a backing field.</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.StubLocation.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Models.Fakes.StubLocation.InitializeStub">
+            <summary>Initializes a new instance of type StubLocation</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.StubLocation.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.StubLocation.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.StubLocation.WeatherForcasts">
+            <summary>Sets the stub of Location.get_WeatherForcasts()</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Models.Fakes.StubLocation.WeatherForcastsGet">
+            <summary>Sets the stub of Location.get_WeatherForcasts()</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Models.Fakes.StubLocation.WeatherForcastsSetICollectionOfWeather">
+            <summary>Sets the stub of Location.set_WeatherForcasts(ICollection`1&lt;Weather&gt; value)</summary>
+        </member>
+        <member name="T:WeatherApp.Domain.Models.Fakes.StubWeather">
+            <summary>Stub type of WeatherApp.Domain.Models.Weather</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Models.Fakes.StubWeather.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Models.Fakes.StubWeather.#ctor(Newtonsoft.Json.Linq.JToken,WeatherApp.Domain.Models.Location)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Models.Fakes.StubWeather.AttachBackingFieldToLocation">
+            <summary>Attaches delegates to emulate StubWeather.Location as a property with a backing field.</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.StubWeather.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Models.Fakes.StubWeather.InitializeStub">
+            <summary>Initializes a new instance of type StubWeather</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.StubWeather.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.StubWeather.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.StubWeather.Location">
+            <summary>Sets the stub of Weather.get_Location()</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Models.Fakes.StubWeather.LocationGet">
+            <summary>Sets the stub of Weather.get_Location()</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Models.Fakes.StubWeather.LocationSetLocation">
+            <summary>Sets the stub of Weather.set_Location(Location value)</summary>
+        </member>
+        <member name="T:WeatherApp.Domain.Models.Fakes.StubWeatherForcastDbContext">
+            <summary>Stub type of WeatherApp.Domain.Models.WeatherForcastDbContext</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Models.Fakes.StubWeatherForcastDbContext.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.StubWeatherForcastDbContext.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Models.Fakes.StubWeatherForcastDbContext.Dispose(System.Boolean)">
+            <summary>Sets the stub of DbContext.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Models.Fakes.StubWeatherForcastDbContext.DisposeBoolean">
+            <summary>Sets the stub of DbContext.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Models.Fakes.StubWeatherForcastDbContext.Equals(System.Object)">
+            <summary>Sets the stub of DbContext.Equals(Object obj)</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Models.Fakes.StubWeatherForcastDbContext.EqualsObject">
+            <summary>Sets the stub of DbContext.Equals(Object obj)</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Models.Fakes.StubWeatherForcastDbContext.GetHashCode">
+            <summary>Sets the stub of DbContext.GetHashCode()</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Models.Fakes.StubWeatherForcastDbContext.GetHashCode01">
+            <summary>Sets the stub of DbContext.GetHashCode()</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Models.Fakes.StubWeatherForcastDbContext.InitializeStub">
+            <summary>Initializes a new instance of type StubWeatherForcastDbContext</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.StubWeatherForcastDbContext.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Models.Fakes.StubWeatherForcastDbContext.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Models.Fakes.StubWeatherForcastDbContext.OnModelCreating(System.Data.Entity.DbModelBuilder)">
+            <summary>Sets the stub of DbContext.OnModelCreating(DbModelBuilder modelBuilder)</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Models.Fakes.StubWeatherForcastDbContext.OnModelCreatingDbModelBuilder">
+            <summary>Sets the stub of DbContext.OnModelCreating(DbModelBuilder modelBuilder)</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Models.Fakes.StubWeatherForcastDbContext.SaveChanges">
+            <summary>Sets the stub of DbContext.SaveChanges()</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Models.Fakes.StubWeatherForcastDbContext.SaveChanges01">
+            <summary>Sets the stub of DbContext.SaveChanges()</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Models.Fakes.StubWeatherForcastDbContext.SaveChangesAsync">
+            <summary>Sets the stub of DbContext.SaveChangesAsync()</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Models.Fakes.StubWeatherForcastDbContext.SaveChangesAsync(System.Threading.CancellationToken)">
+            <summary>Sets the stub of DbContext.SaveChangesAsync(CancellationToken cancellationToken)</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Models.Fakes.StubWeatherForcastDbContext.SaveChangesAsync01">
+            <summary>Sets the stub of DbContext.SaveChangesAsync()</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Models.Fakes.StubWeatherForcastDbContext.SaveChangesAsyncCancellationToken">
+            <summary>Sets the stub of DbContext.SaveChangesAsync(CancellationToken cancellationToken)</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Models.Fakes.StubWeatherForcastDbContext.ShouldValidateEntity(System.Data.Entity.Infrastructure.DbEntityEntry)">
+            <summary>Sets the stub of DbContext.ShouldValidateEntity(DbEntityEntry entityEntry)</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Models.Fakes.StubWeatherForcastDbContext.ShouldValidateEntityDbEntityEntry">
+            <summary>Sets the stub of DbContext.ShouldValidateEntity(DbEntityEntry entityEntry)</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Models.Fakes.StubWeatherForcastDbContext.ToString">
+            <summary>Sets the stub of DbContext.ToString()</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Models.Fakes.StubWeatherForcastDbContext.ToString01">
+            <summary>Sets the stub of DbContext.ToString()</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Models.Fakes.StubWeatherForcastDbContext.ValidateEntity(System.Data.Entity.Infrastructure.DbEntityEntry,System.Collections.Generic.IDictionary{System.Object,System.Object})">
+            <summary>Sets the stub of DbContext.ValidateEntity(DbEntityEntry entityEntry, IDictionary`2&lt;Object,Object&gt; items)</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Models.Fakes.StubWeatherForcastDbContext.ValidateEntityDbEntityEntryIDictionaryOfObjectObject">
+            <summary>Sets the stub of DbContext.ValidateEntity(DbEntityEntry entityEntry, IDictionary`2&lt;Object,Object&gt; items)</summary>
+        </member>
+        <member name="T:WeatherApp.Domain.Repositories.Fakes.ShimWeatherRepository">
+            <summary>Shim type of WeatherApp.Domain.Repositories.WeatherRepository</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Repositories.Fakes.ShimWeatherRepository.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Repositories.Fakes.ShimWeatherRepository.#ctor(WeatherApp.Domain.Repositories.WeatherRepository)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Repositories.Fakes.ShimWeatherRepository.AddLocationLocation">
+            <summary>Sets the shim of WeatherRepository.AddLocation(Location location)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Repositories.Fakes.ShimWeatherRepository.AddWeatherWeather">
+            <summary>Sets the shim of WeatherRepository.AddWeather(Weather weather)</summary>
+        </member>
+        <member name="T:WeatherApp.Domain.Repositories.Fakes.ShimWeatherRepository.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Repositories.Fakes.ShimWeatherRepository.AllInstances.AddLocationLocation">
+            <summary>Sets the shim of WeatherRepository.AddLocation(Location location)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Repositories.Fakes.ShimWeatherRepository.AllInstances.AddWeatherWeather">
+            <summary>Sets the shim of WeatherRepository.AddWeather(Weather weather)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Repositories.Fakes.ShimWeatherRepository.AllInstances.DeleteLocationInt32">
+            <summary>Sets the shim of WeatherRepository.DeleteLocation(Int32 id)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Repositories.Fakes.ShimWeatherRepository.AllInstances.DeleteWeatherInt32">
+            <summary>Sets the shim of WeatherRepository.DeleteWeather(Int32 id)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Repositories.Fakes.ShimWeatherRepository.AllInstances.QueryLocations">
+            <summary>Sets the shim of WeatherRepository.QueryLocations()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Repositories.Fakes.ShimWeatherRepository.AllInstances.QueryWeathers">
+            <summary>Sets the shim of WeatherRepository.QueryWeathers()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Repositories.Fakes.ShimWeatherRepository.AllInstances.Save">
+            <summary>Sets the shim of WeatherRepository.Save()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Repositories.Fakes.ShimWeatherRepository.AllInstances.UpdateLocationLocation">
+            <summary>Sets the shim of WeatherRepository.UpdateLocation(Location location)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Repositories.Fakes.ShimWeatherRepository.AllInstances.UpdateWeatherWeather">
+            <summary>Sets the shim of WeatherRepository.UpdateWeather(Weather weather)</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Repositories.Fakes.ShimWeatherRepository.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Repositories.Fakes.ShimWeatherRepository.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Repositories.Fakes.ShimWeatherRepository.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Repositories.Fakes.ShimWeatherRepository.Bind(WeatherApp.Domain.Repositories.IWeatherRepository)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Repositories.Fakes.ShimWeatherRepository.Bind(System.IDisposable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Repositories.Fakes.ShimWeatherRepository.Constructor">
+            <summary>Sets the shim of WeatherRepository.WeatherRepository()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Repositories.Fakes.ShimWeatherRepository.DeleteLocationInt32">
+            <summary>Sets the shim of WeatherRepository.DeleteLocation(Int32 id)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Repositories.Fakes.ShimWeatherRepository.DeleteWeatherInt32">
+            <summary>Sets the shim of WeatherRepository.DeleteWeather(Int32 id)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Repositories.Fakes.ShimWeatherRepository.QueryLocations">
+            <summary>Sets the shim of WeatherRepository.QueryLocations()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Repositories.Fakes.ShimWeatherRepository.QueryWeathers">
+            <summary>Sets the shim of WeatherRepository.QueryWeathers()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Repositories.Fakes.ShimWeatherRepository.Save">
+            <summary>Sets the shim of WeatherRepository.Save()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Repositories.Fakes.ShimWeatherRepository.UpdateLocationLocation">
+            <summary>Sets the shim of WeatherRepository.UpdateLocation(Location location)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Repositories.Fakes.ShimWeatherRepository.UpdateWeatherWeather">
+            <summary>Sets the shim of WeatherRepository.UpdateWeather(Weather weather)</summary>
+        </member>
+        <member name="T:WeatherApp.Domain.Repositories.Fakes.ShimWeatherRepositoryBase">
+            <summary>Shim type of WeatherApp.Domain.Repositories.WeatherRepositoryBase</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Repositories.Fakes.ShimWeatherRepositoryBase.#ctor(WeatherApp.Domain.Repositories.WeatherRepositoryBase)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="T:WeatherApp.Domain.Repositories.Fakes.ShimWeatherRepositoryBase.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Repositories.Fakes.ShimWeatherRepositoryBase.AllInstances.Dispose">
+            <summary>Sets the shim of WeatherRepositoryBase.Dispose()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Repositories.Fakes.ShimWeatherRepositoryBase.AllInstances.DisposeBoolean">
+            <summary>Sets the shim of WeatherRepositoryBase.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Repositories.Fakes.ShimWeatherRepositoryBase.AllInstances.GetLocationByPlaceIdString">
+            <summary>Sets the shim of WeatherRepositoryBase.GetLocationByPlaceId(String placeId)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Repositories.Fakes.ShimWeatherRepositoryBase.AllInstances.GetLocationInt32">
+            <summary>Sets the shim of WeatherRepositoryBase.GetLocation(Int32 id)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Repositories.Fakes.ShimWeatherRepositoryBase.AllInstances.GetLocationString">
+            <summary>Sets the shim of WeatherRepositoryBase.GetLocation(String location)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Repositories.Fakes.ShimWeatherRepositoryBase.AllInstances.GetLocations">
+            <summary>Sets the shim of WeatherRepositoryBase.GetLocations()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Repositories.Fakes.ShimWeatherRepositoryBase.AllInstances.GetWeatherInt32">
+            <summary>Sets the shim of WeatherRepositoryBase.GetWeather(Int32 id)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Repositories.Fakes.ShimWeatherRepositoryBase.AllInstances.GetWeathers">
+            <summary>Sets the shim of WeatherRepositoryBase.GetWeathers()</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Repositories.Fakes.ShimWeatherRepositoryBase.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Repositories.Fakes.ShimWeatherRepositoryBase.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Repositories.Fakes.ShimWeatherRepositoryBase.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Repositories.Fakes.ShimWeatherRepositoryBase.Bind(WeatherApp.Domain.Repositories.IWeatherRepository)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Repositories.Fakes.ShimWeatherRepositoryBase.Bind(System.IDisposable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Repositories.Fakes.ShimWeatherRepositoryBase.Constructor">
+            <summary>Sets the shim of WeatherRepositoryBase.WeatherRepositoryBase()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Repositories.Fakes.ShimWeatherRepositoryBase.Dispose">
+            <summary>Sets the shim of WeatherRepositoryBase.Dispose()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Repositories.Fakes.ShimWeatherRepositoryBase.DisposeBoolean">
+            <summary>Sets the shim of WeatherRepositoryBase.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Repositories.Fakes.ShimWeatherRepositoryBase.GetLocationByPlaceIdString">
+            <summary>Sets the shim of WeatherRepositoryBase.GetLocationByPlaceId(String placeId)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Repositories.Fakes.ShimWeatherRepositoryBase.GetLocationInt32">
+            <summary>Sets the shim of WeatherRepositoryBase.GetLocation(Int32 id)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Repositories.Fakes.ShimWeatherRepositoryBase.GetLocationString">
+            <summary>Sets the shim of WeatherRepositoryBase.GetLocation(String location)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Repositories.Fakes.ShimWeatherRepositoryBase.GetLocations">
+            <summary>Sets the shim of WeatherRepositoryBase.GetLocations()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Repositories.Fakes.ShimWeatherRepositoryBase.GetWeatherInt32">
+            <summary>Sets the shim of WeatherRepositoryBase.GetWeather(Int32 id)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Repositories.Fakes.ShimWeatherRepositoryBase.GetWeathers">
+            <summary>Sets the shim of WeatherRepositoryBase.GetWeathers()</summary>
+        </member>
+        <member name="T:WeatherApp.Domain.Repositories.Fakes.StubIWeatherRepository">
+            <summary>Stub type of WeatherApp.Domain.Repositories.IWeatherRepository</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Repositories.Fakes.StubIWeatherRepository.#ctor">
+            <summary>Initializes a new instance of type StubIWeatherRepository</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Repositories.Fakes.StubIWeatherRepository.AddLocationLocation">
+            <summary>Sets the stub of IWeatherRepository.AddLocation(Location location)</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Repositories.Fakes.StubIWeatherRepository.AddWeatherWeather">
+            <summary>Sets the stub of IWeatherRepository.AddWeather(Weather weather)</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Repositories.Fakes.StubIWeatherRepository.DeleteLocationInt32">
+            <summary>Sets the stub of IWeatherRepository.DeleteLocation(Int32 id)</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Repositories.Fakes.StubIWeatherRepository.DeleteWeatherInt32">
+            <summary>Sets the stub of IWeatherRepository.DeleteWeather(Int32 id)</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Repositories.Fakes.StubIWeatherRepository.Dispose">
+            <summary>Sets the stub of IDisposable.Dispose()</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Repositories.Fakes.StubIWeatherRepository.GetLocationByPlaceIdString">
+            <summary>Sets the stub of IWeatherRepository.GetLocationByPlaceId(String placeId)</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Repositories.Fakes.StubIWeatherRepository.GetLocationInt32">
+            <summary>Sets the stub of IWeatherRepository.GetLocation(Int32 id)</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Repositories.Fakes.StubIWeatherRepository.GetLocationString">
+            <summary>Sets the stub of IWeatherRepository.GetLocation(String location)</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Repositories.Fakes.StubIWeatherRepository.GetLocations">
+            <summary>Sets the stub of IWeatherRepository.GetLocations()</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Repositories.Fakes.StubIWeatherRepository.GetWeatherInt32">
+            <summary>Sets the stub of IWeatherRepository.GetWeather(Int32 id)</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Repositories.Fakes.StubIWeatherRepository.GetWeathers">
+            <summary>Sets the stub of IWeatherRepository.GetWeathers()</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Repositories.Fakes.StubIWeatherRepository.Save">
+            <summary>Sets the stub of IWeatherRepository.Save()</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Repositories.Fakes.StubIWeatherRepository.System#IDisposable#Dispose">
+            <summary>Sets the stub of IDisposable.Dispose()</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Repositories.Fakes.StubIWeatherRepository.UpdateLocationLocation">
+            <summary>Sets the stub of IWeatherRepository.UpdateLocation(Location location)</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Repositories.Fakes.StubIWeatherRepository.UpdateWeatherWeather">
+            <summary>Sets the stub of IWeatherRepository.UpdateWeather(Weather weather)</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Repositories.Fakes.StubIWeatherRepository.WeatherApp#Domain#Repositories#IWeatherRepository#AddLocation(WeatherApp.Domain.Models.Location)">
+            <summary>Sets the stub of IWeatherRepository.AddLocation(Location location)</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Repositories.Fakes.StubIWeatherRepository.WeatherApp#Domain#Repositories#IWeatherRepository#AddWeather(WeatherApp.Domain.Models.Weather)">
+            <summary>Sets the stub of IWeatherRepository.AddWeather(Weather weather)</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Repositories.Fakes.StubIWeatherRepository.WeatherApp#Domain#Repositories#IWeatherRepository#DeleteLocation(System.Int32)">
+            <summary>Sets the stub of IWeatherRepository.DeleteLocation(Int32 id)</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Repositories.Fakes.StubIWeatherRepository.WeatherApp#Domain#Repositories#IWeatherRepository#DeleteWeather(System.Int32)">
+            <summary>Sets the stub of IWeatherRepository.DeleteWeather(Int32 id)</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Repositories.Fakes.StubIWeatherRepository.WeatherApp#Domain#Repositories#IWeatherRepository#GetLocation(System.Int32)">
+            <summary>Sets the stub of IWeatherRepository.GetLocation(Int32 id)</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Repositories.Fakes.StubIWeatherRepository.WeatherApp#Domain#Repositories#IWeatherRepository#GetLocation(System.String)">
+            <summary>Sets the stub of IWeatherRepository.GetLocation(String location)</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Repositories.Fakes.StubIWeatherRepository.WeatherApp#Domain#Repositories#IWeatherRepository#GetLocationByPlaceId(System.String)">
+            <summary>Sets the stub of IWeatherRepository.GetLocationByPlaceId(String placeId)</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Repositories.Fakes.StubIWeatherRepository.WeatherApp#Domain#Repositories#IWeatherRepository#GetLocations">
+            <summary>Sets the stub of IWeatherRepository.GetLocations()</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Repositories.Fakes.StubIWeatherRepository.WeatherApp#Domain#Repositories#IWeatherRepository#GetWeather(System.Int32)">
+            <summary>Sets the stub of IWeatherRepository.GetWeather(Int32 id)</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Repositories.Fakes.StubIWeatherRepository.WeatherApp#Domain#Repositories#IWeatherRepository#GetWeathers">
+            <summary>Sets the stub of IWeatherRepository.GetWeathers()</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Repositories.Fakes.StubIWeatherRepository.WeatherApp#Domain#Repositories#IWeatherRepository#Save">
+            <summary>Sets the stub of IWeatherRepository.Save()</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Repositories.Fakes.StubIWeatherRepository.WeatherApp#Domain#Repositories#IWeatherRepository#UpdateLocation(WeatherApp.Domain.Models.Location)">
+            <summary>Sets the stub of IWeatherRepository.UpdateLocation(Location location)</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Repositories.Fakes.StubIWeatherRepository.WeatherApp#Domain#Repositories#IWeatherRepository#UpdateWeather(WeatherApp.Domain.Models.Weather)">
+            <summary>Sets the stub of IWeatherRepository.UpdateWeather(Weather weather)</summary>
+        </member>
+        <member name="T:WeatherApp.Domain.Repositories.Fakes.StubWeatherRepository">
+            <summary>Stub type of WeatherApp.Domain.Repositories.WeatherRepository</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Repositories.Fakes.StubWeatherRepository.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Repositories.Fakes.StubWeatherRepository.AddLocation(WeatherApp.Domain.Models.Location)">
+            <summary>Sets the stub of WeatherRepository.AddLocation(Location location)</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Repositories.Fakes.StubWeatherRepository.AddLocationLocation">
+            <summary>Sets the stub of WeatherRepository.AddLocation(Location location)</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Repositories.Fakes.StubWeatherRepository.AddWeather(WeatherApp.Domain.Models.Weather)">
+            <summary>Sets the stub of WeatherRepository.AddWeather(Weather weather)</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Repositories.Fakes.StubWeatherRepository.AddWeatherWeather">
+            <summary>Sets the stub of WeatherRepository.AddWeather(Weather weather)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Repositories.Fakes.StubWeatherRepository.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Repositories.Fakes.StubWeatherRepository.DeleteLocation(System.Int32)">
+            <summary>Sets the stub of WeatherRepository.DeleteLocation(Int32 id)</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Repositories.Fakes.StubWeatherRepository.DeleteLocationInt32">
+            <summary>Sets the stub of WeatherRepository.DeleteLocation(Int32 id)</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Repositories.Fakes.StubWeatherRepository.DeleteWeather(System.Int32)">
+            <summary>Sets the stub of WeatherRepository.DeleteWeather(Int32 id)</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Repositories.Fakes.StubWeatherRepository.DeleteWeatherInt32">
+            <summary>Sets the stub of WeatherRepository.DeleteWeather(Int32 id)</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Repositories.Fakes.StubWeatherRepository.Dispose(System.Boolean)">
+            <summary>Sets the stub of WeatherRepositoryBase.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Repositories.Fakes.StubWeatherRepository.DisposeBoolean">
+            <summary>Sets the stub of WeatherRepositoryBase.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Repositories.Fakes.StubWeatherRepository.InitializeStub">
+            <summary>Initializes a new instance of type StubWeatherRepository</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Repositories.Fakes.StubWeatherRepository.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Repositories.Fakes.StubWeatherRepository.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Repositories.Fakes.StubWeatherRepository.QueryLocations">
+            <summary>Sets the stub of WeatherRepository.QueryLocations()</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Repositories.Fakes.StubWeatherRepository.QueryLocations01">
+            <summary>Sets the stub of WeatherRepository.QueryLocations()</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Repositories.Fakes.StubWeatherRepository.QueryWeathers">
+            <summary>Sets the stub of WeatherRepository.QueryWeathers()</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Repositories.Fakes.StubWeatherRepository.QueryWeathers01">
+            <summary>Sets the stub of WeatherRepository.QueryWeathers()</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Repositories.Fakes.StubWeatherRepository.Save">
+            <summary>Sets the stub of WeatherRepository.Save()</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Repositories.Fakes.StubWeatherRepository.Save01">
+            <summary>Sets the stub of WeatherRepository.Save()</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Repositories.Fakes.StubWeatherRepository.UpdateLocation(WeatherApp.Domain.Models.Location)">
+            <summary>Sets the stub of WeatherRepository.UpdateLocation(Location location)</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Repositories.Fakes.StubWeatherRepository.UpdateLocationLocation">
+            <summary>Sets the stub of WeatherRepository.UpdateLocation(Location location)</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Repositories.Fakes.StubWeatherRepository.UpdateWeather(WeatherApp.Domain.Models.Weather)">
+            <summary>Sets the stub of WeatherRepository.UpdateWeather(Weather weather)</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Repositories.Fakes.StubWeatherRepository.UpdateWeatherWeather">
+            <summary>Sets the stub of WeatherRepository.UpdateWeather(Weather weather)</summary>
+        </member>
+        <member name="T:WeatherApp.Domain.Repositories.Fakes.StubWeatherRepositoryBase">
+            <summary>Stub type of WeatherApp.Domain.Repositories.WeatherRepositoryBase</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Repositories.Fakes.StubWeatherRepositoryBase.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Repositories.Fakes.StubWeatherRepositoryBase.AddLocation(WeatherApp.Domain.Models.Location)">
+            <summary>Sets the stub of WeatherRepositoryBase.AddLocation(Location geoLocation)</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Repositories.Fakes.StubWeatherRepositoryBase.AddLocationLocation">
+            <summary>Sets the stub of WeatherRepositoryBase.AddLocation(Location geoLocation)</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Repositories.Fakes.StubWeatherRepositoryBase.AddWeather(WeatherApp.Domain.Models.Weather)">
+            <summary>Sets the stub of WeatherRepositoryBase.AddWeather(Weather forcast)</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Repositories.Fakes.StubWeatherRepositoryBase.AddWeatherWeather">
+            <summary>Sets the stub of WeatherRepositoryBase.AddWeather(Weather forcast)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Repositories.Fakes.StubWeatherRepositoryBase.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Repositories.Fakes.StubWeatherRepositoryBase.DeleteLocation(System.Int32)">
+            <summary>Sets the stub of WeatherRepositoryBase.DeleteLocation(Int32 id)</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Repositories.Fakes.StubWeatherRepositoryBase.DeleteLocationInt32">
+            <summary>Sets the stub of WeatherRepositoryBase.DeleteLocation(Int32 id)</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Repositories.Fakes.StubWeatherRepositoryBase.DeleteWeather(System.Int32)">
+            <summary>Sets the stub of WeatherRepositoryBase.DeleteWeather(Int32 id)</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Repositories.Fakes.StubWeatherRepositoryBase.DeleteWeatherInt32">
+            <summary>Sets the stub of WeatherRepositoryBase.DeleteWeather(Int32 id)</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Repositories.Fakes.StubWeatherRepositoryBase.Dispose(System.Boolean)">
+            <summary>Sets the stub of WeatherRepositoryBase.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Repositories.Fakes.StubWeatherRepositoryBase.DisposeBoolean">
+            <summary>Sets the stub of WeatherRepositoryBase.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Repositories.Fakes.StubWeatherRepositoryBase.InitializeStub">
+            <summary>Initializes a new instance of type StubWeatherRepositoryBase</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Repositories.Fakes.StubWeatherRepositoryBase.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Repositories.Fakes.StubWeatherRepositoryBase.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Repositories.Fakes.StubWeatherRepositoryBase.QueryLocations">
+            <summary>Sets the stub of WeatherRepositoryBase.QueryLocations()</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Repositories.Fakes.StubWeatherRepositoryBase.QueryLocations01">
+            <summary>Sets the stub of WeatherRepositoryBase.QueryLocations()</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Repositories.Fakes.StubWeatherRepositoryBase.QueryWeathers">
+            <summary>Sets the stub of WeatherRepositoryBase.QueryWeathers()</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Repositories.Fakes.StubWeatherRepositoryBase.QueryWeathers01">
+            <summary>Sets the stub of WeatherRepositoryBase.QueryWeathers()</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Repositories.Fakes.StubWeatherRepositoryBase.Save">
+            <summary>Sets the stub of WeatherRepositoryBase.Save()</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Repositories.Fakes.StubWeatherRepositoryBase.Save01">
+            <summary>Sets the stub of WeatherRepositoryBase.Save()</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Repositories.Fakes.StubWeatherRepositoryBase.UpdateLocation(WeatherApp.Domain.Models.Location)">
+            <summary>Sets the stub of WeatherRepositoryBase.UpdateLocation(Location geoLocation)</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Repositories.Fakes.StubWeatherRepositoryBase.UpdateLocationLocation">
+            <summary>Sets the stub of WeatherRepositoryBase.UpdateLocation(Location geoLocation)</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Repositories.Fakes.StubWeatherRepositoryBase.UpdateWeather(WeatherApp.Domain.Models.Weather)">
+            <summary>Sets the stub of WeatherRepositoryBase.UpdateWeather(Weather forcast)</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Repositories.Fakes.StubWeatherRepositoryBase.UpdateWeatherWeather">
+            <summary>Sets the stub of WeatherRepositoryBase.UpdateWeather(Weather forcast)</summary>
+        </member>
+        <member name="T:WeatherApp.Domain.Services.Fakes.ShimDefaultConfig">
+            <summary>Shim type of WeatherApp.Domain.Services.DefaultConfig</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Services.Fakes.ShimDefaultConfig.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Services.Fakes.ShimDefaultConfig.#ctor(WeatherApp.Domain.Services.DefaultConfig)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="T:WeatherApp.Domain.Services.Fakes.ShimDefaultConfig.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Services.Fakes.ShimDefaultConfig.AllInstances.GetDefaultLocation">
+            <summary>Sets the shim of DefaultConfig.GetDefaultLocation()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Services.Fakes.ShimDefaultConfig.AllInstances.SetDefaultLocationString">
+            <summary>Sets the shim of DefaultConfig.SetDefaultLocation(String location)</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Services.Fakes.ShimDefaultConfig.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Services.Fakes.ShimDefaultConfig.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Services.Fakes.ShimDefaultConfig.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Services.Fakes.ShimDefaultConfig.Bind(WeatherApp.Domain.Services.IDefaultConfig)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Services.Fakes.ShimDefaultConfig.ConstructorString">
+            <summary>Sets the shim of DefaultConfig.DefaultConfig(String path)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Services.Fakes.ShimDefaultConfig.GetDefaultLocation">
+            <summary>Sets the shim of DefaultConfig.GetDefaultLocation()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Services.Fakes.ShimDefaultConfig.SetDefaultLocationString">
+            <summary>Sets the shim of DefaultConfig.SetDefaultLocation(String location)</summary>
+        </member>
+        <member name="T:WeatherApp.Domain.Services.Fakes.ShimDefaultConfigBase">
+            <summary>Shim type of WeatherApp.Domain.Services.DefaultConfigBase</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Services.Fakes.ShimDefaultConfigBase.#ctor(WeatherApp.Domain.Services.DefaultConfigBase)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="T:WeatherApp.Domain.Services.Fakes.ShimDefaultConfigBase.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Services.Fakes.ShimDefaultConfigBase.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Services.Fakes.ShimDefaultConfigBase.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Services.Fakes.ShimDefaultConfigBase.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Services.Fakes.ShimDefaultConfigBase.Bind(WeatherApp.Domain.Services.IDefaultConfig)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Services.Fakes.ShimDefaultConfigBase.Constructor">
+            <summary>Sets the shim of DefaultConfigBase.DefaultConfigBase()</summary>
+        </member>
+        <member name="T:WeatherApp.Domain.Services.Fakes.ShimWeatherService">
+            <summary>Shim type of WeatherApp.Domain.Services.WeatherService</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Services.Fakes.ShimWeatherService.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Services.Fakes.ShimWeatherService.#ctor(WeatherApp.Domain.Services.WeatherService)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="T:WeatherApp.Domain.Services.Fakes.ShimWeatherService.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Services.Fakes.ShimWeatherService.AllInstances.GetAllLocations">
+            <summary>Sets the shim of WeatherService.GetAllLocations()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Services.Fakes.ShimWeatherService.AllInstances.GetLocationString">
+            <summary>Sets the shim of WeatherService.GetLocation(String location)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Services.Fakes.ShimWeatherService.AllInstances.UpdateWeatherLocation">
+            <summary>Sets the shim of WeatherService.UpdateWeather(Location location)</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Services.Fakes.ShimWeatherService.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Services.Fakes.ShimWeatherService.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Services.Fakes.ShimWeatherService.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Services.Fakes.ShimWeatherService.Bind(WeatherApp.Domain.Services.IWeatherService)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Services.Fakes.ShimWeatherService.Bind(System.IDisposable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Services.Fakes.ShimWeatherService.Constructor">
+            <summary>Sets the shim of WeatherService.WeatherService()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Services.Fakes.ShimWeatherService.ConstructorIWeatherRepositoryIWeatherWebService">
+            <summary>Sets the shim of WeatherService.WeatherService(IWeatherRepository repository, IWeatherWebService webservice)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Services.Fakes.ShimWeatherService.GetAllLocations">
+            <summary>Sets the shim of WeatherService.GetAllLocations()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Services.Fakes.ShimWeatherService.GetLocationString">
+            <summary>Sets the shim of WeatherService.GetLocation(String location)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Services.Fakes.ShimWeatherService.UpdateWeatherLocation">
+            <summary>Sets the shim of WeatherService.UpdateWeather(Location location)</summary>
+        </member>
+        <member name="T:WeatherApp.Domain.Services.Fakes.ShimWeatherServiceBase">
+            <summary>Shim type of WeatherApp.Domain.Services.WeatherServiceBase</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Services.Fakes.ShimWeatherServiceBase.#ctor(WeatherApp.Domain.Services.WeatherServiceBase)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="T:WeatherApp.Domain.Services.Fakes.ShimWeatherServiceBase.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Services.Fakes.ShimWeatherServiceBase.AllInstances.Dispose">
+            <summary>Sets the shim of WeatherServiceBase.Dispose()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Services.Fakes.ShimWeatherServiceBase.AllInstances.DisposeBoolean">
+            <summary>Sets the shim of WeatherServiceBase.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Services.Fakes.ShimWeatherServiceBase.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Services.Fakes.ShimWeatherServiceBase.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Services.Fakes.ShimWeatherServiceBase.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Services.Fakes.ShimWeatherServiceBase.Bind(WeatherApp.Domain.Services.IWeatherService)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Services.Fakes.ShimWeatherServiceBase.Bind(System.IDisposable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Services.Fakes.ShimWeatherServiceBase.Constructor">
+            <summary>Sets the shim of WeatherServiceBase.WeatherServiceBase()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Services.Fakes.ShimWeatherServiceBase.Dispose">
+            <summary>Sets the shim of WeatherServiceBase.Dispose()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Services.Fakes.ShimWeatherServiceBase.DisposeBoolean">
+            <summary>Sets the shim of WeatherServiceBase.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="T:WeatherApp.Domain.Services.Fakes.StubDefaultConfig">
+            <summary>Stub type of WeatherApp.Domain.Services.DefaultConfig</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Services.Fakes.StubDefaultConfig.#ctor(System.String)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Services.Fakes.StubDefaultConfig.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Services.Fakes.StubDefaultConfig.GetDefaultLocation">
+            <summary>Sets the stub of DefaultConfig.GetDefaultLocation()</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Services.Fakes.StubDefaultConfig.GetDefaultLocation01">
+            <summary>Sets the stub of DefaultConfig.GetDefaultLocation()</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Services.Fakes.StubDefaultConfig.InitializeStub">
+            <summary>Initializes a new instance of type StubDefaultConfig</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Services.Fakes.StubDefaultConfig.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Services.Fakes.StubDefaultConfig.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Services.Fakes.StubDefaultConfig.SetDefaultLocation(System.String)">
+            <summary>Sets the stub of DefaultConfig.SetDefaultLocation(String location)</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Services.Fakes.StubDefaultConfig.SetDefaultLocationString">
+            <summary>Sets the stub of DefaultConfig.SetDefaultLocation(String location)</summary>
+        </member>
+        <member name="T:WeatherApp.Domain.Services.Fakes.StubDefaultConfigBase">
+            <summary>Stub type of WeatherApp.Domain.Services.DefaultConfigBase</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Services.Fakes.StubDefaultConfigBase.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Services.Fakes.StubDefaultConfigBase.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Services.Fakes.StubDefaultConfigBase.GetDefaultLocation">
+            <summary>Sets the stub of DefaultConfigBase.GetDefaultLocation()</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Services.Fakes.StubDefaultConfigBase.GetDefaultLocation01">
+            <summary>Sets the stub of DefaultConfigBase.GetDefaultLocation()</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Services.Fakes.StubDefaultConfigBase.InitializeStub">
+            <summary>Initializes a new instance of type StubDefaultConfigBase</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Services.Fakes.StubDefaultConfigBase.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Services.Fakes.StubDefaultConfigBase.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Services.Fakes.StubDefaultConfigBase.SetDefaultLocation(System.String)">
+            <summary>Sets the stub of DefaultConfigBase.SetDefaultLocation(String location)</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Services.Fakes.StubDefaultConfigBase.SetDefaultLocationString">
+            <summary>Sets the stub of DefaultConfigBase.SetDefaultLocation(String location)</summary>
+        </member>
+        <member name="T:WeatherApp.Domain.Services.Fakes.StubIDefaultConfig">
+            <summary>Stub type of WeatherApp.Domain.Services.IDefaultConfig</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Services.Fakes.StubIDefaultConfig.#ctor">
+            <summary>Initializes a new instance of type StubIDefaultConfig</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Services.Fakes.StubIDefaultConfig.GetDefaultLocation">
+            <summary>Sets the stub of IDefaultConfig.GetDefaultLocation()</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Services.Fakes.StubIDefaultConfig.SetDefaultLocationString">
+            <summary>Sets the stub of IDefaultConfig.SetDefaultLocation(String location)</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Services.Fakes.StubIDefaultConfig.WeatherApp#Domain#Services#IDefaultConfig#GetDefaultLocation">
+            <summary>Sets the stub of IDefaultConfig.GetDefaultLocation()</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Services.Fakes.StubIDefaultConfig.WeatherApp#Domain#Services#IDefaultConfig#SetDefaultLocation(System.String)">
+            <summary>Sets the stub of IDefaultConfig.SetDefaultLocation(String location)</summary>
+        </member>
+        <member name="T:WeatherApp.Domain.Services.Fakes.StubIWeatherService">
+            <summary>Stub type of WeatherApp.Domain.Services.IWeatherService</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Services.Fakes.StubIWeatherService.#ctor">
+            <summary>Initializes a new instance of type StubIWeatherService</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Services.Fakes.StubIWeatherService.Dispose">
+            <summary>Sets the stub of IDisposable.Dispose()</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Services.Fakes.StubIWeatherService.GetAllLocations">
+            <summary>Sets the stub of IWeatherService.GetAllLocations()</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Services.Fakes.StubIWeatherService.GetLocationString">
+            <summary>Sets the stub of IWeatherService.GetLocation(String location)</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Services.Fakes.StubIWeatherService.System#IDisposable#Dispose">
+            <summary>Sets the stub of IDisposable.Dispose()</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Services.Fakes.StubIWeatherService.UpdateWeatherLocation">
+            <summary>Sets the stub of IWeatherService.UpdateWeather(Location locationObject)</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Services.Fakes.StubIWeatherService.WeatherApp#Domain#Services#IWeatherService#GetAllLocations">
+            <summary>Sets the stub of IWeatherService.GetAllLocations()</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Services.Fakes.StubIWeatherService.WeatherApp#Domain#Services#IWeatherService#GetLocation(System.String)">
+            <summary>Sets the stub of IWeatherService.GetLocation(String location)</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Services.Fakes.StubIWeatherService.WeatherApp#Domain#Services#IWeatherService#UpdateWeather(WeatherApp.Domain.Models.Location)">
+            <summary>Sets the stub of IWeatherService.UpdateWeather(Location locationObject)</summary>
+        </member>
+        <member name="T:WeatherApp.Domain.Services.Fakes.StubWeatherService">
+            <summary>Stub type of WeatherApp.Domain.Services.WeatherService</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Services.Fakes.StubWeatherService.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Services.Fakes.StubWeatherService.#ctor(WeatherApp.Domain.Repositories.IWeatherRepository,WeatherApp.Domain.WebServices.IWeatherWebService)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Services.Fakes.StubWeatherService.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Services.Fakes.StubWeatherService.Dispose(System.Boolean)">
+            <summary>Sets the stub of WeatherServiceBase.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Services.Fakes.StubWeatherService.DisposeBoolean">
+            <summary>Sets the stub of WeatherServiceBase.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Services.Fakes.StubWeatherService.GetAllLocations">
+            <summary>Sets the stub of WeatherService.GetAllLocations()</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Services.Fakes.StubWeatherService.GetAllLocations01">
+            <summary>Sets the stub of WeatherService.GetAllLocations()</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Services.Fakes.StubWeatherService.GetLocation(System.String)">
+            <summary>Sets the stub of WeatherService.GetLocation(String location)</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Services.Fakes.StubWeatherService.GetLocationString">
+            <summary>Sets the stub of WeatherService.GetLocation(String location)</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Services.Fakes.StubWeatherService.InitializeStub">
+            <summary>Initializes a new instance of type StubWeatherService</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Services.Fakes.StubWeatherService.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Services.Fakes.StubWeatherService.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Services.Fakes.StubWeatherService.UpdateWeather(WeatherApp.Domain.Models.Location)">
+            <summary>Sets the stub of WeatherService.UpdateWeather(Location location)</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Services.Fakes.StubWeatherService.UpdateWeatherLocation">
+            <summary>Sets the stub of WeatherService.UpdateWeather(Location location)</summary>
+        </member>
+        <member name="T:WeatherApp.Domain.Services.Fakes.StubWeatherServiceBase">
+            <summary>Stub type of WeatherApp.Domain.Services.WeatherServiceBase</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Services.Fakes.StubWeatherServiceBase.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Services.Fakes.StubWeatherServiceBase.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Services.Fakes.StubWeatherServiceBase.Dispose(System.Boolean)">
+            <summary>Sets the stub of WeatherServiceBase.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Services.Fakes.StubWeatherServiceBase.DisposeBoolean">
+            <summary>Sets the stub of WeatherServiceBase.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Services.Fakes.StubWeatherServiceBase.GetAllLocations">
+            <summary>Sets the stub of WeatherServiceBase.GetAllLocations()</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Services.Fakes.StubWeatherServiceBase.GetAllLocations01">
+            <summary>Sets the stub of WeatherServiceBase.GetAllLocations()</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Services.Fakes.StubWeatherServiceBase.GetLocation(System.String)">
+            <summary>Sets the stub of WeatherServiceBase.GetLocation(String location)</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Services.Fakes.StubWeatherServiceBase.GetLocationString">
+            <summary>Sets the stub of WeatherServiceBase.GetLocation(String location)</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Services.Fakes.StubWeatherServiceBase.InitializeStub">
+            <summary>Initializes a new instance of type StubWeatherServiceBase</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Services.Fakes.StubWeatherServiceBase.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.Services.Fakes.StubWeatherServiceBase.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.Services.Fakes.StubWeatherServiceBase.UpdateWeather(WeatherApp.Domain.Models.Location)">
+            <summary>Sets the stub of WeatherServiceBase.UpdateWeather(Location locationObject)</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.Services.Fakes.StubWeatherServiceBase.UpdateWeatherLocation">
+            <summary>Sets the stub of WeatherServiceBase.UpdateWeather(Location locationObject)</summary>
+        </member>
+        <member name="T:WeatherApp.Domain.WebServices.Fakes.ShimGeoLocationNotFoundException">
+            <summary>Shim type of WeatherApp.Domain.WebServices.GeoLocationNotFoundException</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.WebServices.Fakes.ShimGeoLocationNotFoundException.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.WebServices.Fakes.ShimGeoLocationNotFoundException.#ctor(WeatherApp.Domain.WebServices.GeoLocationNotFoundException)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="T:WeatherApp.Domain.WebServices.Fakes.ShimGeoLocationNotFoundException.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.WebServices.Fakes.ShimGeoLocationNotFoundException.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.WebServices.Fakes.ShimGeoLocationNotFoundException.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.WebServices.Fakes.ShimGeoLocationNotFoundException.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.WebServices.Fakes.ShimGeoLocationNotFoundException.Bind(System.Runtime.Serialization.ISerializable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.WebServices.Fakes.ShimGeoLocationNotFoundException.Constructor">
+            <summary>Sets the shim of GeoLocationNotFoundException.GeoLocationNotFoundException()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.WebServices.Fakes.ShimGeoLocationNotFoundException.ConstructorString">
+            <summary>Sets the shim of GeoLocationNotFoundException.GeoLocationNotFoundException(String message)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.WebServices.Fakes.ShimGeoLocationNotFoundException.ConstructorStringException">
+            <summary>Sets the shim of GeoLocationNotFoundException.GeoLocationNotFoundException(String message, Exception inner)</summary>
+        </member>
+        <member name="T:WeatherApp.Domain.WebServices.Fakes.ShimGeoLocationWebService">
+            <summary>Shim type of WeatherApp.Domain.WebServices.GeoLocationWebService</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.WebServices.Fakes.ShimGeoLocationWebService.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.WebServices.Fakes.ShimGeoLocationWebService.#ctor(WeatherApp.Domain.WebServices.GeoLocationWebService)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.WebServices.Fakes.ShimGeoLocationWebService.AddressToCoordinatesString">
+            <summary>Sets the shim of GeoLocationWebService.AddressToCoordinates(String location)</summary>
+        </member>
+        <member name="T:WeatherApp.Domain.WebServices.Fakes.ShimGeoLocationWebService.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.WebServices.Fakes.ShimGeoLocationWebService.AllInstances.AddressToCoordinatesString">
+            <summary>Sets the shim of GeoLocationWebService.AddressToCoordinates(String location)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.WebServices.Fakes.ShimGeoLocationWebService.AllInstances.CountryGet">
+            <summary>Sets the shim of GeoLocationWebService.get_Country()</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.WebServices.Fakes.ShimGeoLocationWebService.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.WebServices.Fakes.ShimGeoLocationWebService.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.WebServices.Fakes.ShimGeoLocationWebService.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.WebServices.Fakes.ShimGeoLocationWebService.Constructor">
+            <summary>Sets the shim of GeoLocationWebService.GeoLocationWebService()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.WebServices.Fakes.ShimGeoLocationWebService.CountryGet">
+            <summary>Sets the shim of GeoLocationWebService.get_Country()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.WebServices.Fakes.ShimGeoLocationWebService.StaticConstructor">
+            <summary>Sets the shim of GeoLocationWebService.GeoLocationWebService()</summary>
+        </member>
+        <member name="T:WeatherApp.Domain.WebServices.Fakes.ShimWeatherWebService">
+            <summary>Shim type of WeatherApp.Domain.WebServices.WeatherWebService</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.WebServices.Fakes.ShimWeatherWebService.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.WebServices.Fakes.ShimWeatherWebService.#ctor(WeatherApp.Domain.WebServices.WeatherWebService)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="T:WeatherApp.Domain.WebServices.Fakes.ShimWeatherWebService.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.WebServices.Fakes.ShimWeatherWebService.AllInstances.CacheHeadersMaxAgeGet">
+            <summary>Sets the shim of WeatherWebService.get_CacheHeadersMaxAge()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.WebServices.Fakes.ShimWeatherWebService.AllInstances.CacheHeadersMaxAgeSetInt32">
+            <summary>Sets the shim of WeatherWebService.set_CacheHeadersMaxAge(Int32 value)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.WebServices.Fakes.ShimWeatherWebService.AllInstances.GetLocationString">
+            <summary>Sets the shim of WeatherWebService.GetLocation(String location)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.WebServices.Fakes.ShimWeatherWebService.AllInstances.GetWeatherLocation">
+            <summary>Sets the shim of WeatherWebService.GetWeather(Location location)</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.WebServices.Fakes.ShimWeatherWebService.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.WebServices.Fakes.ShimWeatherWebService.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.WebServices.Fakes.ShimWeatherWebService.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.WebServices.Fakes.ShimWeatherWebService.Bind(WeatherApp.Domain.WebServices.IWeatherWebService)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.WebServices.Fakes.ShimWeatherWebService.CacheHeadersMaxAgeGet">
+            <summary>Sets the shim of WeatherWebService.get_CacheHeadersMaxAge()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.WebServices.Fakes.ShimWeatherWebService.CacheHeadersMaxAgeSetInt32">
+            <summary>Sets the shim of WeatherWebService.set_CacheHeadersMaxAge(Int32 value)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.WebServices.Fakes.ShimWeatherWebService.Constructor">
+            <summary>Sets the shim of WeatherWebService.WeatherWebService()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.WebServices.Fakes.ShimWeatherWebService.GetLocationString">
+            <summary>Sets the shim of WeatherWebService.GetLocation(String location)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.WebServices.Fakes.ShimWeatherWebService.GetWeatherLocation">
+            <summary>Sets the shim of WeatherWebService.GetWeather(Location location)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.WebServices.Fakes.ShimWeatherWebService.StaticConstructor">
+            <summary>Sets the shim of WeatherWebService.WeatherWebService()</summary>
+        </member>
+        <member name="T:WeatherApp.Domain.WebServices.Fakes.StubGeoLocationNotFoundException">
+            <summary>Stub type of WeatherApp.Domain.WebServices.GeoLocationNotFoundException</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.WebServices.Fakes.StubGeoLocationNotFoundException.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.WebServices.Fakes.StubGeoLocationNotFoundException.#ctor(System.String)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.WebServices.Fakes.StubGeoLocationNotFoundException.#ctor(System.String,System.Exception)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.WebServices.Fakes.StubGeoLocationNotFoundException.AttachBackingFieldToHelpLink">
+            <summary>Attaches delegates to emulate StubGeoLocationNotFoundException.HelpLink as a property with a backing field.</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.WebServices.Fakes.StubGeoLocationNotFoundException.AttachBackingFieldToSource">
+            <summary>Attaches delegates to emulate StubGeoLocationNotFoundException.Source as a property with a backing field.</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.WebServices.Fakes.StubGeoLocationNotFoundException.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.WebServices.Fakes.StubGeoLocationNotFoundException.Data">
+            <summary>Sets the stub of Exception.get_Data()</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.WebServices.Fakes.StubGeoLocationNotFoundException.DataGet">
+            <summary>Sets the stub of Exception.get_Data()</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.WebServices.Fakes.StubGeoLocationNotFoundException.GetBaseException">
+            <summary>Sets the stub of Exception.GetBaseException()</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.WebServices.Fakes.StubGeoLocationNotFoundException.GetBaseException01">
+            <summary>Sets the stub of Exception.GetBaseException()</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.WebServices.Fakes.StubGeoLocationNotFoundException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>Sets the stub of Exception.GetObjectData(SerializationInfo info, StreamingContext context)</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.WebServices.Fakes.StubGeoLocationNotFoundException.GetObjectDataSerializationInfoStreamingContext">
+            <summary>Sets the stub of Exception.GetObjectData(SerializationInfo info, StreamingContext context)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.WebServices.Fakes.StubGeoLocationNotFoundException.HelpLink">
+            <summary>Sets the stub of Exception.get_HelpLink()</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.WebServices.Fakes.StubGeoLocationNotFoundException.HelpLinkGet">
+            <summary>Sets the stub of Exception.get_HelpLink()</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.WebServices.Fakes.StubGeoLocationNotFoundException.HelpLinkSetString">
+            <summary>Sets the stub of Exception.set_HelpLink(String value)</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.WebServices.Fakes.StubGeoLocationNotFoundException.InitializeStub">
+            <summary>Initializes a new instance of type StubGeoLocationNotFoundException</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.WebServices.Fakes.StubGeoLocationNotFoundException.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.WebServices.Fakes.StubGeoLocationNotFoundException.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.WebServices.Fakes.StubGeoLocationNotFoundException.Message">
+            <summary>Sets the stub of Exception.get_Message()</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.WebServices.Fakes.StubGeoLocationNotFoundException.MessageGet">
+            <summary>Sets the stub of Exception.get_Message()</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.WebServices.Fakes.StubGeoLocationNotFoundException.Source">
+            <summary>Sets the stub of Exception.get_Source()</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.WebServices.Fakes.StubGeoLocationNotFoundException.SourceGet">
+            <summary>Sets the stub of Exception.get_Source()</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.WebServices.Fakes.StubGeoLocationNotFoundException.SourceSetString">
+            <summary>Sets the stub of Exception.set_Source(String value)</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.WebServices.Fakes.StubGeoLocationNotFoundException.StackTrace">
+            <summary>Sets the stub of Exception.get_StackTrace()</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.WebServices.Fakes.StubGeoLocationNotFoundException.StackTraceGet">
+            <summary>Sets the stub of Exception.get_StackTrace()</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.WebServices.Fakes.StubGeoLocationNotFoundException.ToString">
+            <summary>Sets the stub of Exception.ToString()</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.WebServices.Fakes.StubGeoLocationNotFoundException.ToString01">
+            <summary>Sets the stub of Exception.ToString()</summary>
+        </member>
+        <member name="T:WeatherApp.Domain.WebServices.Fakes.StubGeoLocationWebService">
+            <summary>Stub type of WeatherApp.Domain.WebServices.GeoLocationWebService</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.WebServices.Fakes.StubGeoLocationWebService.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.WebServices.Fakes.StubGeoLocationWebService.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.WebServices.Fakes.StubGeoLocationWebService.InitializeStub">
+            <summary>Initializes a new instance of type StubGeoLocationWebService</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.WebServices.Fakes.StubGeoLocationWebService.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.WebServices.Fakes.StubGeoLocationWebService.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:WeatherApp.Domain.WebServices.Fakes.StubIWeatherWebService">
+            <summary>Stub type of WeatherApp.Domain.WebServices.IWeatherWebService</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.WebServices.Fakes.StubIWeatherWebService.#ctor">
+            <summary>Initializes a new instance of type StubIWeatherWebService</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.WebServices.Fakes.StubIWeatherWebService.GetLocationString">
+            <summary>Sets the stub of IWeatherWebService.GetLocation(String location)</summary>
+        </member>
+        <member name="F:WeatherApp.Domain.WebServices.Fakes.StubIWeatherWebService.GetWeatherLocation">
+            <summary>Sets the stub of IWeatherWebService.GetWeather(Location location)</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.WebServices.Fakes.StubIWeatherWebService.WeatherApp#Domain#WebServices#IWeatherWebService#GetLocation(System.String)">
+            <summary>Sets the stub of IWeatherWebService.GetLocation(String location)</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.WebServices.Fakes.StubIWeatherWebService.WeatherApp#Domain#WebServices#IWeatherWebService#GetWeather(WeatherApp.Domain.Models.Location)">
+            <summary>Sets the stub of IWeatherWebService.GetWeather(Location location)</summary>
+        </member>
+        <member name="T:WeatherApp.Domain.WebServices.Fakes.StubWeatherWebService">
+            <summary>Stub type of WeatherApp.Domain.WebServices.WeatherWebService</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.WebServices.Fakes.StubWeatherWebService.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.WebServices.Fakes.StubWeatherWebService.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="M:WeatherApp.Domain.WebServices.Fakes.StubWeatherWebService.InitializeStub">
+            <summary>Initializes a new instance of type StubWeatherWebService</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.WebServices.Fakes.StubWeatherWebService.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:WeatherApp.Domain.WebServices.Fakes.StubWeatherWebService.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+    </members>
+</doc>
