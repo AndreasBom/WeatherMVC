@@ -69,7 +69,7 @@ namespace WeatherApp.Controllers
         /// <summary>
         /// POST: Search for location
         /// </summary>
-        /// <param name="collection"></param>
+        /// <param name="Formcollection"></param>
         /// <returns></returns>
         [HttpPost]
         [ValidateAntiForgeryToken]
